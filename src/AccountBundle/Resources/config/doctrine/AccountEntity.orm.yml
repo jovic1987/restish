@@ -1,0 +1,15 @@
+AccountBundle\Entity\AccountEntity:
+    type: entity
+    table: account
+    repositoryClass: AccountBundle\Entity\AccountEntityRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        owner:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

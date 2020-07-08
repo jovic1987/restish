@@ -1,0 +1,47 @@
+imports:
+    - { resource: config.yml }
+
+#framework:
+#    validation:
+#        cache: validator.mapping.cache.apc
+#    serializer:
+#        cache: serializer.mapping.cache.apc
+
+#doctrine:
+#    orm:
+#        metadata_cache_driver: apc
+#        result_cache_driver: apc
+#        query_cache_driver: apc
+
+monolog:
+    handlers:
+        main:
+            type: fingers_crossed
+            action_level: error
+            handler: nested
+        nested:
+            type: stream
+            path: "php://stderr"
+            level: debug
+        console:
+            type: console
+doctrine:
+    dbal:
+        driver: pdo_pgsql
+        host: ec2-54-75-244-161.eu-west-1.compute.amazonaws.com
+        port: 5432
+        dbname: d56ms7nrjtr25k
+        user: vqesmehrphoatw
+        password: 7dfd90cd20278926b4f5a405b6fe5aa4ac2f5c84b04522830fde4d568f8537dc
+        charset: UTF8
+        # if using pdo_sqlite as your database driver:
+        #   1. add the path in parameters.yml
+        #     e.g. database_path: '%kernel.root_dir%/data/data.db3'
+        #   2. Uncomment database_path in parameters.yml.dist
+        #   3. Uncomment next line:
+        #path: '%database_path%'
+
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true

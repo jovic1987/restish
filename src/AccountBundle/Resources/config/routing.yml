@@ -1,0 +1,3 @@
+account_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AccountBundle:Default:index }
