@@ -16,8 +16,8 @@ class Version20200709145745 extends AbstractMigration
     public function up(Schema $schema)
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('INSERT INTO account (id, owner, balance, currency) VALUES ("bob", "bob", "100", "EUR")');
-        $this->addSql('INSERT INTO account (id, owner, balance, currency) VALUES ("alice", "alice", "0.01", "EUR")');
+        $this->addSql("INSERT INTO account (id, owner, balance, currency) VALUES ('bob', 'bob', '100', 'EUR')");
+        $this->addSql("INSERT INTO account (id, owner, balance, currency) VALUES ('alice', 'alice', '0.01', 'EUR')");
 
     }
 
