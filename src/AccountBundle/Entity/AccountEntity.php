@@ -8,7 +8,7 @@ namespace AccountBundle\Entity;
 class AccountEntity
 {
     /**
-     * @var integer
+     * @var string
      */
     private $id;
 
@@ -16,6 +16,16 @@ class AccountEntity
      * @var string
      */
     private $owner;
+
+    /**
+     * @var float
+     */
+    private $balance;
+
+    /**
+     * @var string
+     */    
+    private $currency;
 
 
     /**
@@ -29,20 +39,6 @@ class AccountEntity
     }
 
     /**
-     * Set owner
-     *
-     * @param string $owner
-     *
-     * @return AccountEntity
-     */
-    public function setOwner($owner)
-    {
-        $this->owner = $owner;
-
-        return $this;
-    }
-
-    /**
      * Get owner
      *
      * @return string
@@ -50,6 +46,26 @@ class AccountEntity
     public function getOwner()
     {
         return $this->owner;
+    }
+
+    /**
+     * Get balance
+     *
+     * @return float
+     */
+    public function getBlanace()
+    {
+        return $this->balance;
+    }
+
+    /**
+     * Get currency
+     *
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->currency;
     }
 }
 

@@ -16,13 +16,11 @@ class Version20200708153002 extends AbstractMigration
     public function up(Schema $schema)
     {
         // this up() migration is auto-generated, please modify it to your needs
-        // $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
-
-        // $this->addSql('CREATE TABLE account (id INT AUTO_INCREMENT NOT NULL, owner VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB');
+        $this->skipIf($this->connection->getDatabasePlatform()->getName() === 'mysql', 'Migration can not be executed safely on \'mysql\'.');
 
         $sql = 'CREATE TABLE account (id VARCHAR(50) PRIMARY KEY NOT NULL,'
             . ' owner VARCHAR (50) NOT NULL,'
-            . ' balance DECIMAL NOT NULL,'
+            . ' balance FLOAT NOT NULL,'
             . ' curency VARCHAR (50) NOT NULL)';
 
         $this->addSql($sql);
@@ -33,9 +31,6 @@ class Version20200708153002 extends AbstractMigration
      */
     public function down(Schema $schema)
     {
-        // this down() migration is auto-generated, please modify it to your needs
-        // $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
-
         $this->addSql('DROP TABLE account');
     }
 }

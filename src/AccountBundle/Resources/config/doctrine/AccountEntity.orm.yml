@@ -4,12 +4,15 @@ AccountBundle\Entity\AccountEntity:
     repositoryClass: AccountBundle\Entity\AccountEntityRepository
     id:
         id:
-            type: integer
+            type: string
             id: true
-            generator:
-                strategy: AUTO
+            length: 50
     fields:
         owner:
             type: string
-            length: 255
-    lifecycleCallbacks: {  }
+            length: 50
+        balance:
+            type: float
+        currency:
+            type: string
+            length: 50
