@@ -21,7 +21,7 @@ class Version20200708153002 extends AbstractMigration
         $sql = 'CREATE TABLE account (id VARCHAR(50) PRIMARY KEY NOT NULL,'
             . ' owner VARCHAR (50) NOT NULL,'
             . ' balance FLOAT NOT NULL,'
-            . ' curency VARCHAR (50) NOT NULL)';
+            . ' currency VARCHAR (50) NOT NULL)';
 
         $this->addSql($sql);
     }
