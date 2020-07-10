@@ -132,9 +132,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // account_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#sD', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'account_homepage')), array (  '_controller' => 'AccountBundle\\Controller\\DefaultController::indexAction',));
+        // account_index
+        if ('/v1/accounts' === $pathinfo) {
+            return array (  '_controller' => 'AccountBundle\\Controller\\DefaultController::indexAction',  '_route' => 'account_index',);
         }
 
         // homepage

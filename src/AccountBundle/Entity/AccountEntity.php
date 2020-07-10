@@ -53,7 +53,7 @@ class AccountEntity
      *
      * @return float
      */
-    public function getBlanace()
+    public function getBalance()
     {
         return $this->balance;
     }
