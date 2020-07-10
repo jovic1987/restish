@@ -1,5 +1,5 @@
 /app/config/parameters.yml
-/app/cache/*
-/vendor/*
-/logs/*
+/app/cache
+/vendor
+/app/logs
 /composer.lock
