@@ -9,6 +9,5 @@
 /web/bundles/
 /app/bootstrap.php.cache
 /build/
-/vendor/
 /bin/
 composer.lock
