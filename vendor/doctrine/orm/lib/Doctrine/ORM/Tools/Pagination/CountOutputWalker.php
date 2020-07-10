@@ -85,14 +85,6 @@ class CountOutputWalker extends SqlWalker
 
         $sql = parent::walkSelectStatement($AST);
 
-        if ($AST->groupByClause) {
-            return sprintf(
-                'SELECT %s AS dctrn_count FROM (%s) dctrn_table',
-                $this->platform->getCountExpression('*'),
-                $sql
-            );
-        }
-
         // Find out the SQL alias of the identifier column of the root entity
         // It may be possible to make this work with multiple root entities but that
         // would probably require issuing multiple queries or doing a UNION SELECT
@@ -104,8 +96,7 @@ class CountOutputWalker extends SqlWalker
             throw new \RuntimeException("Cannot count query which selects two FROM components, cannot make distinction");
         }
 
-        $fromRoot       = reset($from);
-        $rootAlias      = $fromRoot->rangeVariableDeclaration->aliasIdentificationVariable;
+        $rootAlias      = $from[0]->rangeVariableDeclaration->aliasIdentificationVariable;
         $rootClass      = $this->queryComponents[$rootAlias]['metadata'];
         $rootIdentifier = $rootClass->identifier;
 

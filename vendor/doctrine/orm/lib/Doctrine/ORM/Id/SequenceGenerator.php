@@ -19,8 +19,8 @@
 
 namespace Doctrine\ORM\Id;
 
-use Doctrine\ORM\EntityManager;
 use Serializable;
+use Doctrine\ORM\EntityManager;
 
 /**
  * Represents an ID generator that uses a database sequence.
@@ -67,7 +67,14 @@ class SequenceGenerator extends AbstractIdGenerator implements Serializable
     }
 
     /**
-     * {@inheritDoc}
+     * Generates an ID for the given entity.
+     *
+     * @param EntityManager $em
+     * @param object        $entity
+     *
+     * @return integer The generated value.
+     *
+     * @override
      */
     public function generate(EntityManager $em, $entity)
     {
@@ -76,8 +83,7 @@ class SequenceGenerator extends AbstractIdGenerator implements Serializable
             $conn = $em->getConnection();
             $sql  = $conn->getDatabasePlatform()->getSequenceNextValSQL($this->_sequenceName);
 
-            // Using `query` to force usage of the master server in MasterSlaveConnection
-            $this->_nextValue = (int) $conn->query($sql)->fetchColumn();
+            $this->_nextValue = (int)$conn->fetchColumn($sql);
             $this->_maxValue  = $this->_nextValue + $this->_allocationSize;
         }
 
@@ -109,12 +115,10 @@ class SequenceGenerator extends AbstractIdGenerator implements Serializable
      */
     public function serialize()
     {
-        return serialize(
-            [
+        return serialize(array(
             'allocationSize' => $this->_allocationSize,
             'sequenceName'   => $this->_sequenceName
-            ]
-        );
+        ));
     }
 
     /**

@@ -25,6 +25,8 @@ class ClockMock
         }
 
         self::$now = is_numeric($enable) ? (float) $enable : ($enable ? microtime(true) : null);
+
+        return null;
     }
 
     public static function time()
@@ -50,10 +52,10 @@ class ClockMock
     public static function usleep($us)
     {
         if (null === self::$now) {
-            return \usleep($us);
+            \usleep($us);
+        } else {
+            self::$now += $us / 1000000;
         }
-
-        self::$now += $us / 1000000;
     }
 
     public static function microtime($asFloat = false)
@@ -74,9 +76,11 @@ class ClockMock
         $self = \get_called_class();
 
         $mockedNs = array(substr($class, 0, strrpos($class, '\\')));
-        if (strpos($class, '\\Tests\\')) {
+        if (0 < strpos($class, '\\Tests\\')) {
             $ns = str_replace('\\Tests\\', '\\', $class);
             $mockedNs[] = substr($ns, 0, strrpos($ns, '\\'));
+        } elseif (0 === strpos($class, 'Tests\\')) {
+            $mockedNs[] = substr($class, 6, strrpos($class, '\\') - 6);
         }
         foreach ($mockedNs as $ns) {
             if (\function_exists($ns.'\time')) {
@@ -102,7 +106,7 @@ function sleep(\$s)
 
 function usleep(\$us)
 {
-    return \\$self::usleep(\$us);
+    \\$self::usleep(\$us);
 }
 
 EOPHP

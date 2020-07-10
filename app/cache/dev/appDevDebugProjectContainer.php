@@ -73,7 +73,6 @@ class appDevDebugProjectContainer extends Container
             'doctrine.mapping_info_command' => 'getDoctrine_MappingInfoCommandService',
             'doctrine.orm.default_entity_listener_resolver' => 'getDoctrine_Orm_DefaultEntityListenerResolverService',
             'doctrine.orm.default_entity_manager' => 'getDoctrine_Orm_DefaultEntityManagerService',
-            'doctrine.orm.default_listeners.attach_entity_listeners' => 'getDoctrine_Orm_DefaultListeners_AttachEntityListenersService',
             'doctrine.orm.default_manager_configurator' => 'getDoctrine_Orm_DefaultManagerConfiguratorService',
             'doctrine.orm.validator.unique' => 'getDoctrine_Orm_Validator_UniqueService',
             'doctrine.orm.validator_initializer' => 'getDoctrine_Orm_ValidatorInitializerService',
@@ -709,10 +708,7 @@ class appDevDebugProjectContainer extends Container
         $b = new \Doctrine\DBAL\Configuration();
         $b->setSQLLogger($a);
 
-        $c = new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this);
-        $c->addEventListener(array(0 => 'loadClassMetadata'), $this->get('doctrine.orm.default_listeners.attach_entity_listeners'));
-
-        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => NULL, 'dbname' => 'restish', 'user' => 'root', 'password' => 1234, 'charset' => 'UTF8', 'driverOptions' => array(), 'defaultTableOptions' => array()), $b, $c, array());
+        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => NULL, 'dbname' => 'restish', 'user' => 'root', 'password' => 1234, 'charset' => 'UTF8', 'driverOptions' => array(), 'defaultTableOptions' => array()), $b, new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array());
     }
 
     /**
@@ -785,7 +781,7 @@ class appDevDebugProjectContainer extends Container
         if ($lazyLoad) {
             $container = $this;
 
-            return $this->services['doctrine.orm.default_entity_manager'] = new DoctrineORMEntityManager_000000001b53beb1000000005721bc998adf171aff20025ff44492e461c32763(
+            return $this->services['doctrine.orm.default_entity_manager'] = DoctrineORMEntityManager_00000000020215b300000000511477608dcdc572960b2d02d38cd9c05f173664::staticProxyConstructor(
                 function (&$wrappedInstance, \ProxyManager\Proxy\LazyLoadingInterface $proxy) use ($container) {
                     $wrappedInstance = $container->getDoctrine_Orm_DefaultEntityManagerService(false);
 
@@ -823,16 +819,6 @@ class appDevDebugProjectContainer extends Container
         $this->get('doctrine.orm.default_manager_configurator')->configure($instance);
 
         return $instance;
-    }
-
-    /**
-     * Gets the public 'doctrine.orm.default_listeners.attach_entity_listeners' shared service.
-     *
-     * @return \Doctrine\ORM\Tools\AttachEntityListenersListener
-     */
-    protected function getDoctrine_Orm_DefaultListeners_AttachEntityListenersService()
-    {
-        return $this->services['doctrine.orm.default_listeners.attach_entity_listeners'] = new \Doctrine\ORM\Tools\AttachEntityListenersListener();
     }
 
     /**
@@ -964,7 +950,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf_orm_default_23609f0e5a4314bc2e57e0ec2761177010fd55bfe54d57bbbfe4d020db0b9d92');
+        $instance->setNamespace('sf_orm_default_eb0d846f49c579057252253b2c504786c1658ff54bac400923134ff4e5d200e0');
 
         return $instance;
     }
@@ -978,7 +964,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf_orm_default_23609f0e5a4314bc2e57e0ec2761177010fd55bfe54d57bbbfe4d020db0b9d92');
+        $instance->setNamespace('sf_orm_default_eb0d846f49c579057252253b2c504786c1658ff54bac400923134ff4e5d200e0');
 
         return $instance;
     }
@@ -992,7 +978,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_result_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf_orm_default_23609f0e5a4314bc2e57e0ec2761177010fd55bfe54d57bbbfe4d020db0b9d92');
+        $instance->setNamespace('sf_orm_default_eb0d846f49c579057252253b2c504786c1658ff54bac400923134ff4e5d200e0');
 
         return $instance;
     }
@@ -2065,7 +2051,7 @@ class appDevDebugProjectContainer extends Container
 
         $e = new \Symfony\Component\Security\Http\AccessMap();
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($e, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider(array())), 'main', $a, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5f05e63d2e7d44.72838790', $a, $c), 3 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $e, $c)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), new \Symfony\Component\Security\Http\HttpUtils($d, $d, '{^https?://%s$}i'), 'main', NULL, NULL, NULL, $a, false), NULL);
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($e, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider(array())), 'main', $a, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5f0898271a4c91.19135340', $a, $c), 3 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $e, $c)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), new \Symfony\Component\Security\Http\HttpUtils($d, $d, '{^https?://%s$}i'), 'main', NULL, NULL, NULL, $a, false), NULL);
     }
 
     /**
@@ -3145,7 +3131,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5f05e63d2e7d44.72838790')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5f0898271a4c91.19135340')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
@@ -3994,550 +3980,446 @@ class appDevDebugProjectContainer extends Container
     }
 }
 
-class DoctrineORMEntityManager_000000001b53beb1000000005721bc998adf171aff20025ff44492e461c32763 extends \Doctrine\ORM\EntityManager implements \ProxyManager\Proxy\VirtualProxyInterface
+class DoctrineORMEntityManager_00000000020215b300000000511477608dcdc572960b2d02d38cd9c05f173664 extends \Doctrine\ORM\EntityManager implements \ProxyManager\Proxy\VirtualProxyInterface
 {
 
     /**
      * @var \Closure|null initializer responsible for generating the wrapped object
      */
-    private $valueHolder5f05e63d650fb213069105 = null;
+    private $valueHolderee6a8 = null;
 
     /**
      * @var \Closure|null initializer responsible for generating the wrapped object
      */
-    private $initializer5f05e63d65105269316944 = null;
+    private $initializerd0584 = null;
 
     /**
      * @var bool[] map of public properties of the parent class
      */
-    private static $publicProperties5f05e63d650db683520359 = array(
+    private static $publicProperties964ca = [
         
-    );
+    ];
 
-    /**
-     * {@inheritDoc}
-     */
     public function getConnection()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getConnection', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getConnection', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getConnection();
+        return $this->valueHolderee6a8->getConnection();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getMetadataFactory()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getMetadataFactory', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getMetadataFactory', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getMetadataFactory();
+        return $this->valueHolderee6a8->getMetadataFactory();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getExpressionBuilder()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getExpressionBuilder', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getExpressionBuilder', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getExpressionBuilder();
+        return $this->valueHolderee6a8->getExpressionBuilder();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function beginTransaction()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'beginTransaction', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'beginTransaction', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->beginTransaction();
+        return $this->valueHolderee6a8->beginTransaction();
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public function getCache()
-    {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getCache', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
-
-        return $this->valueHolder5f05e63d650fb213069105->getCache();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function transactional($func)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'transactional', array('func' => $func), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'transactional', array('func' => $func), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->transactional($func);
+        return $this->valueHolderee6a8->transactional($func);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function commit()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'commit', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'commit', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->commit();
+        return $this->valueHolderee6a8->commit();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function rollback()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'rollback', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'rollback', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->rollback();
+        return $this->valueHolderee6a8->rollback();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getClassMetadata($className)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getClassMetadata', array('className' => $className), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getClassMetadata', array('className' => $className), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getClassMetadata($className);
+        return $this->valueHolderee6a8->getClassMetadata($className);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function createQuery($dql = '')
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'createQuery', array('dql' => $dql), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'createQuery', array('dql' => $dql), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->createQuery($dql);
+        return $this->valueHolderee6a8->createQuery($dql);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function createNamedQuery($name)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'createNamedQuery', array('name' => $name), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'createNamedQuery', array('name' => $name), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->createNamedQuery($name);
+        return $this->valueHolderee6a8->createNamedQuery($name);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function createNativeQuery($sql, \Doctrine\ORM\Query\ResultSetMapping $rsm)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'createNativeQuery', array('sql' => $sql, 'rsm' => $rsm), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'createNativeQuery', array('sql' => $sql, 'rsm' => $rsm), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->createNativeQuery($sql, $rsm);
+        return $this->valueHolderee6a8->createNativeQuery($sql, $rsm);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function createNamedNativeQuery($name)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'createNamedNativeQuery', array('name' => $name), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'createNamedNativeQuery', array('name' => $name), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->createNamedNativeQuery($name);
+        return $this->valueHolderee6a8->createNamedNativeQuery($name);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function createQueryBuilder()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'createQueryBuilder', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'createQueryBuilder', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->createQueryBuilder();
+        return $this->valueHolderee6a8->createQueryBuilder();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function flush($entity = null)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'flush', array('entity' => $entity), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'flush', array('entity' => $entity), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->flush($entity);
+        return $this->valueHolderee6a8->flush($entity);
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public function find($entityName, $id, $lockMode = null, $lockVersion = null)
+    public function find($entityName, $id, $lockMode = 0, $lockVersion = null)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'find', array('entityName' => $entityName, 'id' => $id, 'lockMode' => $lockMode, 'lockVersion' => $lockVersion), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'find', array('entityName' => $entityName, 'id' => $id, 'lockMode' => $lockMode, 'lockVersion' => $lockVersion), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->find($entityName, $id, $lockMode, $lockVersion);
+        return $this->valueHolderee6a8->find($entityName, $id, $lockMode, $lockVersion);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getReference($entityName, $id)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getReference', array('entityName' => $entityName, 'id' => $id), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getReference', array('entityName' => $entityName, 'id' => $id), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getReference($entityName, $id);
+        return $this->valueHolderee6a8->getReference($entityName, $id);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getPartialReference($entityName, $identifier)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getPartialReference', array('entityName' => $entityName, 'identifier' => $identifier), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getPartialReference', array('entityName' => $entityName, 'identifier' => $identifier), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getPartialReference($entityName, $identifier);
+        return $this->valueHolderee6a8->getPartialReference($entityName, $identifier);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function clear($entityName = null)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'clear', array('entityName' => $entityName), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'clear', array('entityName' => $entityName), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->clear($entityName);
+        return $this->valueHolderee6a8->clear($entityName);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function close()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'close', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'close', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->close();
+        return $this->valueHolderee6a8->close();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function persist($entity)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'persist', array('entity' => $entity), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'persist', array('entity' => $entity), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->persist($entity);
+        return $this->valueHolderee6a8->persist($entity);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function remove($entity)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'remove', array('entity' => $entity), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'remove', array('entity' => $entity), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->remove($entity);
+        return $this->valueHolderee6a8->remove($entity);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function refresh($entity)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'refresh', array('entity' => $entity), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'refresh', array('entity' => $entity), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->refresh($entity);
+        return $this->valueHolderee6a8->refresh($entity);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function detach($entity)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'detach', array('entity' => $entity), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'detach', array('entity' => $entity), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->detach($entity);
+        return $this->valueHolderee6a8->detach($entity);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function merge($entity)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'merge', array('entity' => $entity), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'merge', array('entity' => $entity), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->merge($entity);
+        return $this->valueHolderee6a8->merge($entity);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function copy($entity, $deep = false)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'copy', array('entity' => $entity, 'deep' => $deep), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'copy', array('entity' => $entity, 'deep' => $deep), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->copy($entity, $deep);
+        return $this->valueHolderee6a8->copy($entity, $deep);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function lock($entity, $lockMode, $lockVersion = null)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'lock', array('entity' => $entity, 'lockMode' => $lockMode, 'lockVersion' => $lockVersion), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'lock', array('entity' => $entity, 'lockMode' => $lockMode, 'lockVersion' => $lockVersion), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->lock($entity, $lockMode, $lockVersion);
+        return $this->valueHolderee6a8->lock($entity, $lockMode, $lockVersion);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getRepository($entityName)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getRepository', array('entityName' => $entityName), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getRepository', array('entityName' => $entityName), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getRepository($entityName);
+        return $this->valueHolderee6a8->getRepository($entityName);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function contains($entity)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'contains', array('entity' => $entity), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'contains', array('entity' => $entity), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->contains($entity);
+        return $this->valueHolderee6a8->contains($entity);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getEventManager()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getEventManager', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getEventManager', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getEventManager();
+        return $this->valueHolderee6a8->getEventManager();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getConfiguration()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getConfiguration', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getConfiguration', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getConfiguration();
+        return $this->valueHolderee6a8->getConfiguration();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function isOpen()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'isOpen', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'isOpen', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->isOpen();
+        return $this->valueHolderee6a8->isOpen();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getUnitOfWork()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getUnitOfWork', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getUnitOfWork', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getUnitOfWork();
+        return $this->valueHolderee6a8->getUnitOfWork();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getHydrator($hydrationMode)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getHydrator', array('hydrationMode' => $hydrationMode), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getHydrator', array('hydrationMode' => $hydrationMode), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getHydrator($hydrationMode);
+        return $this->valueHolderee6a8->getHydrator($hydrationMode);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function newHydrator($hydrationMode)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'newHydrator', array('hydrationMode' => $hydrationMode), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'newHydrator', array('hydrationMode' => $hydrationMode), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->newHydrator($hydrationMode);
+        return $this->valueHolderee6a8->newHydrator($hydrationMode);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getProxyFactory()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getProxyFactory', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getProxyFactory', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getProxyFactory();
+        return $this->valueHolderee6a8->getProxyFactory();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function initializeObject($obj)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'initializeObject', array('obj' => $obj), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'initializeObject', array('obj' => $obj), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->initializeObject($obj);
+        return $this->valueHolderee6a8->initializeObject($obj);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getFilters()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'getFilters', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'getFilters', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->getFilters();
+        return $this->valueHolderee6a8->getFilters();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function isFiltersStateClean()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'isFiltersStateClean', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'isFiltersStateClean', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->isFiltersStateClean();
+        return $this->valueHolderee6a8->isFiltersStateClean();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function hasFilters()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'hasFilters', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'hasFilters', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return $this->valueHolder5f05e63d650fb213069105->hasFilters();
+        return $this->valueHolderee6a8->hasFilters();
     }
 
     /**
-     * @override constructor for lazy initialization
+     * Constructor for lazy initialization
      *
      * @param \Closure|null $initializer
      */
-    public function __construct($initializer)
+    public static function staticProxyConstructor($initializer)
     {
-        $this->initializer5f05e63d65105269316944 = $initializer;
+        static $reflection;
+
+        $reflection = $reflection ?? $reflection = new \ReflectionClass(__CLASS__);
+        $instance = $reflection->newInstanceWithoutConstructor();
+
+        \Closure::bind(function (\Doctrine\ORM\EntityManager $instance) {
+            unset($instance->config, $instance->conn, $instance->metadataFactory, $instance->unitOfWork, $instance->eventManager, $instance->proxyFactory, $instance->repositoryFactory, $instance->expressionBuilder, $instance->closed, $instance->filterCollection);
+        }, $instance, 'Doctrine\\ORM\\EntityManager')->__invoke($instance);
+
+        $instance->initializerd0584 = $initializer;
+
+        return $instance;
     }
 
-    /**
-     * @param string $name
-     */
+    protected function __construct(\Doctrine\DBAL\Connection $conn, \Doctrine\ORM\Configuration $config, \Doctrine\Common\EventManager $eventManager)
+    {
+        static $reflection;
+
+        if (! $this->valueHolderee6a8) {
+            $reflection = $reflection ?: new \ReflectionClass('Doctrine\\ORM\\EntityManager');
+            $this->valueHolderee6a8 = $reflection->newInstanceWithoutConstructor();
+        \Closure::bind(function (\Doctrine\ORM\EntityManager $instance) {
+            unset($instance->config, $instance->conn, $instance->metadataFactory, $instance->unitOfWork, $instance->eventManager, $instance->proxyFactory, $instance->repositoryFactory, $instance->expressionBuilder, $instance->closed, $instance->filterCollection);
+        }, $this, 'Doctrine\\ORM\\EntityManager')->__invoke($this);
+
+        }
+
+        $this->valueHolderee6a8->__construct($conn, $config, $eventManager);
+    }
+
     public function & __get($name)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, '__get', array('name' => $name), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, '__get', ['name' => $name], $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        if (isset(self::$publicProperties5f05e63d650db683520359[$name])) {
-            return $this->valueHolder5f05e63d650fb213069105->$name;
+        if (isset(self::$publicProperties964ca[$name])) {
+            return $this->valueHolderee6a8->$name;
         }
 
         $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
 
         if (! $realInstanceReflection->hasProperty($name)) {
-            $targetObject = $this->valueHolder5f05e63d650fb213069105;
+            $targetObject = $this->valueHolderee6a8;
 
             $backtrace = debug_backtrace(false);
-            trigger_error('Undefined property: ' . get_parent_class($this) . '::$' . $name . ' in ' . $backtrace[0]['file'] . ' on line ' . $backtrace[0]['line'], \E_USER_NOTICE);
-            return $targetObject->$name;;
+            trigger_error(
+                sprintf(
+                    'Undefined property: %s::$%s in %s on line %s',
+                    get_parent_class($this),
+                    $name,
+                    $backtrace[0]['file'],
+                    $backtrace[0]['line']
+                ),
+                \E_USER_NOTICE
+            );
+            return $targetObject->$name;
             return;
         }
 
-        $targetObject = $this->valueHolder5f05e63d650fb213069105;
+        $targetObject = $this->valueHolderee6a8;
         $accessor = function & () use ($targetObject, $name) {
             return $targetObject->$name;
         };
-            $backtrace = debug_backtrace(true);
-            $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \stdClass();
-            $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
+        $backtrace = debug_backtrace(true);
+        $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \ProxyManager\Stub\EmptyClassStub();
+        $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
         $returnValue = & $accessor();
 
         return $returnValue;
     }
 
-    /**
-     * @param string $name
-     * @param mixed $value
-     */
     public function __set($name, $value)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, '__set', array('name' => $name, 'value' => $value), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, '__set', array('name' => $name, 'value' => $value), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
         $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
 
         if (! $realInstanceReflection->hasProperty($name)) {
-            $targetObject = $this->valueHolder5f05e63d650fb213069105;
+            $targetObject = $this->valueHolderee6a8;
 
-            return $targetObject->$name = $value;;
+            return $targetObject->$name = $value;
             return;
         }
 
-        $targetObject = $this->valueHolder5f05e63d650fb213069105;
+        $targetObject = $this->valueHolderee6a8;
         $accessor = function & () use ($targetObject, $name, $value) {
             return $targetObject->$name = $value;
         };
-            $backtrace = debug_backtrace(true);
-            $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \stdClass();
-            $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
+        $backtrace = debug_backtrace(true);
+        $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \ProxyManager\Stub\EmptyClassStub();
+        $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
         $returnValue = & $accessor();
 
         return $returnValue;
     }
 
-    /**
-     * @param string $name
-     */
     public function __isset($name)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, '__isset', array('name' => $name), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, '__isset', array('name' => $name), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
         $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
 
         if (! $realInstanceReflection->hasProperty($name)) {
-            $targetObject = $this->valueHolder5f05e63d650fb213069105;
+            $targetObject = $this->valueHolderee6a8;
 
-            return isset($targetObject->$name);;
+            return isset($targetObject->$name);
             return;
         }
 
-        $targetObject = $this->valueHolder5f05e63d650fb213069105;
+        $targetObject = $this->valueHolderee6a8;
         $accessor = function () use ($targetObject, $name) {
             return isset($targetObject->$name);
         };
-            $backtrace = debug_backtrace(true);
-            $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \stdClass();
-            $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
+        $backtrace = debug_backtrace(true);
+        $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \ProxyManager\Stub\EmptyClassStub();
+        $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
         $returnValue = $accessor();
 
         return $returnValue;
     }
 
-    /**
-     * @param string $name
-     */
     public function __unset($name)
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, '__unset', array('name' => $name), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, '__unset', array('name' => $name), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
         $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
 
         if (! $realInstanceReflection->hasProperty($name)) {
-            $targetObject = $this->valueHolder5f05e63d650fb213069105;
+            $targetObject = $this->valueHolderee6a8;
 
-            unset($targetObject->$name);;
+            unset($targetObject->$name);
             return;
         }
 
-        $targetObject = $this->valueHolder5f05e63d650fb213069105;
+        $targetObject = $this->valueHolderee6a8;
         $accessor = function () use ($targetObject, $name) {
             unset($targetObject->$name);
         };
-            $backtrace = debug_backtrace(true);
-            $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \stdClass();
-            $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
+        $backtrace = debug_backtrace(true);
+        $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \ProxyManager\Stub\EmptyClassStub();
+        $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
         $returnValue = $accessor();
 
         return $returnValue;
@@ -4545,60 +4427,48 @@ class DoctrineORMEntityManager_000000001b53beb1000000005721bc998adf171aff20025ff
 
     public function __clone()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, '__clone', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, '__clone', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        $this->valueHolder5f05e63d650fb213069105 = clone $this->valueHolder5f05e63d650fb213069105;
+        $this->valueHolderee6a8 = clone $this->valueHolderee6a8;
     }
 
     public function __sleep()
     {
-        $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, '__sleep', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, '__sleep', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
 
-        return array('valueHolder5f05e63d650fb213069105');
+        return array('valueHolderee6a8');
     }
 
     public function __wakeup()
     {
+        \Closure::bind(function (\Doctrine\ORM\EntityManager $instance) {
+            unset($instance->config, $instance->conn, $instance->metadataFactory, $instance->unitOfWork, $instance->eventManager, $instance->proxyFactory, $instance->repositoryFactory, $instance->expressionBuilder, $instance->closed, $instance->filterCollection);
+        }, $this, 'Doctrine\\ORM\\EntityManager')->__invoke($this);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function setProxyInitializer(\Closure $initializer = null)
     {
-        $this->initializer5f05e63d65105269316944 = $initializer;
+        $this->initializerd0584 = $initializer;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getProxyInitializer()
     {
-        return $this->initializer5f05e63d65105269316944;
+        return $this->initializerd0584;
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public function initializeProxy()
+    public function initializeProxy() : bool
     {
-        return $this->initializer5f05e63d65105269316944 && ($this->initializer5f05e63d65105269316944->__invoke($valueHolder5f05e63d650fb213069105, $this, 'initializeProxy', array(), $this->initializer5f05e63d65105269316944) || 1) && $this->valueHolder5f05e63d650fb213069105 = $valueHolder5f05e63d650fb213069105;
+        return $this->initializerd0584 && ($this->initializerd0584->__invoke($valueHolderee6a8, $this, 'initializeProxy', array(), $this->initializerd0584) || 1) && $this->valueHolderee6a8 = $valueHolderee6a8;
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public function isProxyInitialized()
+    public function isProxyInitialized() : bool
     {
-        return null !== $this->valueHolder5f05e63d650fb213069105;
+        return null !== $this->valueHolderee6a8;
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public function getWrappedValueHolderValue()
+    public function getWrappedValueHolderValue() : ?object
     {
-        return $this->valueHolder5f05e63d650fb213069105;
+        return $this->valueHolderee6a8;
     }
 
 

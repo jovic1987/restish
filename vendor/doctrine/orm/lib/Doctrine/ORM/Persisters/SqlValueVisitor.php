@@ -61,7 +61,7 @@ class SqlValueVisitor extends ExpressionVisitor
         }
 
         $this->values[] = $value;
-        $this->types[]  = array($field, $value, $operator);
+        $this->types[]  = array($field, $value);
     }
 
     /**

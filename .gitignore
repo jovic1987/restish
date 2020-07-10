@@ -3,6 +3,12 @@
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /app/config/parameters.yml
-/vendor/
+/vendor/*
 .idea
 .DS_Store
+/web/bundles/
+/app/bootstrap.php.cache
+/build/
+/vendor/
+/bin/
+composer.lock
