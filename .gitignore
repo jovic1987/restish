@@ -1,5 +1,8 @@
+/app/cache/*
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
 /app/config/parameters.yml
-/app/cache
-/vendor
-/app/logs
-/composer.lock
+/vendor/
+.idea
+.DS_Store
