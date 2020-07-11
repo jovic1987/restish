@@ -1,11 +1,10 @@
 <?php
 
-namespace AccountBundle\Response;
+namespace AccountBundle\Formatter;
 
 use AccountBundle\Entity\AccountEntity;
-use Symfony\Component\HttpFoundation\JsonResponse;
 
-class AccountCollectionResponse
+class AccountsFormatter
 {
     /**
      * @var array
@@ -22,7 +21,7 @@ class AccountCollectionResponse
     private $accounts = [];
 
     /**
-     * AccountCollectionResponse constructor.
+     * AccountsFormatter constructor.
      *
      * @param array $accounts
      */
@@ -36,11 +35,11 @@ class AccountCollectionResponse
 	}
 
     /**
-     * Return json response for provided account records
+     * Return formatted array of accounts
      *
-     * @return JsonResponse
+     * @return array
      */
-    public function toJson()
+    public function format()
 	{
     	foreach ($this->accounts as $account) {
     		$this->data['items'][] = [
@@ -51,6 +50,6 @@ class AccountCollectionResponse
     		];
     	}
 
-    	return new JsonResponse($this->data);
+    	return $this->data;
 	}
 }

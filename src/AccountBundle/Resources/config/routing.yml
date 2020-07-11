@@ -1,3 +1,4 @@
 account_index:
     path:     v1/accounts
     defaults: { _controller: AccountBundle:Default:index }
+    methods: ['GET']

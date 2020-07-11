@@ -8,7 +8,7 @@ use Doctrine\DBAL\Schema\Schema;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-class Version20200709150631 extends AbstractMigration
+class Version20200711153333 extends AbstractMigration
 {
     /**
      * @param Schema $schema
@@ -16,9 +16,15 @@ class Version20200709150631 extends AbstractMigration
     public function up(Schema $schema)
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->skipIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
+        $this->skipIf($this->connection->getDatabasePlatform()->getName() === 'mysql', 'Migration can not be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE account CHANGE balance balance DOUBLE PRECISION NOT NULL');
+        $sql = 'CREATE TABLE payments (id serial PRIMARY KEY NOT NULL, account VARCHAR(255) NOT NULL,'
+            . ' direction VARCHAR (255) NOT NULL,'
+            . ' amount FLOAT NOT NULL,'
+            . ' to_account VARCHAR (255) NOT NULL)';
+
+        $this->addSql($sql);
+
     }
 
     /**
@@ -26,9 +32,8 @@ class Version20200709150631 extends AbstractMigration
      */
     public function down(Schema $schema)
     {
+        $this->addSql('DROP TABLE payments');
         // this down() migration is auto-generated, please modify it to your needs
-        $this->skipIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE account CHANGE balance balance NUMERIC(10, 0) NOT NULL');
     }
 }

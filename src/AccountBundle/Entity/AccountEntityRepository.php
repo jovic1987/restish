@@ -21,4 +21,12 @@ class AccountEntityRepository extends EntityRepository
 
         return !empty($query->getResult()) ? $query->getResult() : [];
     }
+
+    /**
+     * @param AccountEntity $accountEntity
+     */
+    public function update(AccountEntity $accountEntity)
+    {
+        $this->getEntityManager()->flush();
+    }
 }

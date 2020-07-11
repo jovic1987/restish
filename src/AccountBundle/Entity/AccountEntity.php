@@ -65,6 +65,11 @@ class AccountEntity
         return $this->balance;
     }
 
+    public function updateBalance(float $balance)
+    {
+        $this->balance = $balance;
+    }
+
     /**
      * Get currency
      *

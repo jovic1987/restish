@@ -1,11 +1,11 @@
 <?php
 
-namespace PaymentBundle\Entity;
+namespace PaymentBundle\Dto;
 
 /**
- * PaymentEntity
+ * Payment
  */
-class PaymentEntity
+class Payment
 {
     /**
      * @var string
@@ -20,39 +20,19 @@ class PaymentEntity
     /**
      * @var string
      */
-    private $toAccount;
+    private $to_account;
 
     /**
-     * @var string
-     */
-    private $direction;
-
-    /**
-     * @var integer
-     */
-    private $id;
-
-    /**
-     * PaymentEntity constructor.
+     * Payment constructor.
      * @param string $account
      * @param float $amount
      * @param string $toAccount
-     * @param string $direction
      */
-    public function __construct(string $account, float $amount, string $toAccount, string $direction)
+    public function __construct($account, $amount, $toAccount)
     {
         $this->account = $account;
         $this->amount = $amount;
-        $this->toAccount = $toAccount;
-        $this->direction = $direction;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getId(): int
-    {
-        return $this->id;
+        $this->to_account = $toAccount;
     }
 
     /**
@@ -82,16 +62,6 @@ class PaymentEntity
      */
     public function getToAccount(): string
     {
-        return $this->toAccount;
-    }
-
-    /**
-     * Get direction
-     *
-     * @return string 
-     */
-    public function getDirection(): string
-    {
-        return $this->direction;
+        return $this->to_account;
     }
 }

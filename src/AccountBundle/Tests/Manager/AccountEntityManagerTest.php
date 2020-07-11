@@ -4,13 +4,13 @@ namespace AccountBundle\Tests\Manager;
 
 use AccountBundle\Entity\AccountEntity;
 use AccountBundle\Entity\AccountEntityRepository;
-use AccountBundle\Manager\AccountEntityManager;
+use AccountBundle\Manager\PaymentEntityManager;
 use PHPUnit\Framework\TestCase;
 
 class AccountEntityManagerTest extends TestCase
 {
     /**
-     * @var AccountEntityManager
+     * @var PaymentEntityManager
      */
     private $manager;
 
@@ -23,12 +23,13 @@ class AccountEntityManagerTest extends TestCase
     {
         $this->repository = $this->createMock(AccountEntityRepository::class);
 
-        $this->manager = new AccountEntityManager($this->repository);
+        $this->manager = new PaymentEntityManager($this->repository);
     }
 
     public function tearDown(): void
     {
         $this->manager = null;
+        $this->repository = null;
     }
 
     public function testGetAllAccounts()

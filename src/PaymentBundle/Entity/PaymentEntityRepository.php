@@ -12,4 +12,28 @@ use Doctrine\ORM\EntityRepository;
  */
 class PaymentEntityRepository extends EntityRepository
 {
+    /**
+     * Find and return all persisted payments records ordered by account ASC
+     *
+     * @return array
+     */
+    public function findAllOrderByIdDesc(): array
+    {
+        $dql = sprintf(
+            'SELECT p FROM %s p ORDER BY p.id DESC',
+            $this->getClassName()
+        );
+        $query = $this->getEntityManager()->createQuery($dql);
+
+        return !empty($query->getResult()) ? $query->getResult() : [];
+    }
+
+    /**
+     * @param PaymentEntity $paymentEntity
+     */
+    public function create(PaymentEntity $paymentEntity)
+    {
+        $this->getEntityManager()->persist($paymentEntity);
+        $this->getEntityManager()->flush();
+    }
 }

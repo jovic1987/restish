@@ -1,4 +1,8 @@
 services:
-#    payment.example:
-#        class: PaymentBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+  payment.payment_manager:
+    class: 'PaymentBundle\Manager\PaymentEntityManager'
+    arguments: ['@payment.payment_repository', '@account.account_repository']
+  payment.payment_repository:
+    class: 'PaymentBundle\Entity\PaymentEntityRepository'
+    factory: ['@doctrine.orm.entity_manager', 'getRepository']
+    arguments: ['PaymentBundle:PaymentEntity']

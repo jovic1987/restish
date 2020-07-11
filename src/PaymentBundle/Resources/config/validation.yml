@@ -1,0 +1,14 @@
+PaymentBundle\Dto\Payment:
+    properties:
+        account:
+            - NotBlank: ~
+            - AccountBundle\Validator\Constraints\Account: ~
+        amount:
+            - NotBlank: ~
+            - AccountBundle\Validator\Constraints\Amount: ~
+            - GreaterThan:
+                  value: 0
+                  message: "Amount should be greater than '0'"
+        to_account:
+            - NotBlank: ~
+            - AccountBundle\Validator\Constraints\Account: ~

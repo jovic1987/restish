@@ -16,6 +16,7 @@ class Version20200711152918 extends AbstractMigration
     public function up(Schema $schema)
     {
         // this up() migration is auto-generated, please modify it to your needs
+        $this->skipIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can not be executed safely on \'mysql\'.');
 
         $this->addSql('CREATE TABLE payments (account VARCHAR(255) NOT NULL, amount DOUBLE PRECISION NOT NULL, to_account VARCHAR(255) NOT NULL, direction VARCHAR(255) NOT NULL, PRIMARY KEY(account)) DEFAULT CHARACTER SET UTF8 COLLATE `UTF8_unicode_ci` ENGINE = InnoDB');
     }

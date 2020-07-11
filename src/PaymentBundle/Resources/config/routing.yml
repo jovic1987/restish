@@ -1,3 +1,9 @@
-payment_homepage:
-    path:     /hello/{name}
+payment_index:
+    path:     v1/payments
     defaults: { _controller: PaymentBundle:Default:index }
+    methods: ['GET']
+
+payment_create:
+    path:     v1/payments
+    defaults: { _controller: PaymentBundle:Default:create }
+    methods: ['POST']

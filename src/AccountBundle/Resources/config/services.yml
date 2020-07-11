@@ -6,3 +6,12 @@ services:
         class: 'AccountBundle\Entity\AccountEntityRepository'
         factory: ['@doctrine.orm.entity_manager', 'getRepository']
         arguments: ['AccountBundle:AccountEntity']
+    validator.account:
+        class: 'AccountBundle\Validator\Constraints\AccountValidator'
+        tags:
+            - { name: validator.constraint_validator, alias: account }
+        arguments: ['@account.account_repository']
+    validator.amount:
+        class: 'AccountBundle\Validator\Constraints\AmountValidator'
+        tags:
+            - { name: validator.constraint_validator, alias: amount }
