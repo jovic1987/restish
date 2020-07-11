@@ -27,13 +27,20 @@ class AccountEntity
      */    
     private $currency;
 
+    public function __construct(string $id, string $owner, string $balance, string $currency)
+    {
+        $this->id = $id;
+        $this->owner = $owner;
+        $this->balance = $balance;
+        $this->currency = $currency;
+    }
 
     /**
      * Get id
      *
-     * @return integer
+     * @return string
      */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
@@ -43,7 +50,7 @@ class AccountEntity
      *
      * @return string
      */
-    public function getOwner()
+    public function getOwner(): string
     {
         return $this->owner;
     }
@@ -53,7 +60,7 @@ class AccountEntity
      *
      * @return float
      */
-    public function getBalance()
+    public function getBalance(): float
     {
         return $this->balance;
     }
@@ -63,7 +70,7 @@ class AccountEntity
      *
      * @return string
      */
-    public function getCurrency()
+    public function getCurrency(): string
     {
         return $this->currency;
     }

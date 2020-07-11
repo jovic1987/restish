@@ -11,7 +11,7 @@ class AccountEntityRepository extends EntityRepository
      *
      * @return array
      */
-    public function findAllOrderByBalanceDesc()
+    public function findAllOrderByBalanceDesc(): array
     {
         $dql = sprintf(
             'SELECT a FROM %s a ORDER BY a.balance DESC',
@@ -19,6 +19,6 @@ class AccountEntityRepository extends EntityRepository
         );
         $query = $this->getEntityManager()->createQuery($dql);
 
-        return $query->getResult();
+        return !empty($query->getResult()) ? $query->getResult() : [];
     }
 }

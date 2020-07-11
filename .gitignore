@@ -1,10 +1,10 @@
-/app/cache/*
-/app/logs/*
+/app/cache/
+/app/logs/
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /app/config/parameters.yml
-/vendor/*
-.idea
+/vendor/
+.idea/
 .DS_Store
 /web/bundles/
 /app/bootstrap.php.cache
