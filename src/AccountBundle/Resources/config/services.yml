@@ -1,4 +1,8 @@
 services:
-#    account.example:
-#        class: AccountBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    account.account_manager:
+        class: 'AccountBundle\Manager\AccountEntityManager'
+        arguments: ['@account.account_repository']
+    account.account_repository:
+        class: 'AccountBundle\Entity\AccountEntityRepository'
+        factory: ['@doctrine.orm.entity_manager', 'getRepository']
+        arguments: ['AccountBundle:AccountEntity']

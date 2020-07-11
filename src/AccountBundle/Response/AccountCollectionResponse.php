@@ -2,24 +2,45 @@
 
 namespace AccountBundle\Response;
 
+use AccountBundle\Entity\AccountEntity;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class AccountCollectionResponse
 {
-	private $data = [
+    /**
+     * @var array
+     */
+    private $data = [
 		'code'   => 200, 
 		'status' => 'OK', 
 		'items'  => []
 	];
-	
-	private $accounts;
-	
-	public function __construct(array $accounts)
+
+    /**
+     * @var array
+     */
+    private $accounts = [];
+
+    /**
+     * AccountCollectionResponse constructor.
+     *
+     * @param array $accounts
+     */
+    public function __construct(array $accounts)
 	{
-		$this->accounts = $accounts;
+	    foreach ($accounts as $account) {
+	        if ($account instanceof AccountEntity) {
+                $this->accounts[] = $account;
+            }
+        }
 	}
 
-	public function toJson() 
+    /**
+     * Return json response for provided account records
+     *
+     * @return JsonResponse
+     */
+    public function toJson()
 	{
     	foreach ($this->accounts as $account) {
     		$this->data['items'][] = [
