@@ -3,6 +3,7 @@
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use AccountBundle\AccountBundle;
+use PaymentBundle\PaymentBundle;
 use Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle;
 
 class AppKernel extends Kernel
@@ -21,6 +22,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new AccountBundle(),
+            new \PaymentBundle\PaymentBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

@@ -1,0 +1,18 @@
+PaymentBundle\Entity\PaymentEntity:
+    type: entity
+    table: payments
+    repositoryClass: PaymentBundle\Entity\PaymentEntityRepository
+    id:
+        account:
+            type: string
+            id: true
+    fields:
+        amount:
+            type: float
+        toAccount:
+            type: string
+            length: 255
+            column: to_account
+        direction:
+            type: string
+            length: 255

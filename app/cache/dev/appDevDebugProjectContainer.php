@@ -770,7 +770,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getDoctrine_MappingImportCommandService()
     {
-        return $this->services['doctrine.mapping_import_command'] = new \Doctrine\Bundle\DoctrineBundle\Command\ImportMappingDoctrineCommand($this->get('doctrine'), array('FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle', 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle', 'TwigBundle' => 'Symfony\\Bundle\\TwigBundle\\TwigBundle', 'MonologBundle' => 'Symfony\\Bundle\\MonologBundle\\MonologBundle', 'SwiftmailerBundle' => 'Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle', 'AsseticBundle' => 'Symfony\\Bundle\\AsseticBundle\\AsseticBundle', 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle', 'DoctrineMigrationsBundle' => 'Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle', 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle', 'AppBundle' => 'AppBundle\\AppBundle', 'AccountBundle' => 'AccountBundle\\AccountBundle', 'DebugBundle' => 'Symfony\\Bundle\\DebugBundle\\DebugBundle', 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle', 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle', 'SensioGeneratorBundle' => 'Sensio\\Bundle\\GeneratorBundle\\SensioGeneratorBundle'));
+        return $this->services['doctrine.mapping_import_command'] = new \Doctrine\Bundle\DoctrineBundle\Command\ImportMappingDoctrineCommand($this->get('doctrine'), array('FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle', 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle', 'TwigBundle' => 'Symfony\\Bundle\\TwigBundle\\TwigBundle', 'MonologBundle' => 'Symfony\\Bundle\\MonologBundle\\MonologBundle', 'SwiftmailerBundle' => 'Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle', 'AsseticBundle' => 'Symfony\\Bundle\\AsseticBundle\\AsseticBundle', 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle', 'DoctrineMigrationsBundle' => 'Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle', 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle', 'AppBundle' => 'AppBundle\\AppBundle', 'AccountBundle' => 'AccountBundle\\AccountBundle', 'PaymentBundle' => 'PaymentBundle\\PaymentBundle', 'DebugBundle' => 'Symfony\\Bundle\\DebugBundle\\DebugBundle', 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle', 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle', 'SensioGeneratorBundle' => 'Sensio\\Bundle\\GeneratorBundle\\SensioGeneratorBundle'));
     }
 
     /**
@@ -803,7 +803,7 @@ class appDevDebugProjectContainer extends Container
         if ($lazyLoad) {
             $container = $this;
 
-            return $this->services['doctrine.orm.default_entity_manager'] = DoctrineORMEntityManager_000000004d565c6800000000660603ac8dcdc572960b2d02d38cd9c05f173664::staticProxyConstructor(
+            return $this->services['doctrine.orm.default_entity_manager'] = DoctrineORMEntityManager_00000000517b2fdc00000000758216c78dcdc572960b2d02d38cd9c05f173664::staticProxyConstructor(
                 function (&$wrappedInstance, \ProxyManager\Proxy\LazyLoadingInterface $proxy) use ($container) {
                     $wrappedInstance = $container->getDoctrine_Orm_DefaultEntityManagerService(false);
 
@@ -814,14 +814,15 @@ class appDevDebugProjectContainer extends Container
             );
         }
 
-        $a = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array(($this->targetDirs[3].'/src/AccountBundle/Resources/config/doctrine') => 'AccountBundle\\Entity'));
+        $a = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array(($this->targetDirs[3].'/src/AccountBundle/Resources/config/doctrine') => 'AccountBundle\\Entity', ($this->targetDirs[3].'/src/PaymentBundle/Resources/config/doctrine') => 'PaymentBundle\\Entity'));
         $a->setGlobalBasename('mapping');
 
         $b = new \Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain();
         $b->addDriver($a, 'AccountBundle\\Entity');
+        $b->addDriver($a, 'PaymentBundle\\Entity');
 
         $c = new \Doctrine\ORM\Configuration();
-        $c->setEntityNamespaces(array('AccountBundle' => 'AccountBundle\\Entity'));
+        $c->setEntityNamespaces(array('AccountBundle' => 'AccountBundle\\Entity', 'PaymentBundle' => 'PaymentBundle\\Entity'));
         $c->setMetadataCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_metadata_cache'));
         $c->setQueryCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_query_cache'));
         $c->setResultCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_result_cache'));
@@ -2073,7 +2074,7 @@ class appDevDebugProjectContainer extends Container
 
         $e = new \Symfony\Component\Security\Http\AccessMap();
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($e, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider(array())), 'main', $a, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5f096fdfb74979.22626127', $a, $c), 3 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $e, $c)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), new \Symfony\Component\Security\Http\HttpUtils($d, $d, '{^https?://%s$}i'), 'main', NULL, NULL, NULL, $a, false), NULL);
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($e, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider(array())), 'main', $a, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5f09dacc2fd6d7.67000759', $a, $c), 3 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $e, $c)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), new \Symfony\Component\Security\Http\HttpUtils($d, $d, '{^https?://%s$}i'), 'main', NULL, NULL, NULL, $a, false), NULL);
     }
 
     /**
@@ -2905,6 +2906,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/swiftmailer-bundle/Resources/views'), 'Swiftmailer');
         $instance->addPath(($this->targetDirs[3].'/vendor/doctrine/doctrine-bundle/Resources/views'), 'Doctrine');
         $instance->addPath(($this->targetDirs[3].'/src/AccountBundle/Resources/views'), 'Account');
+        $instance->addPath(($this->targetDirs[3].'/src/PaymentBundle/Resources/views'), 'Payment');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views'), 'Debug');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views'), 'WebProfiler');
         $instance->addPath(($this->targetDirs[3].'/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views'), 'SensioDistribution');
@@ -3153,7 +3155,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5f096fdfb74979.22626127')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5f09dacc2fd6d7.67000759')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
@@ -3300,6 +3302,7 @@ class appDevDebugProjectContainer extends Container
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
                 'AppBundle' => 'AppBundle\\AppBundle',
                 'AccountBundle' => 'AccountBundle\\AccountBundle',
+                'PaymentBundle' => 'PaymentBundle\\PaymentBundle',
                 'DebugBundle' => 'Symfony\\Bundle\\DebugBundle\\DebugBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -3360,6 +3363,11 @@ class appDevDebugProjectContainer extends Container
                     'parent' => NULL,
                     'path' => ($this->targetDirs[3].'/src/AccountBundle'),
                     'namespace' => 'AccountBundle',
+                ),
+                'PaymentBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/src/PaymentBundle'),
+                    'namespace' => 'PaymentBundle',
                 ),
                 'DebugBundle' => array(
                     'parent' => NULL,
@@ -4002,7 +4010,7 @@ class appDevDebugProjectContainer extends Container
     }
 }
 
-class DoctrineORMEntityManager_000000004d565c6800000000660603ac8dcdc572960b2d02d38cd9c05f173664 extends \Doctrine\ORM\EntityManager implements \ProxyManager\Proxy\VirtualProxyInterface
+class DoctrineORMEntityManager_00000000517b2fdc00000000758216c78dcdc572960b2d02d38cd9c05f173664 extends \Doctrine\ORM\EntityManager implements \ProxyManager\Proxy\VirtualProxyInterface
 {
 
     /**

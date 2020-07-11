@@ -19,6 +19,7 @@
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="AccountBundle">AccountBundle\AccountBundle</parameter>
+      <parameter key="PaymentBundle">PaymentBundle\PaymentBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -79,6 +80,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">/Users/vladanjovic/restish/src/AccountBundle</parameter>
         <parameter key="namespace">AccountBundle</parameter>
+      </parameter>
+      <parameter key="PaymentBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/Users/vladanjovic/restish/src/PaymentBundle</parameter>
+        <parameter key="namespace">PaymentBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -1805,7 +1811,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5f096fdfb74979.22626127</argument>
+            <argument>5f09dacc2fd6d7.67000759</argument>
           </service>
         </argument>
       </argument>
@@ -1931,7 +1937,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5f096fdfb74979.22626127</argument>
+            <argument>5f09dacc2fd6d7.67000759</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2488,6 +2494,7 @@
         <argument key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</argument>
         <argument key="AppBundle">AppBundle\AppBundle</argument>
         <argument key="AccountBundle">AccountBundle\AccountBundle</argument>
+        <argument key="PaymentBundle">PaymentBundle\PaymentBundle</argument>
         <argument key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</argument>
         <argument key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</argument>
         <argument key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</argument>
@@ -2523,6 +2530,7 @@
           <call method="setEntityNamespaces">
             <argument type="collection">
               <argument key="AccountBundle">AccountBundle\Entity</argument>
+              <argument key="PaymentBundle">PaymentBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -2542,6 +2550,7 @@
                     <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
                       <argument type="collection">
                         <argument key="/Users/vladanjovic/restish/src/AccountBundle/Resources/config/doctrine">AccountBundle\Entity</argument>
+                        <argument key="/Users/vladanjovic/restish/src/PaymentBundle/Resources/config/doctrine">PaymentBundle\Entity</argument>
                       </argument>
                       <call method="setGlobalBasename">
                         <argument>mapping</argument>
@@ -2549,6 +2558,20 @@
                     </service>
                   </argument>
                   <argument>AccountBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
+                      <argument type="collection">
+                        <argument key="/Users/vladanjovic/restish/src/AccountBundle/Resources/config/doctrine">AccountBundle\Entity</argument>
+                        <argument key="/Users/vladanjovic/restish/src/PaymentBundle/Resources/config/doctrine">PaymentBundle\Entity</argument>
+                      </argument>
+                      <call method="setGlobalBasename">
+                        <argument>mapping</argument>
+                      </call>
+                    </service>
+                  </argument>
+                  <argument>PaymentBundle\Entity</argument>
                 </call>
               </service>
             </argument>
@@ -3074,6 +3097,10 @@
       <call method="addPath">
         <argument>/Users/vladanjovic/restish/src/AccountBundle/Resources/views</argument>
         <argument>Account</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Users/vladanjovic/restish/src/PaymentBundle/Resources/views</argument>
+        <argument>Payment</argument>
       </call>
       <call method="addPath">
         <argument>/Users/vladanjovic/restish/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
