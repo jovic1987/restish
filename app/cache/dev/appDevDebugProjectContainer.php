@@ -145,11 +145,96 @@ class appDevDebugProjectContainer extends Container
             'form.type_extension.upload.validator' => 'getForm_TypeExtension_Upload_ValidatorService',
             'form.type_guesser.doctrine' => 'getForm_TypeGuesser_DoctrineService',
             'form.type_guesser.validator' => 'getForm_TypeGuesser_ValidatorService',
+            'fos_oauth_server.access_token_manager.default' => 'getFosOauthServer_AccessTokenManager_DefaultService',
+            'fos_oauth_server.auth_code_manager.default' => 'getFosOauthServer_AuthCodeManager_DefaultService',
+            'fos_oauth_server.authorize.form' => 'getFosOauthServer_Authorize_FormService',
+            'fos_oauth_server.authorize.form.handler.default' => 'getFosOauthServer_Authorize_Form_Handler_DefaultService',
+            'fos_oauth_server.authorize.form.type' => 'getFosOauthServer_Authorize_Form_TypeService',
+            'fos_oauth_server.client_manager.default' => 'getFosOauthServer_ClientManager_DefaultService',
+            'fos_oauth_server.controller.token' => 'getFosOauthServer_Controller_TokenService',
+            'fos_oauth_server.entity_manager' => 'getFosOauthServer_EntityManagerService',
+            'fos_oauth_server.refresh_token_manager.default' => 'getFosOauthServer_RefreshTokenManager_DefaultService',
+            'fos_oauth_server.server' => 'getFosOauthServer_ServerService',
+            'fos_oauth_server.storage' => 'getFosOauthServer_StorageService',
+            'fos_rest.body_listener' => 'getFosRest_BodyListenerService',
+            'fos_rest.decoder.json' => 'getFosRest_Decoder_JsonService',
+            'fos_rest.decoder.jsontoform' => 'getFosRest_Decoder_JsontoformService',
+            'fos_rest.decoder.xml' => 'getFosRest_Decoder_XmlService',
+            'fos_rest.decoder_provider' => 'getFosRest_DecoderProviderService',
+            'fos_rest.exception_format_negotiator' => 'getFosRest_ExceptionFormatNegotiatorService',
+            'fos_rest.format_listener' => 'getFosRest_FormatListenerService',
+            'fos_rest.format_negotiator' => 'getFosRest_FormatNegotiatorService',
+            'fos_rest.inflector.doctrine' => 'getFosRest_Inflector_DoctrineService',
+            'fos_rest.normalizer.camel_keys' => 'getFosRest_Normalizer_CamelKeysService',
+            'fos_rest.normalizer.camel_keys_with_leading_underscore' => 'getFosRest_Normalizer_CamelKeysWithLeadingUnderscoreService',
+            'fos_rest.param_fetcher_listener' => 'getFosRest_ParamFetcherListenerService',
+            'fos_rest.request.param_fetcher' => 'getFosRest_Request_ParamFetcherService',
+            'fos_rest.request.param_fetcher.reader' => 'getFosRest_Request_ParamFetcher_ReaderService',
+            'fos_rest.request_matcher.0dfc4cce134bee15f08405cb5cea4845b13ff7d8c8f779004218432a2c552bd0cd9f9d27' => 'getFosRest_RequestMatcher_0dfc4cce134bee15f08405cb5cea4845b13ff7d8c8f779004218432a2c552bd0cd9f9d27Service',
+            'fos_rest.request_matcher.50d7031fd332f324b33953b2158cded5b34cf57c3cd709fdaa24d6818252fd77ab4624ee' => 'getFosRest_RequestMatcher_50d7031fd332f324b33953b2158cded5b34cf57c3cd709fdaa24d6818252fd77ab4624eeService',
+            'fos_rest.request_matcher.8615024800e4193600fd69885f7587200427156c3f94286d4b2ddc9c87897c17c762ebe2' => 'getFosRest_RequestMatcher_8615024800e4193600fd69885f7587200427156c3f94286d4b2ddc9c87897c17c762ebe2Service',
+            'fos_rest.routing.loader.controller' => 'getFosRest_Routing_Loader_ControllerService',
+            'fos_rest.routing.loader.processor' => 'getFosRest_Routing_Loader_ProcessorService',
+            'fos_rest.routing.loader.reader.action' => 'getFosRest_Routing_Loader_Reader_ActionService',
+            'fos_rest.routing.loader.reader.controller' => 'getFosRest_Routing_Loader_Reader_ControllerService',
+            'fos_rest.routing.loader.xml_collection' => 'getFosRest_Routing_Loader_XmlCollectionService',
+            'fos_rest.routing.loader.yaml_collection' => 'getFosRest_Routing_Loader_YamlCollectionService',
+            'fos_rest.serializer' => 'getFosRest_SerializerService',
+            'fos_rest.serializer.exception_wrapper_normalizer' => 'getFosRest_Serializer_ExceptionWrapperNormalizerService',
+            'fos_rest.serializer.exception_wrapper_serialize_handler' => 'getFosRest_Serializer_ExceptionWrapperSerializeHandlerService',
+            'fos_rest.view.exception_wrapper_handler' => 'getFosRest_View_ExceptionWrapperHandlerService',
+            'fos_rest.view_handler' => 'getFosRest_ViewHandlerService',
+            'fos_rest.view_response_listener' => 'getFosRest_ViewResponseListenerService',
+            'fos_rest.violation_formatter' => 'getFosRest_ViolationFormatterService',
+            'fos_user.change_password.form' => 'getFosUser_ChangePassword_FormService',
+            'fos_user.change_password.form.handler.default' => 'getFosUser_ChangePassword_Form_Handler_DefaultService',
+            'fos_user.change_password.form.type' => 'getFosUser_ChangePassword_Form_TypeService',
+            'fos_user.mailer' => 'getFosUser_MailerService',
+            'fos_user.profile.form' => 'getFosUser_Profile_FormService',
+            'fos_user.profile.form.handler' => 'getFosUser_Profile_Form_HandlerService',
+            'fos_user.profile.form.type' => 'getFosUser_Profile_Form_TypeService',
+            'fos_user.registration.form' => 'getFosUser_Registration_FormService',
+            'fos_user.registration.form.handler' => 'getFosUser_Registration_Form_HandlerService',
+            'fos_user.registration.form.type' => 'getFosUser_Registration_Form_TypeService',
+            'fos_user.resetting.form' => 'getFosUser_Resetting_FormService',
+            'fos_user.resetting.form.handler' => 'getFosUser_Resetting_Form_HandlerService',
+            'fos_user.resetting.form.type' => 'getFosUser_Resetting_Form_TypeService',
+            'fos_user.security.interactive_login_listener' => 'getFosUser_Security_InteractiveLoginListenerService',
+            'fos_user.security.login_manager' => 'getFosUser_Security_LoginManagerService',
+            'fos_user.user_manager' => 'getFosUser_UserManagerService',
+            'fos_user.user_provider.username' => 'getFosUser_UserProvider_UsernameService',
+            'fos_user.username_form_type' => 'getFosUser_UsernameFormTypeService',
+            'fos_user.util.email_canonicalizer' => 'getFosUser_Util_EmailCanonicalizerService',
+            'fos_user.util.token_generator' => 'getFosUser_Util_TokenGeneratorService',
+            'fos_user.util.user_manipulator' => 'getFosUser_Util_UserManipulatorService',
             'fragment.handler' => 'getFragment_HandlerService',
             'fragment.listener' => 'getFragment_ListenerService',
             'fragment.renderer.hinclude' => 'getFragment_Renderer_HincludeService',
             'fragment.renderer.inline' => 'getFragment_Renderer_InlineService',
             'http_kernel' => 'getHttpKernelService',
+            'jms_serializer' => 'getJmsSerializerService',
+            'jms_serializer.accessor_strategy' => 'getJmsSerializer_AccessorStrategyService',
+            'jms_serializer.array_collection_handler' => 'getJmsSerializer_ArrayCollectionHandlerService',
+            'jms_serializer.constraint_violation_handler' => 'getJmsSerializer_ConstraintViolationHandlerService',
+            'jms_serializer.datetime_handler' => 'getJmsSerializer_DatetimeHandlerService',
+            'jms_serializer.deserialization_context_factory' => 'getJmsSerializer_DeserializationContextFactoryService',
+            'jms_serializer.doctrine_proxy_subscriber' => 'getJmsSerializer_DoctrineProxySubscriberService',
+            'jms_serializer.expression_evaluator' => 'getJmsSerializer_ExpressionEvaluatorService',
+            'jms_serializer.form_error_handler' => 'getJmsSerializer_FormErrorHandlerService',
+            'jms_serializer.handler_registry' => 'getJmsSerializer_HandlerRegistryService',
+            'jms_serializer.json_deserialization_visitor' => 'getJmsSerializer_JsonDeserializationVisitorService',
+            'jms_serializer.json_serialization_visitor' => 'getJmsSerializer_JsonSerializationVisitorService',
+            'jms_serializer.metadata_driver' => 'getJmsSerializer_MetadataDriverService',
+            'jms_serializer.naming_strategy' => 'getJmsSerializer_NamingStrategyService',
+            'jms_serializer.object_constructor' => 'getJmsSerializer_ObjectConstructorService',
+            'jms_serializer.php_collection_handler' => 'getJmsSerializer_PhpCollectionHandlerService',
+            'jms_serializer.serialization_context_factory' => 'getJmsSerializer_SerializationContextFactoryService',
+            'jms_serializer.stopwatch_subscriber' => 'getJmsSerializer_StopwatchSubscriberService',
+            'jms_serializer.templating.helper.serializer' => 'getJmsSerializer_Templating_Helper_SerializerService',
+            'jms_serializer.unserialize_object_constructor' => 'getJmsSerializer_UnserializeObjectConstructorService',
+            'jms_serializer.xml_deserialization_visitor' => 'getJmsSerializer_XmlDeserializationVisitorService',
+            'jms_serializer.xml_serialization_visitor' => 'getJmsSerializer_XmlSerializationVisitorService',
+            'jms_serializer.yaml_serialization_visitor' => 'getJmsSerializer_YamlSerializationVisitorService',
             'kernel' => 'getKernelService',
             'locale_listener' => 'getLocaleListenerService',
             'logger' => 'getLoggerService',
@@ -181,22 +266,32 @@ class appDevDebugProjectContainer extends Container
             'router_listener' => 'getRouterListenerService',
             'routing.loader' => 'getRouting_LoaderService',
             'security.access.decision_manager' => 'getSecurity_Access_DecisionManagerService',
+            'security.access_listener' => 'getSecurity_AccessListenerService',
+            'security.access_map' => 'getSecurity_AccessMapService',
             'security.authentication.manager' => 'getSecurity_Authentication_ManagerService',
+            'security.authentication.session_strategy' => 'getSecurity_Authentication_SessionStrategyService',
             'security.authentication.trust_resolver' => 'getSecurity_Authentication_TrustResolverService',
             'security.authentication_utils' => 'getSecurity_AuthenticationUtilsService',
             'security.authorization_checker' => 'getSecurity_AuthorizationCheckerService',
+            'security.channel_listener' => 'getSecurity_ChannelListenerService',
             'security.context' => 'getSecurity_ContextService',
             'security.csrf.token_manager' => 'getSecurity_Csrf_TokenManagerService',
+            'security.csrf.token_storage' => 'getSecurity_Csrf_TokenStorageService',
             'security.encoder_factory' => 'getSecurity_EncoderFactoryService',
             'security.firewall' => 'getSecurity_FirewallService',
+            'security.firewall.map.context.api' => 'getSecurity_Firewall_Map_Context_ApiService',
             'security.firewall.map.context.dev' => 'getSecurity_Firewall_Map_Context_DevService',
             'security.firewall.map.context.main' => 'getSecurity_Firewall_Map_Context_MainService',
+            'security.firewall.map.context.oauth_authorize' => 'getSecurity_Firewall_Map_Context_OauthAuthorizeService',
+            'security.firewall.map.context.oauth_token' => 'getSecurity_Firewall_Map_Context_OauthTokenService',
+            'security.http_utils' => 'getSecurity_HttpUtilsService',
             'security.logout_url_generator' => 'getSecurity_LogoutUrlGeneratorService',
             'security.password_encoder' => 'getSecurity_PasswordEncoderService',
             'security.rememberme.response_listener' => 'getSecurity_Rememberme_ResponseListenerService',
             'security.role_hierarchy' => 'getSecurity_RoleHierarchyService',
             'security.secure_random' => 'getSecurity_SecureRandomService',
             'security.token_storage' => 'getSecurity_TokenStorageService',
+            'security.user_checker' => 'getSecurity_UserCheckerService',
             'security.validator.user_password' => 'getSecurity_Validator_UserPasswordService',
             'sensio_distribution.security_checker' => 'getSensioDistribution_SecurityCheckerService',
             'sensio_distribution.security_checker.command' => 'getSensioDistribution_SecurityChecker_CommandService',
@@ -209,7 +304,6 @@ class appDevDebugProjectContainer extends Container
             'sensio_framework_extra.converter.manager' => 'getSensioFrameworkExtra_Converter_ManagerService',
             'sensio_framework_extra.security.listener' => 'getSensioFrameworkExtra_Security_ListenerService',
             'sensio_framework_extra.view.guesser' => 'getSensioFrameworkExtra_View_GuesserService',
-            'sensio_framework_extra.view.listener' => 'getSensioFrameworkExtra_View_ListenerService',
             'service_container' => 'getServiceContainerService',
             'session' => 'getSessionService',
             'session.save_listener' => 'getSession_SaveListenerService',
@@ -325,8 +419,22 @@ class appDevDebugProjectContainer extends Container
             'doctrine.orm.default_result_cache' => 'doctrine_cache.providers.doctrine.orm.default_result_cache',
             'doctrine.orm.entity_manager' => 'doctrine.orm.default_entity_manager',
             'event_dispatcher' => 'debug.event_dispatcher',
+            'fos_oauth_server.access_token_manager' => 'fos_oauth_server.access_token_manager.default',
+            'fos_oauth_server.auth_code_manager' => 'fos_oauth_server.auth_code_manager.default',
+            'fos_oauth_server.authorize.form.handler' => 'fos_oauth_server.authorize.form.handler.default',
+            'fos_oauth_server.client_manager' => 'fos_oauth_server.client_manager.default',
+            'fos_oauth_server.refresh_token_manager' => 'fos_oauth_server.refresh_token_manager.default',
+            'fos_rest.exception_handler' => 'fos_rest.view.exception_wrapper_handler',
+            'fos_rest.inflector' => 'fos_rest.inflector.doctrine',
+            'fos_rest.router' => 'router',
+            'fos_rest.templating' => 'templating',
+            'fos_user.change_password.form.handler' => 'fos_user.change_password.form.handler.default',
+            'fos_user.util.username_canonicalizer' => 'fos_user.util.email_canonicalizer',
+            'jms\\serializer\\arraytransformerinterface' => 'jms_serializer',
+            'jms\\serializer\\serializerinterface' => 'jms_serializer',
             'mailer' => 'swiftmailer.mailer.default',
             'sensio.distribution.webconfigurator' => 'sensio_distribution.webconfigurator',
+            'serializer' => 'jms_serializer',
             'session.storage' => 'session.storage.native',
             'swiftmailer.mailer' => 'swiftmailer.mailer.default',
             'swiftmailer.plugin.messagelogger' => 'swiftmailer.mailer.default.plugin.messagelogger',
@@ -572,6 +680,12 @@ class appDevDebugProjectContainer extends Container
 
         $instance->addListenerService('kernel.controller', array(0 => 'data_collector.router', 1 => 'onKernelController'), 0);
         $instance->addListenerService('kernel.request', array(0 => 'assetic.request_listener', 1 => 'onKernelRequest'), 0);
+        $instance->addListenerService('security.interactive_login', array(0 => 'fos_user.security.interactive_login_listener', 1 => 'onSecurityInteractiveLogin'), 0);
+        $instance->addListenerService('kernel.controller', array(0 => 'fos_rest.view_response_listener', 1 => 'onKernelController'), -10);
+        $instance->addListenerService('kernel.view', array(0 => 'fos_rest.view_response_listener', 1 => 'onKernelView'), 100);
+        $instance->addListenerService('kernel.request', array(0 => 'fos_rest.body_listener', 1 => 'onKernelRequest'), 10);
+        $instance->addListenerService('kernel.request', array(0 => 'fos_rest.format_listener', 1 => 'onKernelRequest'), 34);
+        $instance->addListenerService('kernel.controller', array(0 => 'fos_rest.param_fetcher_listener', 1 => 'onKernelController'), 5);
         $instance->addSubscriberService('response_listener', 'Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener');
         $instance->addSubscriberService('streamed_response_listener', 'Symfony\\Component\\HttpKernel\\EventListener\\StreamedResponseListener');
         $instance->addSubscriberService('locale_listener', 'Symfony\\Component\\HttpKernel\\EventListener\\LocaleListener');
@@ -591,7 +705,6 @@ class appDevDebugProjectContainer extends Container
         $instance->addSubscriberService('swiftmailer.email_sender.listener', 'Symfony\\Bundle\\SwiftmailerBundle\\EventListener\\EmailSenderListener');
         $instance->addSubscriberService('sensio_framework_extra.controller.listener', 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\ControllerListener');
         $instance->addSubscriberService('sensio_framework_extra.converter.listener', 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\ParamConverterListener');
-        $instance->addSubscriberService('sensio_framework_extra.view.listener', 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\TemplateListener');
         $instance->addSubscriberService('sensio_framework_extra.cache.listener', 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\HttpCacheListener');
         $instance->addSubscriberService('sensio_framework_extra.security.listener', 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\SecurityListener');
         $instance->addSubscriberService('debug.dump_listener', 'Symfony\\Component\\HttpKernel\\EventListener\\DumpListener');
@@ -734,7 +847,10 @@ class appDevDebugProjectContainer extends Container
         $b = new \Doctrine\DBAL\Configuration();
         $b->setSQLLogger($a);
 
-        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => NULL, 'dbname' => 'restish', 'user' => 'root', 'password' => 1234, 'charset' => 'UTF8', 'driverOptions' => array(), 'defaultTableOptions' => array()), $b, new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array());
+        $c = new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this);
+        $c->addEventSubscriber(new \FOS\UserBundle\Entity\UserListener($this));
+
+        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => NULL, 'dbname' => 'restish', 'user' => 'root', 'password' => 1234, 'charset' => 'UTF8', 'driverOptions' => array(), 'defaultTableOptions' => array()), $b, $c, array());
     }
 
     /**
@@ -774,7 +890,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getDoctrine_MappingImportCommandService()
     {
-        return $this->services['doctrine.mapping_import_command'] = new \Doctrine\Bundle\DoctrineBundle\Command\ImportMappingDoctrineCommand($this->get('doctrine'), array('FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle', 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle', 'TwigBundle' => 'Symfony\\Bundle\\TwigBundle\\TwigBundle', 'MonologBundle' => 'Symfony\\Bundle\\MonologBundle\\MonologBundle', 'SwiftmailerBundle' => 'Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle', 'AsseticBundle' => 'Symfony\\Bundle\\AsseticBundle\\AsseticBundle', 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle', 'DoctrineMigrationsBundle' => 'Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle', 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle', 'AppBundle' => 'AppBundle\\AppBundle', 'AccountBundle' => 'AccountBundle\\AccountBundle', 'PaymentBundle' => 'PaymentBundle\\PaymentBundle', 'DebugBundle' => 'Symfony\\Bundle\\DebugBundle\\DebugBundle', 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle', 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle', 'SensioGeneratorBundle' => 'Sensio\\Bundle\\GeneratorBundle\\SensioGeneratorBundle'));
+        return $this->services['doctrine.mapping_import_command'] = new \Doctrine\Bundle\DoctrineBundle\Command\ImportMappingDoctrineCommand($this->get('doctrine'), array('FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle', 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle', 'TwigBundle' => 'Symfony\\Bundle\\TwigBundle\\TwigBundle', 'MonologBundle' => 'Symfony\\Bundle\\MonologBundle\\MonologBundle', 'SwiftmailerBundle' => 'Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle', 'AsseticBundle' => 'Symfony\\Bundle\\AsseticBundle\\AsseticBundle', 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle', 'DoctrineMigrationsBundle' => 'Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle', 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle', 'AppBundle' => 'AppBundle\\AppBundle', 'AccountBundle' => 'AccountBundle\\AccountBundle', 'PaymentBundle' => 'PaymentBundle\\PaymentBundle', 'ApiBundle' => 'ApiBundle\\ApiBundle', 'FOSUserBundle' => 'FOS\\UserBundle\\FOSUserBundle', 'FOSRestBundle' => 'FOS\\RestBundle\\FOSRestBundle', 'JMSSerializerBundle' => 'JMS\\SerializerBundle\\JMSSerializerBundle', 'FOSOAuthServerBundle' => 'FOS\\OAuthServerBundle\\FOSOAuthServerBundle', 'DebugBundle' => 'Symfony\\Bundle\\DebugBundle\\DebugBundle', 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle', 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle', 'SensioGeneratorBundle' => 'Sensio\\Bundle\\GeneratorBundle\\SensioGeneratorBundle'));
     }
 
     /**
@@ -807,7 +923,7 @@ class appDevDebugProjectContainer extends Container
         if ($lazyLoad) {
             $container = $this;
 
-            return $this->services['doctrine.orm.default_entity_manager'] = DoctrineORMEntityManager_0000000003ce0acd000000004f387b668dcdc572960b2d02d38cd9c05f173664::staticProxyConstructor(
+            return $this->services['doctrine.orm.default_entity_manager'] = DoctrineORMEntityManager_0000000024be3ac8000000003f7e1eab8dcdc572960b2d02d38cd9c05f173664::staticProxyConstructor(
                 function (&$wrappedInstance, \ProxyManager\Proxy\LazyLoadingInterface $proxy) use ($container) {
                     $wrappedInstance = $container->getDoctrine_Orm_DefaultEntityManagerService(false);
 
@@ -821,27 +937,33 @@ class appDevDebugProjectContainer extends Container
         $a = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array(($this->targetDirs[3].'/src/AccountBundle/Resources/config/doctrine') => 'AccountBundle\\Entity', ($this->targetDirs[3].'/src/PaymentBundle/Resources/config/doctrine') => 'PaymentBundle\\Entity'));
         $a->setGlobalBasename('mapping');
 
-        $b = new \Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain();
-        $b->addDriver($a, 'AccountBundle\\Entity');
-        $b->addDriver($a, 'PaymentBundle\\Entity');
+        $b = new \Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver(array(($this->targetDirs[3].'/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/doctrine') => 'FOS\\UserBundle\\Entity', ($this->targetDirs[3].'/vendor/friendsofsymfony/oauth-server-bundle/Resources/config/doctrine') => 'FOS\\OAuthServerBundle\\Entity'));
+        $b->setGlobalBasename('mapping');
 
-        $c = new \Doctrine\ORM\Configuration();
-        $c->setEntityNamespaces(array('AccountBundle' => 'AccountBundle\\Entity', 'PaymentBundle' => 'PaymentBundle\\Entity'));
-        $c->setMetadataCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_metadata_cache'));
-        $c->setQueryCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_query_cache'));
-        $c->setResultCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_result_cache'));
-        $c->setMetadataDriverImpl($b);
-        $c->setProxyDir((__DIR__.'/doctrine/orm/Proxies'));
-        $c->setProxyNamespace('Proxies');
-        $c->setAutoGenerateProxyClasses(true);
-        $c->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
-        $c->setDefaultRepositoryClassName('Doctrine\\ORM\\EntityRepository');
-        $c->setNamingStrategy(new \Doctrine\ORM\Mapping\UnderscoreNamingStrategy());
-        $c->setQuoteStrategy(new \Doctrine\ORM\Mapping\DefaultQuoteStrategy());
-        $c->setEntityListenerResolver($this->get('doctrine.orm.default_entity_listener_resolver'));
-        $c->setRepositoryFactory(new \Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory(NULL));
+        $c = new \Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain();
+        $c->addDriver($a, 'AccountBundle\\Entity');
+        $c->addDriver($a, 'PaymentBundle\\Entity');
+        $c->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($this->get('annotation_reader'), array(0 => ($this->targetDirs[3].'/src/ApiBundle/Entity'))), 'ApiBundle\\Entity');
+        $c->addDriver($b, 'FOS\\UserBundle\\Entity');
+        $c->addDriver($b, 'FOS\\OAuthServerBundle\\Entity');
 
-        $instance = \Doctrine\ORM\EntityManager::create($this->get('doctrine.dbal.default_connection'), $c);
+        $d = new \Doctrine\ORM\Configuration();
+        $d->setEntityNamespaces(array('AccountBundle' => 'AccountBundle\\Entity', 'PaymentBundle' => 'PaymentBundle\\Entity', 'ApiBundle' => 'ApiBundle\\Entity', 'FOSUserBundle' => 'FOS\\UserBundle\\Entity', 'FOSOAuthServerBundle' => 'FOS\\OAuthServerBundle\\Entity'));
+        $d->setMetadataCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_metadata_cache'));
+        $d->setQueryCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_query_cache'));
+        $d->setResultCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_result_cache'));
+        $d->setMetadataDriverImpl($c);
+        $d->setProxyDir((__DIR__.'/doctrine/orm/Proxies'));
+        $d->setProxyNamespace('Proxies');
+        $d->setAutoGenerateProxyClasses(true);
+        $d->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
+        $d->setDefaultRepositoryClassName('Doctrine\\ORM\\EntityRepository');
+        $d->setNamingStrategy(new \Doctrine\ORM\Mapping\UnderscoreNamingStrategy());
+        $d->setQuoteStrategy(new \Doctrine\ORM\Mapping\DefaultQuoteStrategy());
+        $d->setEntityListenerResolver($this->get('doctrine.orm.default_entity_listener_resolver'));
+        $d->setRepositoryFactory(new \Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory(NULL));
+
+        $instance = \Doctrine\ORM\EntityManager::create($this->get('doctrine.dbal.default_connection'), $d);
 
         $this->get('doctrine.orm.default_manager_configurator')->configure($instance);
 
@@ -1137,7 +1259,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getForm_RegistryService()
     {
-        return $this->services['form.registry'] = new \Symfony\Component\Form\FormRegistry(array(0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension($this, array('form' => 'form.type.form', 'birthday' => 'form.type.birthday', 'checkbox' => 'form.type.checkbox', 'choice' => 'form.type.choice', 'collection' => 'form.type.collection', 'country' => 'form.type.country', 'date' => 'form.type.date', 'datetime' => 'form.type.datetime', 'email' => 'form.type.email', 'file' => 'form.type.file', 'hidden' => 'form.type.hidden', 'integer' => 'form.type.integer', 'language' => 'form.type.language', 'locale' => 'form.type.locale', 'money' => 'form.type.money', 'number' => 'form.type.number', 'password' => 'form.type.password', 'percent' => 'form.type.percent', 'radio' => 'form.type.radio', 'repeated' => 'form.type.repeated', 'search' => 'form.type.search', 'textarea' => 'form.type.textarea', 'text' => 'form.type.text', 'time' => 'form.type.time', 'timezone' => 'form.type.timezone', 'url' => 'form.type.url', 'button' => 'form.type.button', 'submit' => 'form.type.submit', 'reset' => 'form.type.reset', 'currency' => 'form.type.currency', 'entity' => 'form.type.entity'), array('form' => array(0 => 'form.type_extension.form.http_foundation', 1 => 'form.type_extension.form.validator', 2 => 'form.type_extension.upload.validator', 3 => 'form.type_extension.csrf', 4 => 'form.type_extension.form.data_collector'), 'repeated' => array(0 => 'form.type_extension.repeated.validator'), 'submit' => array(0 => 'form.type_extension.submit.validator')), array(0 => 'form.type_guesser.validator', 1 => 'form.type_guesser.doctrine'))), $this->get('form.resolved_type_factory'));
+        return $this->services['form.registry'] = new \Symfony\Component\Form\FormRegistry(array(0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension($this, array('form' => 'form.type.form', 'birthday' => 'form.type.birthday', 'checkbox' => 'form.type.checkbox', 'choice' => 'form.type.choice', 'collection' => 'form.type.collection', 'country' => 'form.type.country', 'date' => 'form.type.date', 'datetime' => 'form.type.datetime', 'email' => 'form.type.email', 'file' => 'form.type.file', 'hidden' => 'form.type.hidden', 'integer' => 'form.type.integer', 'language' => 'form.type.language', 'locale' => 'form.type.locale', 'money' => 'form.type.money', 'number' => 'form.type.number', 'password' => 'form.type.password', 'percent' => 'form.type.percent', 'radio' => 'form.type.radio', 'repeated' => 'form.type.repeated', 'search' => 'form.type.search', 'textarea' => 'form.type.textarea', 'text' => 'form.type.text', 'time' => 'form.type.time', 'timezone' => 'form.type.timezone', 'url' => 'form.type.url', 'button' => 'form.type.button', 'submit' => 'form.type.submit', 'reset' => 'form.type.reset', 'currency' => 'form.type.currency', 'entity' => 'form.type.entity', 'fos_user_username' => 'fos_user.username_form_type', 'fos_user_profile' => 'fos_user.profile.form.type', 'fos_user_registration' => 'fos_user.registration.form.type', 'fos_user_change_password' => 'fos_user.change_password.form.type', 'fos_user_resetting' => 'fos_user.resetting.form.type', 'fos_oauth_server_authorize' => 'fos_oauth_server.authorize.form.type'), array('form' => array(0 => 'form.type_extension.form.http_foundation', 1 => 'form.type_extension.form.validator', 2 => 'form.type_extension.upload.validator', 3 => 'form.type_extension.csrf', 4 => 'form.type_extension.form.data_collector'), 'repeated' => array(0 => 'form.type_extension.repeated.validator'), 'submit' => array(0 => 'form.type_extension.submit.validator')), array(0 => 'form.type_guesser.validator', 1 => 'form.type_guesser.doctrine'))), $this->get('form.resolved_type_factory'));
     }
 
     /**
@@ -1551,6 +1673,643 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the public 'fos_oauth_server.access_token_manager.default' shared service.
+     *
+     * @return \FOS\OAuthServerBundle\Entity\AccessTokenManager
+     */
+    protected function getFosOauthServer_AccessTokenManager_DefaultService()
+    {
+        return $this->services['fos_oauth_server.access_token_manager.default'] = new \FOS\OAuthServerBundle\Entity\AccessTokenManager($this->get('fos_oauth_server.entity_manager'), 'ApiBundle\\Entity\\AccessToken');
+    }
+
+    /**
+     * Gets the public 'fos_oauth_server.auth_code_manager.default' shared service.
+     *
+     * @return \FOS\OAuthServerBundle\Entity\AuthCodeManager
+     */
+    protected function getFosOauthServer_AuthCodeManager_DefaultService()
+    {
+        return $this->services['fos_oauth_server.auth_code_manager.default'] = new \FOS\OAuthServerBundle\Entity\AuthCodeManager($this->get('fos_oauth_server.entity_manager'), 'ApiBundle\\Entity\\AuthCode');
+    }
+
+    /**
+     * Gets the public 'fos_oauth_server.authorize.form' shared service.
+     *
+     * @return \Symfony\Component\Form\Form
+     */
+    protected function getFosOauthServer_Authorize_FormService()
+    {
+        return $this->services['fos_oauth_server.authorize.form'] = $this->get('form.factory')->createNamed('fos_oauth_server_authorize_form', 'fos_oauth_server_authorize', NULL, array('validation_groups' => array(0 => 'Authorize', 1 => 'Default')));
+    }
+
+    /**
+     * Gets the public 'fos_oauth_server.authorize.form.handler.default' shared service.
+     *
+     * @return \FOS\OAuthServerBundle\Form\Handler\AuthorizeFormHandler
+     */
+    protected function getFosOauthServer_Authorize_Form_Handler_DefaultService()
+    {
+        return $this->services['fos_oauth_server.authorize.form.handler.default'] = new \FOS\OAuthServerBundle\Form\Handler\AuthorizeFormHandler($this->get('fos_oauth_server.authorize.form'), $this->get('request_stack', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+    }
+
+    /**
+     * Gets the public 'fos_oauth_server.authorize.form.type' shared service.
+     *
+     * @return \FOS\OAuthServerBundle\Form\Type\AuthorizeFormType
+     */
+    protected function getFosOauthServer_Authorize_Form_TypeService()
+    {
+        return $this->services['fos_oauth_server.authorize.form.type'] = new \FOS\OAuthServerBundle\Form\Type\AuthorizeFormType();
+    }
+
+    /**
+     * Gets the public 'fos_oauth_server.client_manager.default' shared service.
+     *
+     * @return \FOS\OAuthServerBundle\Entity\ClientManager
+     */
+    protected function getFosOauthServer_ClientManager_DefaultService()
+    {
+        return $this->services['fos_oauth_server.client_manager.default'] = new \FOS\OAuthServerBundle\Entity\ClientManager($this->get('fos_oauth_server.entity_manager'), 'ApiBundle\\Entity\\Client');
+    }
+
+    /**
+     * Gets the public 'fos_oauth_server.controller.token' shared service.
+     *
+     * @return \FOS\OAuthServerBundle\Controller\TokenController
+     */
+    protected function getFosOauthServer_Controller_TokenService()
+    {
+        return $this->services['fos_oauth_server.controller.token'] = new \FOS\OAuthServerBundle\Controller\TokenController($this->get('fos_oauth_server.server'));
+    }
+
+    /**
+     * Gets the public 'fos_oauth_server.refresh_token_manager.default' shared service.
+     *
+     * @return \FOS\OAuthServerBundle\Entity\RefreshTokenManager
+     */
+    protected function getFosOauthServer_RefreshTokenManager_DefaultService()
+    {
+        return $this->services['fos_oauth_server.refresh_token_manager.default'] = new \FOS\OAuthServerBundle\Entity\RefreshTokenManager($this->get('fos_oauth_server.entity_manager'), 'ApiBundle\\Entity\\RefreshToken');
+    }
+
+    /**
+     * Gets the public 'fos_oauth_server.server' shared service.
+     *
+     * @return \OAuth2\OAuth2
+     */
+    protected function getFosOauthServer_ServerService()
+    {
+        return $this->services['fos_oauth_server.server'] = new \OAuth2\OAuth2($this->get('fos_oauth_server.storage'), array());
+    }
+
+    /**
+     * Gets the public 'fos_oauth_server.storage' shared service.
+     *
+     * @return \FOS\OAuthServerBundle\Storage\OAuthStorage
+     */
+    protected function getFosOauthServer_StorageService()
+    {
+        return $this->services['fos_oauth_server.storage'] = new \FOS\OAuthServerBundle\Storage\OAuthStorage($this->get('fos_oauth_server.client_manager.default'), $this->get('fos_oauth_server.access_token_manager.default'), $this->get('fos_oauth_server.refresh_token_manager.default'), $this->get('fos_oauth_server.auth_code_manager.default'), $this->get('fos_user.user_manager', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('security.encoder_factory'));
+    }
+
+    /**
+     * Gets the public 'fos_rest.body_listener' shared service.
+     *
+     * @return \FOS\RestBundle\EventListener\BodyListener
+     */
+    protected function getFosRest_BodyListenerService()
+    {
+        $this->services['fos_rest.body_listener'] = $instance = new \FOS\RestBundle\EventListener\BodyListener($this->get('fos_rest.decoder_provider'), false);
+
+        $instance->setDefaultFormat(NULL);
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'fos_rest.decoder.json' shared service.
+     *
+     * @return \FOS\RestBundle\Decoder\JsonDecoder
+     */
+    protected function getFosRest_Decoder_JsonService()
+    {
+        return $this->services['fos_rest.decoder.json'] = new \FOS\RestBundle\Decoder\JsonDecoder();
+    }
+
+    /**
+     * Gets the public 'fos_rest.decoder.jsontoform' shared service.
+     *
+     * @return \FOS\RestBundle\Decoder\JsonToFormDecoder
+     */
+    protected function getFosRest_Decoder_JsontoformService()
+    {
+        return $this->services['fos_rest.decoder.jsontoform'] = new \FOS\RestBundle\Decoder\JsonToFormDecoder();
+    }
+
+    /**
+     * Gets the public 'fos_rest.decoder.xml' shared service.
+     *
+     * @return \FOS\RestBundle\Decoder\XmlDecoder
+     */
+    protected function getFosRest_Decoder_XmlService()
+    {
+        return $this->services['fos_rest.decoder.xml'] = new \FOS\RestBundle\Decoder\XmlDecoder();
+    }
+
+    /**
+     * Gets the public 'fos_rest.decoder_provider' shared service.
+     *
+     * @return \FOS\RestBundle\Decoder\ContainerDecoderProvider
+     */
+    protected function getFosRest_DecoderProviderService()
+    {
+        $this->services['fos_rest.decoder_provider'] = $instance = new \FOS\RestBundle\Decoder\ContainerDecoderProvider(array('json' => 'fos_rest.decoder.json', 'xml' => 'fos_rest.decoder.xml'));
+
+        $instance->setContainer($this);
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'fos_rest.exception_format_negotiator' shared service.
+     *
+     * @return \FOS\RestBundle\Negotiation\FormatNegotiator
+     */
+    protected function getFosRest_ExceptionFormatNegotiatorService()
+    {
+        $this->services['fos_rest.exception_format_negotiator'] = $instance = new \FOS\RestBundle\Negotiation\FormatNegotiator();
+
+        $instance->add($this->get('fos_rest.request_matcher.50d7031fd332f324b33953b2158cded5b34cf57c3cd709fdaa24d6818252fd77ab4624ee'), array('methods' => NULL, 'priorities' => array(0 => 'html', 1 => 'json'), 'fallback_format' => 'html', 'prefer_extension' => '2.0'));
+        $instance->add($this->get('fos_rest.request_matcher.8615024800e4193600fd69885f7587200427156c3f94286d4b2ddc9c87897c17c762ebe2'), array('priorities' => array(0 => 'json'), 'fallback_format' => 'json', 'prefer_extension' => '2.0', 'methods' => NULL, 'stop' => false));
+        $instance->add($this->get('fos_rest.request_matcher.0dfc4cce134bee15f08405cb5cea4845b13ff7d8c8f779004218432a2c552bd0cd9f9d27'), array('priorities' => array(0 => 'html'), 'fallback_format' => 'html', 'prefer_extension' => '2.0', 'methods' => NULL, 'stop' => false));
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'fos_rest.format_listener' shared service.
+     *
+     * @return \FOS\RestBundle\EventListener\FormatListener
+     */
+    protected function getFosRest_FormatListenerService()
+    {
+        return $this->services['fos_rest.format_listener'] = new \FOS\RestBundle\EventListener\FormatListener($this->get('fos_rest.format_negotiator'));
+    }
+
+    /**
+     * Gets the public 'fos_rest.format_negotiator' shared service.
+     *
+     * @return \FOS\RestBundle\Negotiation\FormatNegotiator
+     */
+    protected function getFosRest_FormatNegotiatorService()
+    {
+        $this->services['fos_rest.format_negotiator'] = $instance = new \FOS\RestBundle\Negotiation\FormatNegotiator();
+
+        $instance->add($this->get('fos_rest.request_matcher.50d7031fd332f324b33953b2158cded5b34cf57c3cd709fdaa24d6818252fd77ab4624ee'), array('methods' => NULL, 'priorities' => array(0 => 'html', 1 => 'json'), 'fallback_format' => 'html', 'prefer_extension' => '2.0'));
+        $instance->add($this->get('fos_rest.request_matcher.8615024800e4193600fd69885f7587200427156c3f94286d4b2ddc9c87897c17c762ebe2'), array('priorities' => array(0 => 'json'), 'fallback_format' => 'json', 'prefer_extension' => '2.0', 'methods' => NULL, 'stop' => false));
+        $instance->add($this->get('fos_rest.request_matcher.0dfc4cce134bee15f08405cb5cea4845b13ff7d8c8f779004218432a2c552bd0cd9f9d27'), array('priorities' => array(0 => 'html'), 'fallback_format' => 'html', 'prefer_extension' => '2.0', 'methods' => NULL, 'stop' => false));
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'fos_rest.inflector.doctrine' shared service.
+     *
+     * @return \FOS\RestBundle\Inflector\DoctrineInflector
+     */
+    protected function getFosRest_Inflector_DoctrineService()
+    {
+        return $this->services['fos_rest.inflector.doctrine'] = new \FOS\RestBundle\Inflector\DoctrineInflector();
+    }
+
+    /**
+     * Gets the public 'fos_rest.normalizer.camel_keys' shared service.
+     *
+     * @return \FOS\RestBundle\Normalizer\CamelKeysNormalizer
+     */
+    protected function getFosRest_Normalizer_CamelKeysService()
+    {
+        return $this->services['fos_rest.normalizer.camel_keys'] = new \FOS\RestBundle\Normalizer\CamelKeysNormalizer();
+    }
+
+    /**
+     * Gets the public 'fos_rest.normalizer.camel_keys_with_leading_underscore' shared service.
+     *
+     * @return \FOS\RestBundle\Normalizer\CamelKeysNormalizerWithLeadingUnderscore
+     */
+    protected function getFosRest_Normalizer_CamelKeysWithLeadingUnderscoreService()
+    {
+        return $this->services['fos_rest.normalizer.camel_keys_with_leading_underscore'] = new \FOS\RestBundle\Normalizer\CamelKeysNormalizerWithLeadingUnderscore();
+    }
+
+    /**
+     * Gets the public 'fos_rest.param_fetcher_listener' shared service.
+     *
+     * @return \FOS\RestBundle\EventListener\ParamFetcherListener
+     */
+    protected function getFosRest_ParamFetcherListenerService()
+    {
+        return $this->services['fos_rest.param_fetcher_listener'] = new \FOS\RestBundle\EventListener\ParamFetcherListener($this, false);
+    }
+
+    /**
+     * Gets the public 'fos_rest.request.param_fetcher' shared service.
+     *
+     * @return \FOS\RestBundle\Request\ParamFetcher
+     */
+    protected function getFosRest_Request_ParamFetcherService()
+    {
+        return $this->services['fos_rest.request.param_fetcher'] = new \FOS\RestBundle\Request\ParamFetcher($this->get('fos_rest.request.param_fetcher.reader'), $this->get('request_stack', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('fos_rest.violation_formatter'), $this->get('validator', ContainerInterface::NULL_ON_INVALID_REFERENCE), false);
+    }
+
+    /**
+     * Gets the public 'fos_rest.request.param_fetcher.reader' shared service.
+     *
+     * @return \FOS\RestBundle\Request\ParamReader
+     */
+    protected function getFosRest_Request_ParamFetcher_ReaderService()
+    {
+        return $this->services['fos_rest.request.param_fetcher.reader'] = new \FOS\RestBundle\Request\ParamReader($this->get('annotation_reader'));
+    }
+
+    /**
+     * Gets the public 'fos_rest.routing.loader.controller' shared service.
+     *
+     * @return \FOS\RestBundle\Routing\Loader\RestRouteLoader
+     */
+    protected function getFosRest_Routing_Loader_ControllerService()
+    {
+        return $this->services['fos_rest.routing.loader.controller'] = new \FOS\RestBundle\Routing\Loader\RestRouteLoader($this, $this->get('file_locator'), $this->get('controller_name_converter'), $this->get('fos_rest.routing.loader.reader.controller'), NULL);
+    }
+
+    /**
+     * Gets the public 'fos_rest.routing.loader.processor' shared service.
+     *
+     * @return \FOS\RestBundle\Routing\Loader\RestRouteProcessor
+     */
+    protected function getFosRest_Routing_Loader_ProcessorService()
+    {
+        return $this->services['fos_rest.routing.loader.processor'] = new \FOS\RestBundle\Routing\Loader\RestRouteProcessor();
+    }
+
+    /**
+     * Gets the public 'fos_rest.routing.loader.reader.action' shared service.
+     *
+     * @return \FOS\RestBundle\Routing\Loader\Reader\RestActionReader
+     */
+    protected function getFosRest_Routing_Loader_Reader_ActionService()
+    {
+        return $this->services['fos_rest.routing.loader.reader.action'] = new \FOS\RestBundle\Routing\Loader\Reader\RestActionReader($this->get('annotation_reader'), $this->get('fos_rest.request.param_fetcher.reader'), $this->get('fos_rest.inflector.doctrine'), false, array('json' => false, 'xml' => false, 'html' => true));
+    }
+
+    /**
+     * Gets the public 'fos_rest.routing.loader.reader.controller' shared service.
+     *
+     * @return \FOS\RestBundle\Routing\Loader\Reader\RestControllerReader
+     */
+    protected function getFosRest_Routing_Loader_Reader_ControllerService()
+    {
+        return $this->services['fos_rest.routing.loader.reader.controller'] = new \FOS\RestBundle\Routing\Loader\Reader\RestControllerReader($this->get('fos_rest.routing.loader.reader.action'), $this->get('annotation_reader'));
+    }
+
+    /**
+     * Gets the public 'fos_rest.routing.loader.xml_collection' shared service.
+     *
+     * @return \FOS\RestBundle\Routing\Loader\RestXmlCollectionLoader
+     */
+    protected function getFosRest_Routing_Loader_XmlCollectionService()
+    {
+        return $this->services['fos_rest.routing.loader.xml_collection'] = new \FOS\RestBundle\Routing\Loader\RestXmlCollectionLoader($this->get('file_locator'), $this->get('fos_rest.routing.loader.processor'), false, array('json' => false, 'xml' => false, 'html' => true), NULL);
+    }
+
+    /**
+     * Gets the public 'fos_rest.routing.loader.yaml_collection' shared service.
+     *
+     * @return \FOS\RestBundle\Routing\Loader\RestYamlCollectionLoader
+     */
+    protected function getFosRest_Routing_Loader_YamlCollectionService()
+    {
+        return $this->services['fos_rest.routing.loader.yaml_collection'] = new \FOS\RestBundle\Routing\Loader\RestYamlCollectionLoader($this->get('file_locator'), $this->get('fos_rest.routing.loader.processor'), false, array('json' => false, 'xml' => false, 'html' => true), NULL);
+    }
+
+    /**
+     * Gets the public 'fos_rest.serializer' shared service.
+     *
+     * @return \FOS\RestBundle\Serializer\JMSSerializerAdapter
+     */
+    public function getFosRest_SerializerService($lazyLoad = true)
+    {
+        if ($lazyLoad) {
+            $container = $this;
+
+            return $this->services['fos_rest.serializer'] = FOSRestBundleSerializerJMSSerializerAdapter_0000000024be373b000000003f7e1eab8dcdc572960b2d02d38cd9c05f173664::staticProxyConstructor(
+                function (&$wrappedInstance, \ProxyManager\Proxy\LazyLoadingInterface $proxy) use ($container) {
+                    $wrappedInstance = $container->getFosRest_SerializerService(false);
+
+                    $proxy->setProxyInitializer(null);
+
+                    return true;
+                }
+            );
+        }
+
+        return new \FOS\RestBundle\Serializer\JMSSerializerAdapter($this->get('jms_serializer'));
+    }
+
+    /**
+     * Gets the public 'fos_rest.serializer.exception_wrapper_normalizer' shared service.
+     *
+     * @return \FOS\RestBundle\Serializer\ExceptionWrapperNormalizer
+     */
+    protected function getFosRest_Serializer_ExceptionWrapperNormalizerService()
+    {
+        return $this->services['fos_rest.serializer.exception_wrapper_normalizer'] = new \FOS\RestBundle\Serializer\ExceptionWrapperNormalizer($this->get('translator'));
+    }
+
+    /**
+     * Gets the public 'fos_rest.serializer.exception_wrapper_serialize_handler' shared service.
+     *
+     * @return \FOS\RestBundle\Serializer\ExceptionWrapperSerializeHandler
+     */
+    protected function getFosRest_Serializer_ExceptionWrapperSerializeHandlerService()
+    {
+        return $this->services['fos_rest.serializer.exception_wrapper_serialize_handler'] = new \FOS\RestBundle\Serializer\ExceptionWrapperSerializeHandler();
+    }
+
+    /**
+     * Gets the public 'fos_rest.view.exception_wrapper_handler' shared service.
+     *
+     * @return \FOS\RestBundle\View\ExceptionWrapperHandler
+     */
+    protected function getFosRest_View_ExceptionWrapperHandlerService()
+    {
+        return $this->services['fos_rest.view.exception_wrapper_handler'] = new \FOS\RestBundle\View\ExceptionWrapperHandler();
+    }
+
+    /**
+     * Gets the public 'fos_rest.view_handler' shared service.
+     *
+     * @return \FOS\RestBundle\View\ViewHandler
+     */
+    protected function getFosRest_ViewHandlerService()
+    {
+        $this->services['fos_rest.view_handler'] = $instance = new \FOS\RestBundle\View\ViewHandler(array('json' => false, 'xml' => false, 'html' => true), 400, 204, false, array('html' => 302), 'twig');
+
+        $instance->setExclusionStrategyGroups(array());
+        $instance->setExclusionStrategyVersion('');
+        $instance->setSerializeNullStrategy(false);
+        $instance->setContainer($this);
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'fos_rest.view_response_listener' shared service.
+     *
+     * @return \FOS\RestBundle\EventListener\ViewResponseListener
+     */
+    protected function getFosRest_ViewResponseListenerService()
+    {
+        return $this->services['fos_rest.view_response_listener'] = new \FOS\RestBundle\EventListener\ViewResponseListener($this);
+    }
+
+    /**
+     * Gets the public 'fos_rest.violation_formatter' shared service.
+     *
+     * @return \FOS\RestBundle\Util\ViolationFormatter
+     */
+    protected function getFosRest_ViolationFormatterService()
+    {
+        return $this->services['fos_rest.violation_formatter'] = new \FOS\RestBundle\Util\ViolationFormatter(false);
+    }
+
+    /**
+     * Gets the public 'fos_user.change_password.form' shared service.
+     *
+     * @return \Symfony\Component\Form\Form
+     */
+    protected function getFosUser_ChangePassword_FormService()
+    {
+        return $this->services['fos_user.change_password.form'] = $this->get('form.factory')->createNamed('fos_user_change_password_form', 'fos_user_change_password', NULL, array('validation_groups' => array(0 => 'ChangePassword', 1 => 'Default')));
+    }
+
+    /**
+     * Gets the public 'fos_user.change_password.form.handler.default' shared service.
+     *
+     * @return \FOS\UserBundle\Form\Handler\ChangePasswordFormHandler
+     * 
+     * @throws InactiveScopeException when the 'fos_user.change_password.form.handler.default' service is requested while the 'request' scope is not active
+     */
+    protected function getFosUser_ChangePassword_Form_Handler_DefaultService()
+    {
+        if (!isset($this->scopedServices['request'])) {
+            throw new InactiveScopeException('fos_user.change_password.form.handler.default', 'request');
+        }
+
+        return $this->services['fos_user.change_password.form.handler.default'] = $this->scopedServices['request']['fos_user.change_password.form.handler.default'] = new \FOS\UserBundle\Form\Handler\ChangePasswordFormHandler($this->get('fos_user.change_password.form'), $this->get('request'), $this->get('fos_user.user_manager'));
+    }
+
+    /**
+     * Gets the public 'fos_user.change_password.form.type' shared service.
+     *
+     * @return \FOS\UserBundle\Form\Type\ChangePasswordFormType
+     */
+    protected function getFosUser_ChangePassword_Form_TypeService()
+    {
+        return $this->services['fos_user.change_password.form.type'] = new \FOS\UserBundle\Form\Type\ChangePasswordFormType();
+    }
+
+    /**
+     * Gets the public 'fos_user.mailer' shared service.
+     *
+     * @return \FOS\UserBundle\Mailer\Mailer
+     */
+    protected function getFosUser_MailerService()
+    {
+        return $this->services['fos_user.mailer'] = new \FOS\UserBundle\Mailer\Mailer($this->get('swiftmailer.mailer.default'), $this->get('router'), $this->get('templating'), array('confirmation.template' => 'FOSUserBundle:Registration:email.txt.twig', 'resetting.template' => 'FOSUserBundle:Resetting:email.txt.twig', 'from_email' => array('confirmation' => array('webmaster@example.com' => 'webmaster'), 'resetting' => array('webmaster@example.com' => 'webmaster'))));
+    }
+
+    /**
+     * Gets the public 'fos_user.profile.form' shared service.
+     *
+     * @return \Symfony\Component\Form\Form
+     */
+    protected function getFosUser_Profile_FormService()
+    {
+        return $this->services['fos_user.profile.form'] = $this->get('form.factory')->createNamed('fos_user_profile_form', 'fos_user_profile', NULL, array('validation_groups' => array(0 => 'Profile', 1 => 'Default')));
+    }
+
+    /**
+     * Gets the public 'fos_user.profile.form.handler' shared service.
+     *
+     * @return \FOS\UserBundle\Form\Handler\ProfileFormHandler
+     * 
+     * @throws InactiveScopeException when the 'fos_user.profile.form.handler' service is requested while the 'request' scope is not active
+     */
+    protected function getFosUser_Profile_Form_HandlerService()
+    {
+        if (!isset($this->scopedServices['request'])) {
+            throw new InactiveScopeException('fos_user.profile.form.handler', 'request');
+        }
+
+        return $this->services['fos_user.profile.form.handler'] = $this->scopedServices['request']['fos_user.profile.form.handler'] = new \FOS\UserBundle\Form\Handler\ProfileFormHandler($this->get('fos_user.profile.form'), $this->get('request'), $this->get('fos_user.user_manager'));
+    }
+
+    /**
+     * Gets the public 'fos_user.profile.form.type' shared service.
+     *
+     * @return \FOS\UserBundle\Form\Type\ProfileFormType
+     */
+    protected function getFosUser_Profile_Form_TypeService()
+    {
+        return $this->services['fos_user.profile.form.type'] = new \FOS\UserBundle\Form\Type\ProfileFormType('ApiBundle\\Entity\\User');
+    }
+
+    /**
+     * Gets the public 'fos_user.registration.form' shared service.
+     *
+     * @return \Symfony\Component\Form\Form
+     */
+    protected function getFosUser_Registration_FormService()
+    {
+        return $this->services['fos_user.registration.form'] = $this->get('form.factory')->createNamed('fos_user_registration_form', 'fos_user_registration', NULL, array('validation_groups' => array(0 => 'Registration', 1 => 'Default')));
+    }
+
+    /**
+     * Gets the public 'fos_user.registration.form.handler' shared service.
+     *
+     * @return \FOS\UserBundle\Form\Handler\RegistrationFormHandler
+     * 
+     * @throws InactiveScopeException when the 'fos_user.registration.form.handler' service is requested while the 'request' scope is not active
+     */
+    protected function getFosUser_Registration_Form_HandlerService()
+    {
+        if (!isset($this->scopedServices['request'])) {
+            throw new InactiveScopeException('fos_user.registration.form.handler', 'request');
+        }
+
+        return $this->services['fos_user.registration.form.handler'] = $this->scopedServices['request']['fos_user.registration.form.handler'] = new \FOS\UserBundle\Form\Handler\RegistrationFormHandler($this->get('fos_user.registration.form'), $this->get('request'), $this->get('fos_user.user_manager'), $this->get('fos_user.mailer'), $this->get('fos_user.util.token_generator'));
+    }
+
+    /**
+     * Gets the public 'fos_user.registration.form.type' shared service.
+     *
+     * @return \FOS\UserBundle\Form\Type\RegistrationFormType
+     */
+    protected function getFosUser_Registration_Form_TypeService()
+    {
+        return $this->services['fos_user.registration.form.type'] = new \FOS\UserBundle\Form\Type\RegistrationFormType('ApiBundle\\Entity\\User');
+    }
+
+    /**
+     * Gets the public 'fos_user.resetting.form' shared service.
+     *
+     * @return \Symfony\Component\Form\Form
+     */
+    protected function getFosUser_Resetting_FormService()
+    {
+        return $this->services['fos_user.resetting.form'] = $this->get('form.factory')->createNamed('fos_user_resetting_form', 'fos_user_resetting', NULL, array('validation_groups' => array(0 => 'ResetPassword', 1 => 'Default')));
+    }
+
+    /**
+     * Gets the public 'fos_user.resetting.form.handler' shared service.
+     *
+     * @return \FOS\UserBundle\Form\Handler\ResettingFormHandler
+     * 
+     * @throws InactiveScopeException when the 'fos_user.resetting.form.handler' service is requested while the 'request' scope is not active
+     */
+    protected function getFosUser_Resetting_Form_HandlerService()
+    {
+        if (!isset($this->scopedServices['request'])) {
+            throw new InactiveScopeException('fos_user.resetting.form.handler', 'request');
+        }
+
+        return $this->services['fos_user.resetting.form.handler'] = $this->scopedServices['request']['fos_user.resetting.form.handler'] = new \FOS\UserBundle\Form\Handler\ResettingFormHandler($this->get('fos_user.resetting.form'), $this->get('request'), $this->get('fos_user.user_manager'));
+    }
+
+    /**
+     * Gets the public 'fos_user.resetting.form.type' shared service.
+     *
+     * @return \FOS\UserBundle\Form\Type\ResettingFormType
+     */
+    protected function getFosUser_Resetting_Form_TypeService()
+    {
+        return $this->services['fos_user.resetting.form.type'] = new \FOS\UserBundle\Form\Type\ResettingFormType();
+    }
+
+    /**
+     * Gets the public 'fos_user.security.interactive_login_listener' shared service.
+     *
+     * @return \FOS\UserBundle\Security\InteractiveLoginListener
+     */
+    protected function getFosUser_Security_InteractiveLoginListenerService()
+    {
+        return $this->services['fos_user.security.interactive_login_listener'] = new \FOS\UserBundle\Security\InteractiveLoginListener($this->get('fos_user.user_manager'));
+    }
+
+    /**
+     * Gets the public 'fos_user.security.login_manager' shared service.
+     *
+     * @return \FOS\UserBundle\Security\LoginManager
+     */
+    protected function getFosUser_Security_LoginManagerService()
+    {
+        return $this->services['fos_user.security.login_manager'] = new \FOS\UserBundle\Security\LoginManager($this->get('security.context'), $this->get('security.user_checker'), $this->get('security.authentication.session_strategy'), $this);
+    }
+
+    /**
+     * Gets the public 'fos_user.user_manager' shared service.
+     *
+     * @return \FOS\UserBundle\Doctrine\UserManager
+     */
+    protected function getFosUser_UserManagerService()
+    {
+        $a = $this->get('fos_user.util.email_canonicalizer');
+
+        return $this->services['fos_user.user_manager'] = new \FOS\UserBundle\Doctrine\UserManager($this->get('security.encoder_factory'), $a, $a, $this->get('doctrine')->getManager(NULL), 'ApiBundle\\Entity\\User');
+    }
+
+    /**
+     * Gets the public 'fos_user.username_form_type' shared service.
+     *
+     * @return \FOS\UserBundle\Form\Type\UsernameFormType
+     */
+    protected function getFosUser_UsernameFormTypeService()
+    {
+        return $this->services['fos_user.username_form_type'] = new \FOS\UserBundle\Form\Type\UsernameFormType(new \FOS\UserBundle\Form\DataTransformer\UserToUsernameTransformer($this->get('fos_user.user_manager')));
+    }
+
+    /**
+     * Gets the public 'fos_user.util.email_canonicalizer' shared service.
+     *
+     * @return \FOS\UserBundle\Util\Canonicalizer
+     */
+    protected function getFosUser_Util_EmailCanonicalizerService()
+    {
+        return $this->services['fos_user.util.email_canonicalizer'] = new \FOS\UserBundle\Util\Canonicalizer();
+    }
+
+    /**
+     * Gets the public 'fos_user.util.token_generator' shared service.
+     *
+     * @return \FOS\UserBundle\Util\TokenGenerator
+     */
+    protected function getFosUser_Util_TokenGeneratorService()
+    {
+        return $this->services['fos_user.util.token_generator'] = new \FOS\UserBundle\Util\TokenGenerator($this->get('logger', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+    }
+
+    /**
+     * Gets the public 'fos_user.util.user_manipulator' shared service.
+     *
+     * @return \FOS\UserBundle\Util\UserManipulator
+     */
+    protected function getFosUser_Util_UserManipulatorService()
+    {
+        return $this->services['fos_user.util.user_manipulator'] = new \FOS\UserBundle\Util\UserManipulator($this->get('fos_user.user_manager'));
+    }
+
+    /**
      * Gets the public 'fragment.handler' shared service.
      *
      * @return \Symfony\Component\HttpKernel\DependencyInjection\LazyLoadingFragmentHandler
@@ -1612,6 +2371,254 @@ class appDevDebugProjectContainer extends Container
     protected function getHttpKernelService()
     {
         return $this->services['http_kernel'] = new \Symfony\Component\HttpKernel\DependencyInjection\ContainerAwareHttpKernel($this->get('debug.event_dispatcher'), $this, $this->get('debug.controller_resolver'), $this->get('request_stack'), false);
+    }
+
+    /**
+     * Gets the public 'jms_serializer' shared service.
+     *
+     * @return \JMS\Serializer\Serializer
+     */
+    protected function getJmsSerializerService()
+    {
+        $a = new \Metadata\MetadataFactory(new \Metadata\Driver\LazyLoadingDriver($this, 'jms_serializer.metadata_driver'), 'Metadata\\ClassHierarchyMetadata', true);
+        $a->setCache(new \Metadata\Cache\FileCache((__DIR__.'/jms_serializer')));
+
+        $b = new \JMS\Serializer\EventDispatcher\LazyEventDispatcher($this);
+        $b->setListeners(array('serializer.pre_serialize' => array(0 => array(0 => array(0 => 'jms_serializer.stopwatch_subscriber', 1 => 'onPreSerialize'), 1 => NULL, 2 => NULL), 1 => array(0 => array(0 => 'jms_serializer.doctrine_proxy_subscriber', 1 => 'onPreSerializeTypedProxy'), 1 => NULL, 2 => NULL), 2 => array(0 => array(0 => 'jms_serializer.doctrine_proxy_subscriber', 1 => 'onPreSerialize'), 1 => NULL, 2 => NULL)), 'serializer.post_serialize' => array(0 => array(0 => array(0 => 'jms_serializer.stopwatch_subscriber', 1 => 'onPostSerialize'), 1 => NULL, 2 => NULL))));
+
+        $this->services['jms_serializer'] = $instance = new \JMS\Serializer\Serializer($a, $this->get('jms_serializer.handler_registry'), $this->get('jms_serializer.unserialize_object_constructor'), new \PhpCollection\Map(array('json' => $this->get('jms_serializer.json_serialization_visitor'), 'xml' => $this->get('jms_serializer.xml_serialization_visitor'), 'yml' => $this->get('jms_serializer.yaml_serialization_visitor'))), new \PhpCollection\Map(array('json' => $this->get('jms_serializer.json_deserialization_visitor'), 'xml' => $this->get('jms_serializer.xml_deserialization_visitor'))), $b, NULL, $this->get('jms_serializer.expression_evaluator'));
+
+        $instance->setSerializationContextFactory($this->get('jms_serializer.serialization_context_factory'));
+        $instance->setDeserializationContextFactory($this->get('jms_serializer.deserialization_context_factory'));
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'jms_serializer.accessor_strategy' shared service.
+     *
+     * @return \JMS\Serializer\Accessor\ExpressionAccessorStrategy
+     */
+    protected function getJmsSerializer_AccessorStrategyService()
+    {
+        return $this->services['jms_serializer.accessor_strategy'] = new \JMS\Serializer\Accessor\ExpressionAccessorStrategy($this->get('jms_serializer.expression_evaluator'), new \JMS\Serializer\Accessor\DefaultAccessorStrategy());
+    }
+
+    /**
+     * Gets the public 'jms_serializer.array_collection_handler' shared service.
+     *
+     * @return \JMS\Serializer\Handler\ArrayCollectionHandler
+     */
+    protected function getJmsSerializer_ArrayCollectionHandlerService()
+    {
+        return $this->services['jms_serializer.array_collection_handler'] = new \JMS\Serializer\Handler\ArrayCollectionHandler(true);
+    }
+
+    /**
+     * Gets the public 'jms_serializer.constraint_violation_handler' shared service.
+     *
+     * @return \JMS\Serializer\Handler\ConstraintViolationHandler
+     */
+    protected function getJmsSerializer_ConstraintViolationHandlerService()
+    {
+        return $this->services['jms_serializer.constraint_violation_handler'] = new \JMS\Serializer\Handler\ConstraintViolationHandler();
+    }
+
+    /**
+     * Gets the public 'jms_serializer.datetime_handler' shared service.
+     *
+     * @return \JMS\Serializer\Handler\DateHandler
+     */
+    protected function getJmsSerializer_DatetimeHandlerService()
+    {
+        return $this->services['jms_serializer.datetime_handler'] = new \JMS\Serializer\Handler\DateHandler('Y-m-d\\TH:i:sO', 'UTC', true);
+    }
+
+    /**
+     * Gets the public 'jms_serializer.deserialization_context_factory' shared service.
+     *
+     * @return \JMS\SerializerBundle\ContextFactory\ConfiguredContextFactory
+     */
+    protected function getJmsSerializer_DeserializationContextFactoryService()
+    {
+        return $this->services['jms_serializer.deserialization_context_factory'] = new \JMS\SerializerBundle\ContextFactory\ConfiguredContextFactory();
+    }
+
+    /**
+     * Gets the public 'jms_serializer.doctrine_proxy_subscriber' shared service.
+     *
+     * @return \JMS\Serializer\EventDispatcher\Subscriber\DoctrineProxySubscriber
+     */
+    protected function getJmsSerializer_DoctrineProxySubscriberService()
+    {
+        return $this->services['jms_serializer.doctrine_proxy_subscriber'] = new \JMS\Serializer\EventDispatcher\Subscriber\DoctrineProxySubscriber(false, true);
+    }
+
+    /**
+     * Gets the public 'jms_serializer.expression_evaluator' shared service.
+     *
+     * @return \JMS\Serializer\Expression\ExpressionEvaluator
+     */
+    protected function getJmsSerializer_ExpressionEvaluatorService()
+    {
+        $a = new \Symfony\Component\ExpressionLanguage\ExpressionLanguage();
+        $a->registerProvider(new \JMS\SerializerBundle\ExpressionLanguage\BasicSerializerFunctionsProvider());
+
+        return $this->services['jms_serializer.expression_evaluator'] = new \JMS\Serializer\Expression\ExpressionEvaluator($a, array('container' => $this));
+    }
+
+    /**
+     * Gets the public 'jms_serializer.form_error_handler' shared service.
+     *
+     * @return \JMS\Serializer\Handler\FormErrorHandler
+     */
+    protected function getJmsSerializer_FormErrorHandlerService()
+    {
+        return $this->services['jms_serializer.form_error_handler'] = new \JMS\Serializer\Handler\FormErrorHandler($this->get('translator'));
+    }
+
+    /**
+     * Gets the public 'jms_serializer.handler_registry' shared service.
+     *
+     * @return \JMS\Serializer\Handler\LazyHandlerRegistry
+     */
+    protected function getJmsSerializer_HandlerRegistryService()
+    {
+        return $this->services['jms_serializer.handler_registry'] = new \JMS\Serializer\Handler\LazyHandlerRegistry($this, array(1 => array('FOS\\RestBundle\\Util\\ExceptionWrapper' => array('json' => array(0 => 'fos_rest.serializer.exception_wrapper_serialize_handler', 1 => 'serializeToJson'), 'xml' => array(0 => 'fos_rest.serializer.exception_wrapper_serialize_handler', 1 => 'serializeToXml')), 'DateTime' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime')), 'DateTimeImmutable' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable')), 'DateInterval' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval')), 'ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\Common\\Collections\\ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\ORM\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\ODM\\MongoDB\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\ODM\\PHPCR\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'PhpCollection\\Sequence' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence')), 'PhpCollection\\Map' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap')), 'Symfony\\Component\\Form\\Form' => array('xml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormToxml'), 'json' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormTojson'), 'yml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormToyml')), 'Symfony\\Component\\Form\\FormError' => array('xml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorToxml'), 'json' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorTojson'), 'yml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorToyml')), 'Symfony\\Component\\Validator\\ConstraintViolationList' => array('xml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListToxml'), 'json' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListTojson'), 'yml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListToyml')), 'Symfony\\Component\\Validator\\ConstraintViolation' => array('xml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationToxml'), 'json' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationTojson'), 'yml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationToyml'))), 2 => array('DateTime' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromjson'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromxml'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromyml')), 'DateTimeImmutable' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromjson'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromxml'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromyml')), 'DateInterval' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromjson'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromxml'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromyml')), 'ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\Common\\Collections\\ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\ORM\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\ODM\\MongoDB\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\ODM\\PHPCR\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'PhpCollection\\Sequence' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence')), 'PhpCollection\\Map' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap')))));
+    }
+
+    /**
+     * Gets the public 'jms_serializer.json_deserialization_visitor' shared service.
+     *
+     * @return \JMS\Serializer\JsonDeserializationVisitor
+     */
+    protected function getJmsSerializer_JsonDeserializationVisitorService()
+    {
+        return $this->services['jms_serializer.json_deserialization_visitor'] = new \JMS\Serializer\JsonDeserializationVisitor($this->get('jms_serializer.naming_strategy'));
+    }
+
+    /**
+     * Gets the public 'jms_serializer.json_serialization_visitor' shared service.
+     *
+     * @return \JMS\Serializer\JsonSerializationVisitor
+     */
+    protected function getJmsSerializer_JsonSerializationVisitorService()
+    {
+        $this->services['jms_serializer.json_serialization_visitor'] = $instance = new \JMS\Serializer\JsonSerializationVisitor($this->get('jms_serializer.naming_strategy'), $this->get('jms_serializer.accessor_strategy'));
+
+        $instance->setOptions(0);
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'jms_serializer.metadata_driver' shared service.
+     *
+     * @return \JMS\Serializer\Metadata\Driver\DoctrineTypeDriver
+     */
+    protected function getJmsSerializer_MetadataDriverService()
+    {
+        $a = new \Metadata\Driver\FileLocator(array('Symfony\\Bundle\\FrameworkBundle' => ($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/serializer'), 'Symfony\\Bundle\\SecurityBundle' => ($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/serializer'), 'Symfony\\Bundle\\TwigBundle' => ($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/serializer'), 'Symfony\\Bundle\\MonologBundle' => ($this->targetDirs[3].'/vendor/symfony/monolog-bundle/Resources/config/serializer'), 'Symfony\\Bundle\\SwiftmailerBundle' => ($this->targetDirs[3].'/vendor/symfony/swiftmailer-bundle/Resources/config/serializer'), 'Symfony\\Bundle\\AsseticBundle' => ($this->targetDirs[3].'/vendor/symfony/assetic-bundle/Resources/config/serializer'), 'Doctrine\\Bundle\\DoctrineBundle' => ($this->targetDirs[3].'/vendor/doctrine/doctrine-bundle/Resources/config/serializer'), 'Doctrine\\Bundle\\MigrationsBundle' => ($this->targetDirs[3].'/vendor/doctrine/doctrine-migrations-bundle/Resources/config/serializer'), 'Sensio\\Bundle\\FrameworkExtraBundle' => ($this->targetDirs[3].'/vendor/sensio/framework-extra-bundle/Resources/config/serializer'), 'AppBundle' => ($this->targetDirs[3].'/src/AppBundle/Resources/config/serializer'), 'AccountBundle' => ($this->targetDirs[3].'/src/AccountBundle/Resources/config/serializer'), 'PaymentBundle' => ($this->targetDirs[3].'/src/PaymentBundle/Resources/config/serializer'), 'ApiBundle' => ($this->targetDirs[3].'/src/ApiBundle/Resources/config/serializer'), 'FOS\\UserBundle' => ($this->targetDirs[3].'/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/serializer'), 'FOS\\RestBundle' => ($this->targetDirs[3].'/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle/Resources/config/serializer'), 'JMS\\SerializerBundle' => ($this->targetDirs[3].'/vendor/jms/serializer-bundle/JMS/SerializerBundle/Resources/config/serializer'), 'FOS\\OAuthServerBundle' => ($this->targetDirs[3].'/vendor/friendsofsymfony/oauth-server-bundle/Resources/config/serializer'), 'Symfony\\Bundle\\DebugBundle' => ($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/config/serializer'), 'Symfony\\Bundle\\WebProfilerBundle' => ($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/serializer'), 'Sensio\\Bundle\\DistributionBundle' => ($this->targetDirs[3].'/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/serializer'), 'Sensio\\Bundle\\GeneratorBundle' => ($this->targetDirs[3].'/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/config/serializer')));
+
+        return $this->services['jms_serializer.metadata_driver'] = new \JMS\Serializer\Metadata\Driver\DoctrineTypeDriver(new \Metadata\Driver\DriverChain(array(0 => new \JMS\Serializer\Metadata\Driver\YamlDriver($a), 1 => new \JMS\Serializer\Metadata\Driver\XmlDriver($a), 2 => new \JMS\Serializer\Metadata\Driver\PhpDriver($a), 3 => new \JMS\Serializer\Metadata\Driver\AnnotationDriver($this->get('annotation_reader')))), $this->get('doctrine'));
+    }
+
+    /**
+     * Gets the public 'jms_serializer.naming_strategy' shared service.
+     *
+     * @return \JMS\Serializer\Naming\CacheNamingStrategy
+     */
+    protected function getJmsSerializer_NamingStrategyService()
+    {
+        return $this->services['jms_serializer.naming_strategy'] = new \JMS\Serializer\Naming\CacheNamingStrategy(new \JMS\Serializer\Naming\SerializedNameAnnotationStrategy(new \JMS\Serializer\Naming\CamelCaseNamingStrategy('_', true)));
+    }
+
+    /**
+     * Gets the public 'jms_serializer.object_constructor' shared service.
+     *
+     * @return \JMS\Serializer\Construction\DoctrineObjectConstructor
+     */
+    protected function getJmsSerializer_ObjectConstructorService()
+    {
+        return $this->services['jms_serializer.object_constructor'] = new \JMS\Serializer\Construction\DoctrineObjectConstructor($this->get('doctrine'), $this->get('jms_serializer.unserialize_object_constructor'), 'null');
+    }
+
+    /**
+     * Gets the public 'jms_serializer.php_collection_handler' shared service.
+     *
+     * @return \JMS\Serializer\Handler\PhpCollectionHandler
+     */
+    protected function getJmsSerializer_PhpCollectionHandlerService()
+    {
+        return $this->services['jms_serializer.php_collection_handler'] = new \JMS\Serializer\Handler\PhpCollectionHandler();
+    }
+
+    /**
+     * Gets the public 'jms_serializer.serialization_context_factory' shared service.
+     *
+     * @return \JMS\SerializerBundle\ContextFactory\ConfiguredContextFactory
+     */
+    protected function getJmsSerializer_SerializationContextFactoryService()
+    {
+        return $this->services['jms_serializer.serialization_context_factory'] = new \JMS\SerializerBundle\ContextFactory\ConfiguredContextFactory();
+    }
+
+    /**
+     * Gets the public 'jms_serializer.stopwatch_subscriber' shared service.
+     *
+     * @return \JMS\SerializerBundle\Serializer\StopwatchEventSubscriber
+     */
+    protected function getJmsSerializer_StopwatchSubscriberService()
+    {
+        return $this->services['jms_serializer.stopwatch_subscriber'] = new \JMS\SerializerBundle\Serializer\StopwatchEventSubscriber($this->get('debug.stopwatch'));
+    }
+
+    /**
+     * Gets the public 'jms_serializer.templating.helper.serializer' shared service.
+     *
+     * @return \JMS\SerializerBundle\Templating\SerializerHelper
+     */
+    protected function getJmsSerializer_Templating_Helper_SerializerService()
+    {
+        return $this->services['jms_serializer.templating.helper.serializer'] = new \JMS\SerializerBundle\Templating\SerializerHelper($this->get('jms_serializer'));
+    }
+
+    /**
+     * Gets the public 'jms_serializer.xml_deserialization_visitor' shared service.
+     *
+     * @return \JMS\Serializer\XmlDeserializationVisitor
+     */
+    protected function getJmsSerializer_XmlDeserializationVisitorService()
+    {
+        $this->services['jms_serializer.xml_deserialization_visitor'] = $instance = new \JMS\Serializer\XmlDeserializationVisitor($this->get('jms_serializer.naming_strategy'));
+
+        $instance->setDoctypeWhitelist(array());
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'jms_serializer.xml_serialization_visitor' shared service.
+     *
+     * @return \JMS\Serializer\XmlSerializationVisitor
+     */
+    protected function getJmsSerializer_XmlSerializationVisitorService()
+    {
+        $this->services['jms_serializer.xml_serialization_visitor'] = $instance = new \JMS\Serializer\XmlSerializationVisitor($this->get('jms_serializer.naming_strategy'), $this->get('jms_serializer.accessor_strategy'));
+
+        $instance->setFormatOutput(true);
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'jms_serializer.yaml_serialization_visitor' shared service.
+     *
+     * @return \JMS\Serializer\YamlSerializationVisitor
+     */
+    protected function getJmsSerializer_YamlSerializationVisitorService()
+    {
+        return $this->services['jms_serializer.yaml_serialization_visitor'] = new \JMS\Serializer\YamlSerializationVisitor($this->get('jms_serializer.naming_strategy'), $this->get('jms_serializer.accessor_strategy'));
     }
 
     /**
@@ -2007,9 +3014,13 @@ class appDevDebugProjectContainer extends Container
         $d->addLoader(new \Symfony\Component\Routing\Loader\YamlFileLoader($a));
         $d->addLoader(new \Symfony\Component\Routing\Loader\PhpFileLoader($a));
         $d->addLoader(new \Symfony\Bundle\AsseticBundle\Routing\AsseticLoader($this->get('assetic.asset_manager'), array()));
-        $d->addLoader($c);
         $d->addLoader(new \Symfony\Component\Routing\Loader\AnnotationDirectoryLoader($a, $c));
         $d->addLoader(new \Symfony\Component\Routing\Loader\AnnotationFileLoader($a, $c));
+        $d->addLoader($c);
+        $d->addLoader(new \FOS\RestBundle\Routing\Loader\DirectoryRouteLoader($a, $this->get('fos_rest.routing.loader.processor')));
+        $d->addLoader($this->get('fos_rest.routing.loader.controller'));
+        $d->addLoader($this->get('fos_rest.routing.loader.yaml_collection'));
+        $d->addLoader($this->get('fos_rest.routing.loader.xml_collection'));
 
         return $this->services['routing.loader'] = new \Symfony\Bundle\FrameworkBundle\Routing\DelegatingLoader($this->get('controller_name_converter'), $this->get('monolog.logger.router', ContainerInterface::NULL_ON_INVALID_REFERENCE), $d);
     }
@@ -2051,7 +3062,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Csrf_TokenManagerService()
     {
-        return $this->services['security.csrf.token_manager'] = new \Symfony\Component\Security\Csrf\CsrfTokenManager(new \Symfony\Component\Security\Csrf\TokenGenerator\UriSafeTokenGenerator($this->get('security.secure_random')), new \Symfony\Component\Security\Csrf\TokenStorage\SessionTokenStorage($this->get('session')), $this->get('request_stack', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+        return $this->services['security.csrf.token_manager'] = new \Symfony\Component\Security\Csrf\CsrfTokenManager(new \Symfony\Component\Security\Csrf\TokenGenerator\UriSafeTokenGenerator($this->get('security.secure_random')), $this->get('security.csrf.token_storage'), $this->get('request_stack', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
 
     /**
@@ -2061,7 +3072,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_EncoderFactoryService()
     {
-        return $this->services['security.encoder_factory'] = new \Symfony\Component\Security\Core\Encoder\EncoderFactory(array());
+        return $this->services['security.encoder_factory'] = new \Symfony\Component\Security\Core\Encoder\EncoderFactory(array('FOS\\UserBundle\\Model\\UserInterface' => array('class' => 'Symfony\\Component\\Security\\Core\\Encoder\\BCryptPasswordEncoder', 'arguments' => array(0 => 13))));
     }
 
     /**
@@ -2071,7 +3082,20 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_FirewallService()
     {
-        return $this->services['security.firewall'] = new \Symfony\Component\Security\Http\Firewall(new \Symfony\Bundle\SecurityBundle\Security\FirewallMap($this, array('security.firewall.map.context.dev' => new \Symfony\Component\HttpFoundation\RequestMatcher('^/(_(profiler|wdt)|css|images|js)/'), 'security.firewall.map.context.main' => NULL)), $this->get('debug.event_dispatcher'));
+        return $this->services['security.firewall'] = new \Symfony\Component\Security\Http\Firewall(new \Symfony\Bundle\SecurityBundle\Security\FirewallMap($this, array('security.firewall.map.context.dev' => new \Symfony\Component\HttpFoundation\RequestMatcher('^/(_(profiler|wdt)|css|images|js)/'), 'security.firewall.map.context.oauth_token' => new \Symfony\Component\HttpFoundation\RequestMatcher('^/oauth/v2/token'), 'security.firewall.map.context.oauth_authorize' => new \Symfony\Component\HttpFoundation\RequestMatcher('^/oauth/v2/auth'), 'security.firewall.map.context.api' => new \Symfony\Component\HttpFoundation\RequestMatcher('^/api'), 'security.firewall.map.context.main' => new \Symfony\Component\HttpFoundation\RequestMatcher('^/'))), $this->get('debug.event_dispatcher'));
+    }
+
+    /**
+     * Gets the public 'security.firewall.map.context.api' shared service.
+     *
+     * @return \Symfony\Bundle\SecurityBundle\Security\FirewallContext
+     */
+    protected function getSecurity_Firewall_Map_Context_ApiService()
+    {
+        $a = $this->get('security.token_storage');
+        $b = $this->get('fos_oauth_server.server');
+
+        return $this->services['security.firewall.map.context.api'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => new \FOS\OAuthServerBundle\Security\Firewall\OAuthListener($a, $this->get('security.authentication.manager'), $b), 2 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($a, $this->get('security.authentication.trust_resolver'), $this->get('security.http_utils'), 'api', new \FOS\OAuthServerBundle\Security\EntryPoint\OAuthEntryPoint($b), NULL, NULL, $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE), true), NULL);
     }
 
     /**
@@ -2091,14 +3115,50 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Firewall_Map_Context_MainService()
     {
-        $a = $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE);
-        $b = $this->get('security.token_storage');
-        $c = $this->get('security.authentication.manager');
-        $d = $this->get('router', ContainerInterface::NULL_ON_INVALID_REFERENCE);
+        $a = $this->get('security.token_storage');
+        $b = $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE);
+        $c = $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE);
+        $d = $this->get('security.http_utils');
+        $e = $this->get('http_kernel');
+        $f = $this->get('security.authentication.manager');
 
-        $e = new \Symfony\Component\Security\Http\AccessMap();
+        $g = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler($d, array());
+        $g->setOptions(array('always_use_default_target_path' => false, 'default_target_path' => '/', 'login_path' => '/login', 'target_path_parameter' => '_target_path', 'use_referer' => false));
+        $g->setProviderKey('main');
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($e, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider(array())), 'main', $a, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5f0b6495de31a2.04789626', $a, $c), 3 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $e, $c)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), new \Symfony\Component\Security\Http\HttpUtils($d, $d, '{^https?://%s$}i'), 'main', NULL, NULL, NULL, $a, false), NULL);
+        $h = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($e, $d, array(), $b);
+        $h->setOptions(array('login_path' => '/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'));
+
+        $i = new \Symfony\Component\Security\Http\Firewall\LogoutListener($a, $d, new \Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler($d, '/'), array('csrf_parameter' => '_csrf_token', 'intention' => 'logout', 'logout_path' => '/logout'));
+        $i->addHandler(new \Symfony\Component\Security\Http\Logout\CsrfTokenClearingLogoutHandler($this->get('security.csrf.token_storage')));
+        $i->addHandler(new \Symfony\Component\Security\Http\Logout\SessionLogoutHandler());
+
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($a, array(0 => $this->get('fos_user.user_provider.username')), 'main', $b, $c), 2 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($a, $f, $this->get('security.authentication.session_strategy'), $d, 'main', $g, $h, array('check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $b, $c, $this->get('security.csrf.token_manager')), 3 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($a, '5f0b6f3ab90016.89543246', $b, $f), 4 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($a, $this->get('security.authentication.trust_resolver'), $d, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $d, '/login', false), NULL, NULL, $b, false), $i);
+    }
+
+    /**
+     * Gets the public 'security.firewall.map.context.oauth_authorize' shared service.
+     *
+     * @return \Symfony\Bundle\SecurityBundle\Security\FirewallContext
+     */
+    protected function getSecurity_Firewall_Map_Context_OauthAuthorizeService()
+    {
+        $a = $this->get('security.token_storage');
+        $b = $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE);
+
+        $c = new \Symfony\Component\Security\Http\EntryPoint\BasicAuthenticationEntryPoint('Secured Area');
+
+        return $this->services['security.firewall.map.context.oauth_authorize'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($a, array(0 => $this->get('fos_user.user_provider.username')), 'oauth_authorize', $b, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\BasicAuthenticationListener($a, $this->get('security.authentication.manager'), 'oauth_authorize', $c, $b), 3 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($a, $this->get('security.authentication.trust_resolver'), $this->get('security.http_utils'), 'oauth_authorize', $c, NULL, NULL, $b, false), NULL);
+    }
+
+    /**
+     * Gets the public 'security.firewall.map.context.oauth_token' shared service.
+     *
+     * @return \Symfony\Bundle\SecurityBundle\Security\FirewallContext
+     */
+    protected function getSecurity_Firewall_Map_Context_OauthTokenService()
+    {
+        return $this->services['security.firewall.map.context.oauth_token'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(), NULL, NULL);
     }
 
     /**
@@ -2269,16 +3329,6 @@ class appDevDebugProjectContainer extends Container
     protected function getSensioFrameworkExtra_View_GuesserService()
     {
         return $this->services['sensio_framework_extra.view.guesser'] = new \Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser($this->get('kernel'));
-    }
-
-    /**
-     * Gets the public 'sensio_framework_extra.view.listener' shared service.
-     *
-     * @return \Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener
-     */
-    protected function getSensioFrameworkExtra_View_ListenerService()
-    {
-        return $this->services['sensio_framework_extra.view.listener'] = new \Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener($this);
     }
 
     /**
@@ -2877,6 +3927,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\FormExtension(new \Symfony\Bridge\Twig\Form\TwigRenderer(new \Symfony\Bridge\Twig\Form\TwigRendererEngine(array(0 => 'form_div_layout.html.twig')), $this->get('security.csrf.token_manager', ContainerInterface::NULL_ON_INVALID_REFERENCE))));
         $instance->addExtension(new \Symfony\Bundle\AsseticBundle\Twig\AsseticExtension($this->get('assetic.asset_factory'), $this->get('templating.name_parser'), true, array(), array(), new \Symfony\Bundle\AsseticBundle\DefaultValueSupplier($this)));
         $instance->addExtension(new \Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension());
+        $instance->addExtension(new \JMS\Serializer\Twig\SerializerExtension($this->get('jms_serializer')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\DumpExtension($this->get('var_dumper.cloner')));
         $instance->addExtension(new \Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension());
         $instance->addGlobal('app', $f);
@@ -2931,6 +3982,9 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath(($this->targetDirs[3].'/vendor/doctrine/doctrine-bundle/Resources/views'), 'Doctrine');
         $instance->addPath(($this->targetDirs[3].'/src/AccountBundle/Resources/views'), 'Account');
         $instance->addPath(($this->targetDirs[3].'/src/PaymentBundle/Resources/views'), 'Payment');
+        $instance->addPath(($this->targetDirs[3].'/src/ApiBundle/Resources/views'), 'Api');
+        $instance->addPath(($this->targetDirs[3].'/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views'), 'FOSUser');
+        $instance->addPath(($this->targetDirs[3].'/vendor/friendsofsymfony/oauth-server-bundle/Resources/views'), 'FOSOAuthServer');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views'), 'Debug');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views'), 'WebProfiler');
         $instance->addPath(($this->targetDirs[3].'/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views'), 'SensioDistribution');
@@ -3022,10 +4076,12 @@ class appDevDebugProjectContainer extends Container
         $instance->setConstraintValidatorFactory(new \Symfony\Bundle\FrameworkBundle\Validator\ConstraintValidatorFactory($this, array('validator.expression' => 'validator.expression', 'Symfony\\Component\\Validator\\Constraints\\ExpressionValidator' => 'validator.expression', 'Symfony\\Component\\Validator\\Constraints\\EmailValidator' => 'validator.email', 'security.validator.user_password' => 'security.validator.user_password', 'Symfony\\Component\\Security\\Core\\Validator\\Constraints\\UserPasswordValidator' => 'security.validator.user_password', 'doctrine.orm.validator.unique' => 'doctrine.orm.validator.unique', 'Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntityValidator' => 'doctrine.orm.validator.unique', 'account' => 'validator.account', 'AccountBundle\\Validator\\Constraints\\AccountValidator' => 'validator.account', 'amount' => 'validator.amount', 'AccountBundle\\Validator\\Constraints\\AmountValidator' => 'validator.amount')));
         $instance->setTranslator($this->get('translator'));
         $instance->setTranslationDomain('validators');
-        $instance->addXmlMappings(array(0 => ($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml')));
+        $instance->addXmlMappings(array(0 => ($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml'), 1 => ($this->targetDirs[3].'/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation.xml'), 2 => ($this->targetDirs[3].'/vendor/friendsofsymfony/oauth-server-bundle/Resources/config/validation.xml')));
         $instance->addYamlMappings(array(0 => ($this->targetDirs[3].'/src/PaymentBundle/Resources/config/validation.yml')));
+        $instance->enableAnnotationMapping($this->get('annotation_reader'));
         $instance->addMethodMapping('loadValidatorMetadata');
-        $instance->addObjectInitializers(array(0 => $this->get('doctrine.orm.validator_initializer')));
+        $instance->addObjectInitializers(array(0 => $this->get('doctrine.orm.validator_initializer'), 1 => new \FOS\UserBundle\Validator\Initializer($this->get('fos_user.user_manager'))));
+        $instance->addXmlMapping(($this->targetDirs[3].'/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/DependencyInjection/Compiler/../../Resources/config/storage-validation/orm.xml'));
 
         return $instance;
     }
@@ -3160,6 +4216,66 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the private 'fos_oauth_server.entity_manager' shared service.
+     *
+     * @return \Doctrine\ORM\EntityManager
+     */
+    protected function getFosOauthServer_EntityManagerService()
+    {
+        return $this->services['fos_oauth_server.entity_manager'] = $this->get('doctrine')->getManager(NULL);
+    }
+
+    /**
+     * Gets the private 'fos_rest.request_matcher.0dfc4cce134bee15f08405cb5cea4845b13ff7d8c8f779004218432a2c552bd0cd9f9d27' shared service.
+     *
+     * @return \Symfony\Component\HttpFoundation\RequestMatcher
+     */
+    protected function getFosRest_RequestMatcher_0dfc4cce134bee15f08405cb5cea4845b13ff7d8c8f779004218432a2c552bd0cd9f9d27Service()
+    {
+        return $this->services['fos_rest.request_matcher.0dfc4cce134bee15f08405cb5cea4845b13ff7d8c8f779004218432a2c552bd0cd9f9d27'] = new \Symfony\Component\HttpFoundation\RequestMatcher('^/', NULL, NULL);
+    }
+
+    /**
+     * Gets the private 'fos_rest.request_matcher.50d7031fd332f324b33953b2158cded5b34cf57c3cd709fdaa24d6818252fd77ab4624ee' shared service.
+     *
+     * @return \Symfony\Component\HttpFoundation\RequestMatcher
+     */
+    protected function getFosRest_RequestMatcher_50d7031fd332f324b33953b2158cded5b34cf57c3cd709fdaa24d6818252fd77ab4624eeService()
+    {
+        return $this->services['fos_rest.request_matcher.50d7031fd332f324b33953b2158cded5b34cf57c3cd709fdaa24d6818252fd77ab4624ee'] = new \Symfony\Component\HttpFoundation\RequestMatcher('^/_profiler|_wdt/', NULL, NULL);
+    }
+
+    /**
+     * Gets the private 'fos_rest.request_matcher.8615024800e4193600fd69885f7587200427156c3f94286d4b2ddc9c87897c17c762ebe2' shared service.
+     *
+     * @return \Symfony\Component\HttpFoundation\RequestMatcher
+     */
+    protected function getFosRest_RequestMatcher_8615024800e4193600fd69885f7587200427156c3f94286d4b2ddc9c87897c17c762ebe2Service()
+    {
+        return $this->services['fos_rest.request_matcher.8615024800e4193600fd69885f7587200427156c3f94286d4b2ddc9c87897c17c762ebe2'] = new \Symfony\Component\HttpFoundation\RequestMatcher('^/api', NULL, NULL);
+    }
+
+    /**
+     * Gets the private 'fos_user.user_provider.username' shared service.
+     *
+     * @return \FOS\UserBundle\Security\UserProvider
+     */
+    protected function getFosUser_UserProvider_UsernameService()
+    {
+        return $this->services['fos_user.user_provider.username'] = new \FOS\UserBundle\Security\UserProvider($this->get('fos_user.user_manager'));
+    }
+
+    /**
+     * Gets the private 'jms_serializer.unserialize_object_constructor' shared service.
+     *
+     * @return \JMS\Serializer\Construction\UnserializeObjectConstructor
+     */
+    protected function getJmsSerializer_UnserializeObjectConstructorService()
+    {
+        return $this->services['jms_serializer.unserialize_object_constructor'] = new \JMS\Serializer\Construction\UnserializeObjectConstructor();
+    }
+
+    /**
      * Gets the private 'monolog.processor.psr_log_message' shared service.
      *
      * @return \Monolog\Processor\PsrLogMessageProcessor
@@ -3193,17 +4309,55 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the private 'security.access_listener' shared service.
+     *
+     * @return \Symfony\Component\Security\Http\Firewall\AccessListener
+     */
+    protected function getSecurity_AccessListenerService()
+    {
+        return $this->services['security.access_listener'] = new \Symfony\Component\Security\Http\Firewall\AccessListener($this->get('security.token_storage'), $this->get('security.access.decision_manager'), $this->get('security.access_map'), $this->get('security.authentication.manager'));
+    }
+
+    /**
+     * Gets the private 'security.access_map' shared service.
+     *
+     * @return \Symfony\Component\Security\Http\AccessMap
+     */
+    protected function getSecurity_AccessMapService()
+    {
+        $this->services['security.access_map'] = $instance = new \Symfony\Component\Security\Http\AccessMap();
+
+        $instance->add(new \Symfony\Component\HttpFoundation\RequestMatcher('^/api'), array(0 => 'IS_AUTHENTICATED_FULLY'), NULL);
+
+        return $instance;
+    }
+
+    /**
      * Gets the private 'security.authentication.manager' shared service.
      *
      * @return \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5f0b6495de31a2.04789626')), true);
+        $a = $this->get('fos_user.user_provider.username');
+        $b = $this->get('security.user_checker');
+        $c = $this->get('security.encoder_factory');
+
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($a, $b, 'oauth_authorize', $c, true), 1 => new \FOS\OAuthServerBundle\Security\Authentication\Provider\OAuthProvider($a, $this->get('fos_oauth_server.server'), $b), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($a, $b, 'main', $c, true), 3 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5f0b6f3ab90016.89543246')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
         return $instance;
+    }
+
+    /**
+     * Gets the private 'security.authentication.session_strategy' shared service.
+     *
+     * @return \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy
+     */
+    protected function getSecurity_Authentication_SessionStrategyService()
+    {
+        return $this->services['security.authentication.session_strategy'] = new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate');
     }
 
     /**
@@ -3217,13 +4371,49 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the private 'security.channel_listener' shared service.
+     *
+     * @return \Symfony\Component\Security\Http\Firewall\ChannelListener
+     */
+    protected function getSecurity_ChannelListenerService()
+    {
+        return $this->services['security.channel_listener'] = new \Symfony\Component\Security\Http\Firewall\ChannelListener($this->get('security.access_map'), new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+    }
+
+    /**
+     * Gets the private 'security.csrf.token_storage' shared service.
+     *
+     * @return \Symfony\Component\Security\Csrf\TokenStorage\SessionTokenStorage
+     */
+    protected function getSecurity_Csrf_TokenStorageService()
+    {
+        return $this->services['security.csrf.token_storage'] = new \Symfony\Component\Security\Csrf\TokenStorage\SessionTokenStorage($this->get('session'));
+    }
+
+    /**
+     * Gets the private 'security.http_utils' shared service.
+     *
+     * @return \Symfony\Component\Security\Http\HttpUtils
+     */
+    protected function getSecurity_HttpUtilsService()
+    {
+        $a = $this->get('router', ContainerInterface::NULL_ON_INVALID_REFERENCE);
+
+        return $this->services['security.http_utils'] = new \Symfony\Component\Security\Http\HttpUtils($a, $a, '{^https?://%s$}i');
+    }
+
+    /**
      * Gets the private 'security.logout_url_generator' shared service.
      *
      * @return \Symfony\Component\Security\Http\Logout\LogoutUrlGenerator
      */
     protected function getSecurity_LogoutUrlGeneratorService()
     {
-        return $this->services['security.logout_url_generator'] = new \Symfony\Component\Security\Http\Logout\LogoutUrlGenerator($this->get('request_stack', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('router', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('security.token_storage', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+        $this->services['security.logout_url_generator'] = $instance = new \Symfony\Component\Security\Http\Logout\LogoutUrlGenerator($this->get('request_stack', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('router', ContainerInterface::NULL_ON_INVALID_REFERENCE), $this->get('security.token_storage', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+
+        $instance->registerListener('main', '/logout', 'logout', '_csrf_token', NULL);
+
+        return $instance;
     }
 
     /**
@@ -3233,7 +4423,17 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_RoleHierarchyService()
     {
-        return $this->services['security.role_hierarchy'] = new \Symfony\Component\Security\Core\Role\RoleHierarchy(array());
+        return $this->services['security.role_hierarchy'] = new \Symfony\Component\Security\Core\Role\RoleHierarchy(array('ROLE_ADMIN' => array(0 => 'ROLE_USER'), 'ROLE_SUPER_ADMIN' => array(0 => 'ROLE_ADMIN')));
+    }
+
+    /**
+     * Gets the private 'security.user_checker' shared service.
+     *
+     * @return \Symfony\Component\Security\Core\User\UserChecker
+     */
+    protected function getSecurity_UserCheckerService()
+    {
+        return $this->services['security.user_checker'] = new \Symfony\Component\Security\Core\User\UserChecker();
     }
 
     /**
@@ -3347,6 +4547,11 @@ class appDevDebugProjectContainer extends Container
                 'AppBundle' => 'AppBundle\\AppBundle',
                 'AccountBundle' => 'AccountBundle\\AccountBundle',
                 'PaymentBundle' => 'PaymentBundle\\PaymentBundle',
+                'ApiBundle' => 'ApiBundle\\ApiBundle',
+                'FOSUserBundle' => 'FOS\\UserBundle\\FOSUserBundle',
+                'FOSRestBundle' => 'FOS\\RestBundle\\FOSRestBundle',
+                'JMSSerializerBundle' => 'JMS\\SerializerBundle\\JMSSerializerBundle',
+                'FOSOAuthServerBundle' => 'FOS\\OAuthServerBundle\\FOSOAuthServerBundle',
                 'DebugBundle' => 'Symfony\\Bundle\\DebugBundle\\DebugBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -3412,6 +4617,31 @@ class appDevDebugProjectContainer extends Container
                     'parent' => NULL,
                     'path' => ($this->targetDirs[3].'/src/PaymentBundle'),
                     'namespace' => 'PaymentBundle',
+                ),
+                'ApiBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/src/ApiBundle'),
+                    'namespace' => 'ApiBundle',
+                ),
+                'FOSUserBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/vendor/friendsofsymfony/user-bundle/FOS/UserBundle'),
+                    'namespace' => 'FOS\\UserBundle',
+                ),
+                'FOSRestBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/vendor/friendsofsymfony/rest-bundle/FOS/RestBundle'),
+                    'namespace' => 'FOS\\RestBundle',
+                ),
+                'JMSSerializerBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/vendor/jms/serializer-bundle/JMS/SerializerBundle'),
+                    'namespace' => 'JMS\\SerializerBundle',
+                ),
+                'FOSOAuthServerBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/vendor/friendsofsymfony/oauth-server-bundle'),
+                    'namespace' => 'FOS\\OAuthServerBundle',
                 ),
                 'DebugBundle' => array(
                     'parent' => NULL,
@@ -3686,7 +4916,12 @@ class appDevDebugProjectContainer extends Container
             'security.access.always_authenticate_before_granting' => false,
             'security.authentication.hide_user_not_found' => true,
             'security.role_hierarchy.roles' => array(
-
+                'ROLE_ADMIN' => array(
+                    0 => 'ROLE_USER',
+                ),
+                'ROLE_SUPER_ADMIN' => array(
+                    0 => 'ROLE_ADMIN',
+                ),
             ),
             'twig.class' => 'Twig\\Environment',
             'twig.loader.filesystem.class' => 'Symfony\\Bundle\\TwigBundle\\Loader\\FilesystemLoader',
@@ -3940,7 +5175,207 @@ class appDevDebugProjectContainer extends Container
             'sensio_framework_extra.converter.manager.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\Request\\ParamConverter\\ParamConverterManager',
             'sensio_framework_extra.converter.doctrine.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\Request\\ParamConverter\\DoctrineParamConverter',
             'sensio_framework_extra.converter.datetime.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\Request\\ParamConverter\\DateTimeParamConverter',
-            'sensio_framework_extra.view.listener.class' => 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\TemplateListener',
+            'fos_user.validator.password.class' => 'FOS\\UserBundle\\Validator\\PasswordValidator',
+            'fos_user.validator.unique.class' => 'FOS\\UserBundle\\Validator\\UniqueValidator',
+            'fos_user.security.interactive_login_listener.class' => 'FOS\\UserBundle\\Security\\InteractiveLoginListener',
+            'fos_user.security.login_manager.class' => 'FOS\\UserBundle\\Security\\LoginManager',
+            'fos_user.resetting.email.template' => 'FOSUserBundle:Resetting:email.txt.twig',
+            'fos_user.registration.confirmation.template' => 'FOSUserBundle:Registration:email.txt.twig',
+            'fos_user.storage' => 'orm',
+            'fos_user.firewall_name' => 'main',
+            'fos_user.model_manager_name' => NULL,
+            'fos_user.model.user.class' => 'ApiBundle\\Entity\\User',
+            'fos_user.template.engine' => 'twig',
+            'fos_user.profile.form.type' => 'fos_user_profile',
+            'fos_user.profile.form.name' => 'fos_user_profile_form',
+            'fos_user.profile.form.validation_groups' => array(
+                0 => 'Profile',
+                1 => 'Default',
+            ),
+            'fos_user.registration.confirmation.from_email' => array(
+                'webmaster@example.com' => 'webmaster',
+            ),
+            'fos_user.registration.confirmation.enabled' => false,
+            'fos_user.registration.form.type' => 'fos_user_registration',
+            'fos_user.registration.form.name' => 'fos_user_registration_form',
+            'fos_user.registration.form.validation_groups' => array(
+                0 => 'Registration',
+                1 => 'Default',
+            ),
+            'fos_user.change_password.form.type' => 'fos_user_change_password',
+            'fos_user.change_password.form.name' => 'fos_user_change_password_form',
+            'fos_user.change_password.form.validation_groups' => array(
+                0 => 'ChangePassword',
+                1 => 'Default',
+            ),
+            'fos_user.resetting.email.from_email' => array(
+                'webmaster@example.com' => 'webmaster',
+            ),
+            'fos_user.resetting.token_ttl' => 86400,
+            'fos_user.resetting.form.type' => 'fos_user_resetting',
+            'fos_user.resetting.form.name' => 'fos_user_resetting_form',
+            'fos_user.resetting.form.validation_groups' => array(
+                0 => 'ResetPassword',
+                1 => 'Default',
+            ),
+            'fos_rest.serializer.exclusion_strategy.version' => '',
+            'fos_rest.serializer.exclusion_strategy.groups' => array(
+
+            ),
+            'fos_rest.view_handler.jsonp.callback_param' => '',
+            'fos_rest.view.exception_wrapper_handler' => 'FOS\\RestBundle\\View\\ExceptionWrapperHandler',
+            'fos_rest.view_handler.default.class' => 'FOS\\RestBundle\\View\\ViewHandler',
+            'fos_rest.view_handler.jsonp.class' => 'FOS\\RestBundle\\View\\JsonpHandler',
+            'fos_rest.serializer.exception_wrapper_serialize_handler.class' => 'FOS\\RestBundle\\Serializer\\ExceptionWrapperSerializeHandler',
+            'fos_rest.routing.loader.controller.class' => 'FOS\\RestBundle\\Routing\\Loader\\RestRouteLoader',
+            'fos_rest.routing.loader.yaml_collection.class' => 'FOS\\RestBundle\\Routing\\Loader\\RestYamlCollectionLoader',
+            'fos_rest.routing.loader.xml_collection.class' => 'FOS\\RestBundle\\Routing\\Loader\\RestXmlCollectionLoader',
+            'fos_rest.routing.loader.processor.class' => 'FOS\\RestBundle\\Routing\\Loader\\RestRouteProcessor',
+            'fos_rest.routing.loader.reader.controller.class' => 'FOS\\RestBundle\\Routing\\Loader\\Reader\\RestControllerReader',
+            'fos_rest.routing.loader.reader.action.class' => 'FOS\\RestBundle\\Routing\\Loader\\Reader\\RestActionReader',
+            'fos_rest.format_negotiator.class' => 'FOS\\RestBundle\\Negotiation\\FormatNegotiator',
+            'fos_rest.inflector.class' => 'FOS\\RestBundle\\Inflector\\DoctrineInflector',
+            'fos_rest.request_matcher.class' => 'Symfony\\Component\\HttpFoundation\\RequestMatcher',
+            'fos_rest.violation_formatter.class' => 'FOS\\RestBundle\\Util\\ViolationFormatter',
+            'fos_rest.request.param_fetcher.class' => 'FOS\\RestBundle\\Request\\ParamFetcher',
+            'fos_rest.request.param_fetcher.reader.class' => 'FOS\\RestBundle\\Request\\ParamReader',
+            'fos_rest.cache_dir' => (__DIR__.'/fos_rest'),
+            'fos_rest.routing.loader.default_format' => NULL,
+            'fos_rest.routing.loader.include_format' => false,
+            'fos_rest.serializer.serialize_null' => false,
+            'fos_rest.exception.codes' => array(
+
+            ),
+            'fos_rest.exception.messages' => array(
+
+            ),
+            'fos_rest.converter.request_body.validation_errors_argument' => 'validationErrors',
+            'fos_rest.mime_types' => array(
+
+            ),
+            'fos_rest.view_response_listener.class' => 'FOS\\RestBundle\\EventListener\\ViewResponseListener',
+            'fos_rest.view_response_listener.force_view' => true,
+            'fos_rest.formats' => array(
+                'json' => false,
+                'xml' => false,
+                'html' => true,
+            ),
+            'fos_rest.force_redirects' => array(
+                'html' => 302,
+            ),
+            'fos_rest.failed_validation' => 400,
+            'fos_rest.empty_content' => 204,
+            'fos_rest.serialize_null' => false,
+            'fos_rest.default_engine' => 'twig',
+            'fos_rest.normalizer.camel_keys.class' => 'FOS\\RestBundle\\Normalizer\\CamelKeysNormalizer',
+            'fos_rest.decoder.json.class' => 'FOS\\RestBundle\\Decoder\\JsonDecoder',
+            'fos_rest.decoder.jsontoform.class' => 'FOS\\RestBundle\\Decoder\\JsonToFormDecoder',
+            'fos_rest.decoder.xml.class' => 'FOS\\RestBundle\\Decoder\\XmlDecoder',
+            'fos_rest.decoder_provider.class' => 'FOS\\RestBundle\\Decoder\\ContainerDecoderProvider',
+            'fos_rest.body_listener.class' => 'FOS\\RestBundle\\EventListener\\BodyListener',
+            'fos_rest.throw_exception_on_unsupported_content_type' => false,
+            'fos_rest.body_default_format' => NULL,
+            'fos_rest.decoders' => array(
+                'json' => 'fos_rest.decoder.json',
+                'xml' => 'fos_rest.decoder.xml',
+            ),
+            'fos_rest.format_listener.class' => 'FOS\\RestBundle\\EventListener\\FormatListener',
+            'fos_rest.version_listener.class' => 'FOS\\RestBundle\\EventListener\\VersionListener',
+            'fos_rest.format_listener.rules' => array(
+                0 => array(
+                    'path' => '^/api',
+                    'priorities' => array(
+                        0 => 'json',
+                    ),
+                    'fallback_format' => 'json',
+                    'prefer_extension' => true,
+                    'host' => NULL,
+                    'methods' => NULL,
+                    'stop' => false,
+                    'exception_fallback_format' => 'json',
+                ),
+                1 => array(
+                    'path' => '^/',
+                    'priorities' => array(
+                        0 => 'html',
+                    ),
+                    'fallback_format' => 'html',
+                    'prefer_extension' => true,
+                    'host' => NULL,
+                    'methods' => NULL,
+                    'stop' => false,
+                    'exception_fallback_format' => 'html',
+                ),
+            ),
+            'fos_rest.param_fetcher_listener.class' => 'FOS\\RestBundle\\EventListener\\ParamFetcherListener',
+            'fos_rest.param_fetcher_listener.set_params_as_attributes' => false,
+            'jms_serializer.metadata.file_locator.class' => 'Metadata\\Driver\\FileLocator',
+            'jms_serializer.metadata.annotation_driver.class' => 'JMS\\Serializer\\Metadata\\Driver\\AnnotationDriver',
+            'jms_serializer.metadata.chain_driver.class' => 'Metadata\\Driver\\DriverChain',
+            'jms_serializer.metadata.yaml_driver.class' => 'JMS\\Serializer\\Metadata\\Driver\\YamlDriver',
+            'jms_serializer.metadata.xml_driver.class' => 'JMS\\Serializer\\Metadata\\Driver\\XmlDriver',
+            'jms_serializer.metadata.php_driver.class' => 'JMS\\Serializer\\Metadata\\Driver\\PhpDriver',
+            'jms_serializer.metadata.doctrine_type_driver.class' => 'JMS\\Serializer\\Metadata\\Driver\\DoctrineTypeDriver',
+            'jms_serializer.metadata.doctrine_phpcr_type_driver.class' => 'JMS\\Serializer\\Metadata\\Driver\\DoctrinePHPCRTypeDriver',
+            'jms_serializer.metadata.lazy_loading_driver.class' => 'Metadata\\Driver\\LazyLoadingDriver',
+            'jms_serializer.metadata.metadata_factory.class' => 'Metadata\\MetadataFactory',
+            'jms_serializer.metadata.cache.file_cache.class' => 'Metadata\\Cache\\FileCache',
+            'jms_serializer.event_dispatcher.class' => 'JMS\\Serializer\\EventDispatcher\\LazyEventDispatcher',
+            'jms_serializer.camel_case_naming_strategy.class' => 'JMS\\Serializer\\Naming\\CamelCaseNamingStrategy',
+            'jms_serializer.identical_property_naming_strategy.class' => 'JMS\\Serializer\\Naming\\IdenticalPropertyNamingStrategy',
+            'jms_serializer.serialized_name_annotation_strategy.class' => 'JMS\\Serializer\\Naming\\SerializedNameAnnotationStrategy',
+            'jms_serializer.cache_naming_strategy.class' => 'JMS\\Serializer\\Naming\\CacheNamingStrategy',
+            'jms_serializer.doctrine_object_constructor.class' => 'JMS\\Serializer\\Construction\\DoctrineObjectConstructor',
+            'jms_serializer.unserialize_object_constructor.class' => 'JMS\\Serializer\\Construction\\UnserializeObjectConstructor',
+            'jms_serializer.version_exclusion_strategy.class' => 'JMS\\Serializer\\Exclusion\\VersionExclusionStrategy',
+            'jms_serializer.serializer.class' => 'JMS\\Serializer\\Serializer',
+            'jms_serializer.twig_extension.class' => 'JMS\\Serializer\\Twig\\SerializerExtension',
+            'jms_serializer.twig_runtime_extension.class' => 'JMS\\Serializer\\Twig\\SerializerRuntimeExtension',
+            'jms_serializer.twig_runtime_extension_helper.class' => 'JMS\\Serializer\\Twig\\SerializerRuntimeHelper',
+            'jms_serializer.templating.helper.class' => 'JMS\\SerializerBundle\\Templating\\SerializerHelper',
+            'jms_serializer.json_serialization_visitor.class' => 'JMS\\Serializer\\JsonSerializationVisitor',
+            'jms_serializer.json_serialization_visitor.options' => 0,
+            'jms_serializer.json_deserialization_visitor.class' => 'JMS\\Serializer\\JsonDeserializationVisitor',
+            'jms_serializer.xml_serialization_visitor.class' => 'JMS\\Serializer\\XmlSerializationVisitor',
+            'jms_serializer.xml_deserialization_visitor.class' => 'JMS\\Serializer\\XmlDeserializationVisitor',
+            'jms_serializer.xml_deserialization_visitor.doctype_whitelist' => array(
+
+            ),
+            'jms_serializer.xml_serialization_visitor.format_output' => true,
+            'jms_serializer.yaml_serialization_visitor.class' => 'JMS\\Serializer\\YamlSerializationVisitor',
+            'jms_serializer.handler_registry.class' => 'JMS\\Serializer\\Handler\\LazyHandlerRegistry',
+            'jms_serializer.datetime_handler.class' => 'JMS\\Serializer\\Handler\\DateHandler',
+            'jms_serializer.array_collection_handler.class' => 'JMS\\Serializer\\Handler\\ArrayCollectionHandler',
+            'jms_serializer.php_collection_handler.class' => 'JMS\\Serializer\\Handler\\PhpCollectionHandler',
+            'jms_serializer.form_error_handler.class' => 'JMS\\Serializer\\Handler\\FormErrorHandler',
+            'jms_serializer.constraint_violation_handler.class' => 'JMS\\Serializer\\Handler\\ConstraintViolationHandler',
+            'jms_serializer.doctrine_proxy_subscriber.class' => 'JMS\\Serializer\\EventDispatcher\\Subscriber\\DoctrineProxySubscriber',
+            'jms_serializer.stopwatch_subscriber.class' => 'JMS\\SerializerBundle\\Serializer\\StopwatchEventSubscriber',
+            'jms_serializer.configured_context_factory.class' => 'JMS\\SerializerBundle\\ContextFactory\\ConfiguredContextFactory',
+            'jms_serializer.expression_evaluator.class' => 'JMS\\Serializer\\Expression\\ExpressionEvaluator',
+            'jms_serializer.expression_language.class' => 'Symfony\\Component\\ExpressionLanguage\\ExpressionLanguage',
+            'jms_serializer.expression_language.function_provider.class' => 'JMS\\SerializerBundle\\ExpressionLanguage\\BasicSerializerFunctionsProvider',
+            'jms_serializer.accessor_strategy.default.class' => 'JMS\\Serializer\\Accessor\\DefaultAccessorStrategy',
+            'jms_serializer.accessor_strategy.expression.class' => 'JMS\\Serializer\\Accessor\\ExpressionAccessorStrategy',
+            'fos_oauth_server.server.class' => 'OAuth2\\OAuth2',
+            'fos_oauth_server.security.authentication.provider.class' => 'FOS\\OAuthServerBundle\\Security\\Authentication\\Provider\\OAuthProvider',
+            'fos_oauth_server.security.authentication.listener.class' => 'FOS\\OAuthServerBundle\\Security\\Firewall\\OAuthListener',
+            'fos_oauth_server.security.entry_point.class' => 'FOS\\OAuthServerBundle\\Security\\EntryPoint\\OAuthEntryPoint',
+            'fos_oauth_server.server.options' => array(
+
+            ),
+            'fos_oauth_server.model_manager_name' => NULL,
+            'fos_oauth_server.model.client.class' => 'ApiBundle\\Entity\\Client',
+            'fos_oauth_server.model.access_token.class' => 'ApiBundle\\Entity\\AccessToken',
+            'fos_oauth_server.model.refresh_token.class' => 'ApiBundle\\Entity\\RefreshToken',
+            'fos_oauth_server.model.auth_code.class' => 'ApiBundle\\Entity\\AuthCode',
+            'fos_oauth_server.template.engine' => 'twig',
+            'fos_oauth_server.authorize.form.type' => 'fos_oauth_server_authorize',
+            'fos_oauth_server.authorize.form.name' => 'fos_oauth_server_authorize_form',
+            'fos_oauth_server.authorize.form.validation_groups' => array(
+                0 => 'Authorize',
+                1 => 'Default',
+            ),
             'web_profiler.controller.profiler.class' => 'Symfony\\Bundle\\WebProfilerBundle\\Controller\\ProfilerController',
             'web_profiler.controller.router.class' => 'Symfony\\Bundle\\WebProfilerBundle\\Controller\\RouterController',
             'web_profiler.controller.exception.class' => 'Symfony\\Bundle\\WebProfilerBundle\\Controller\\ExceptionController',
@@ -4054,297 +5489,297 @@ class appDevDebugProjectContainer extends Container
     }
 }
 
-class DoctrineORMEntityManager_0000000003ce0acd000000004f387b668dcdc572960b2d02d38cd9c05f173664 extends \Doctrine\ORM\EntityManager implements \ProxyManager\Proxy\VirtualProxyInterface
+class DoctrineORMEntityManager_0000000024be3ac8000000003f7e1eab8dcdc572960b2d02d38cd9c05f173664 extends \Doctrine\ORM\EntityManager implements \ProxyManager\Proxy\VirtualProxyInterface
 {
 
     /**
      * @var \Closure|null initializer responsible for generating the wrapped object
      */
-    private $valueHolder21694 = null;
+    private $valueHolder9b545 = null;
 
     /**
      * @var \Closure|null initializer responsible for generating the wrapped object
      */
-    private $initializer67e86 = null;
+    private $initializer891b1 = null;
 
     /**
      * @var bool[] map of public properties of the parent class
      */
-    private static $publicProperties0442a = [
+    private static $publicPropertiesbc6b5 = [
         
     ];
 
     public function getConnection()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getConnection', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getConnection', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getConnection();
+        return $this->valueHolder9b545->getConnection();
     }
 
     public function getMetadataFactory()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getMetadataFactory', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getMetadataFactory', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getMetadataFactory();
+        return $this->valueHolder9b545->getMetadataFactory();
     }
 
     public function getExpressionBuilder()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getExpressionBuilder', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getExpressionBuilder', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getExpressionBuilder();
+        return $this->valueHolder9b545->getExpressionBuilder();
     }
 
     public function beginTransaction()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'beginTransaction', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'beginTransaction', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->beginTransaction();
+        return $this->valueHolder9b545->beginTransaction();
     }
 
     public function transactional($func)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'transactional', array('func' => $func), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'transactional', array('func' => $func), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->transactional($func);
+        return $this->valueHolder9b545->transactional($func);
     }
 
     public function commit()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'commit', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'commit', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->commit();
+        return $this->valueHolder9b545->commit();
     }
 
     public function rollback()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'rollback', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'rollback', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->rollback();
+        return $this->valueHolder9b545->rollback();
     }
 
     public function getClassMetadata($className)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getClassMetadata', array('className' => $className), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getClassMetadata', array('className' => $className), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getClassMetadata($className);
+        return $this->valueHolder9b545->getClassMetadata($className);
     }
 
     public function createQuery($dql = '')
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'createQuery', array('dql' => $dql), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'createQuery', array('dql' => $dql), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->createQuery($dql);
+        return $this->valueHolder9b545->createQuery($dql);
     }
 
     public function createNamedQuery($name)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'createNamedQuery', array('name' => $name), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'createNamedQuery', array('name' => $name), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->createNamedQuery($name);
+        return $this->valueHolder9b545->createNamedQuery($name);
     }
 
     public function createNativeQuery($sql, \Doctrine\ORM\Query\ResultSetMapping $rsm)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'createNativeQuery', array('sql' => $sql, 'rsm' => $rsm), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'createNativeQuery', array('sql' => $sql, 'rsm' => $rsm), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->createNativeQuery($sql, $rsm);
+        return $this->valueHolder9b545->createNativeQuery($sql, $rsm);
     }
 
     public function createNamedNativeQuery($name)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'createNamedNativeQuery', array('name' => $name), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'createNamedNativeQuery', array('name' => $name), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->createNamedNativeQuery($name);
+        return $this->valueHolder9b545->createNamedNativeQuery($name);
     }
 
     public function createQueryBuilder()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'createQueryBuilder', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'createQueryBuilder', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->createQueryBuilder();
+        return $this->valueHolder9b545->createQueryBuilder();
     }
 
     public function flush($entity = null)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'flush', array('entity' => $entity), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'flush', array('entity' => $entity), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->flush($entity);
+        return $this->valueHolder9b545->flush($entity);
     }
 
     public function find($entityName, $id, $lockMode = 0, $lockVersion = null)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'find', array('entityName' => $entityName, 'id' => $id, 'lockMode' => $lockMode, 'lockVersion' => $lockVersion), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'find', array('entityName' => $entityName, 'id' => $id, 'lockMode' => $lockMode, 'lockVersion' => $lockVersion), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->find($entityName, $id, $lockMode, $lockVersion);
+        return $this->valueHolder9b545->find($entityName, $id, $lockMode, $lockVersion);
     }
 
     public function getReference($entityName, $id)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getReference', array('entityName' => $entityName, 'id' => $id), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getReference', array('entityName' => $entityName, 'id' => $id), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getReference($entityName, $id);
+        return $this->valueHolder9b545->getReference($entityName, $id);
     }
 
     public function getPartialReference($entityName, $identifier)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getPartialReference', array('entityName' => $entityName, 'identifier' => $identifier), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getPartialReference', array('entityName' => $entityName, 'identifier' => $identifier), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getPartialReference($entityName, $identifier);
+        return $this->valueHolder9b545->getPartialReference($entityName, $identifier);
     }
 
     public function clear($entityName = null)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'clear', array('entityName' => $entityName), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'clear', array('entityName' => $entityName), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->clear($entityName);
+        return $this->valueHolder9b545->clear($entityName);
     }
 
     public function close()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'close', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'close', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->close();
+        return $this->valueHolder9b545->close();
     }
 
     public function persist($entity)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'persist', array('entity' => $entity), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'persist', array('entity' => $entity), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->persist($entity);
+        return $this->valueHolder9b545->persist($entity);
     }
 
     public function remove($entity)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'remove', array('entity' => $entity), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'remove', array('entity' => $entity), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->remove($entity);
+        return $this->valueHolder9b545->remove($entity);
     }
 
     public function refresh($entity)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'refresh', array('entity' => $entity), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'refresh', array('entity' => $entity), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->refresh($entity);
+        return $this->valueHolder9b545->refresh($entity);
     }
 
     public function detach($entity)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'detach', array('entity' => $entity), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'detach', array('entity' => $entity), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->detach($entity);
+        return $this->valueHolder9b545->detach($entity);
     }
 
     public function merge($entity)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'merge', array('entity' => $entity), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'merge', array('entity' => $entity), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->merge($entity);
+        return $this->valueHolder9b545->merge($entity);
     }
 
     public function copy($entity, $deep = false)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'copy', array('entity' => $entity, 'deep' => $deep), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'copy', array('entity' => $entity, 'deep' => $deep), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->copy($entity, $deep);
+        return $this->valueHolder9b545->copy($entity, $deep);
     }
 
     public function lock($entity, $lockMode, $lockVersion = null)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'lock', array('entity' => $entity, 'lockMode' => $lockMode, 'lockVersion' => $lockVersion), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'lock', array('entity' => $entity, 'lockMode' => $lockMode, 'lockVersion' => $lockVersion), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->lock($entity, $lockMode, $lockVersion);
+        return $this->valueHolder9b545->lock($entity, $lockMode, $lockVersion);
     }
 
     public function getRepository($entityName)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getRepository', array('entityName' => $entityName), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getRepository', array('entityName' => $entityName), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getRepository($entityName);
+        return $this->valueHolder9b545->getRepository($entityName);
     }
 
     public function contains($entity)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'contains', array('entity' => $entity), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'contains', array('entity' => $entity), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->contains($entity);
+        return $this->valueHolder9b545->contains($entity);
     }
 
     public function getEventManager()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getEventManager', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getEventManager', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getEventManager();
+        return $this->valueHolder9b545->getEventManager();
     }
 
     public function getConfiguration()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getConfiguration', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getConfiguration', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getConfiguration();
+        return $this->valueHolder9b545->getConfiguration();
     }
 
     public function isOpen()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'isOpen', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'isOpen', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->isOpen();
+        return $this->valueHolder9b545->isOpen();
     }
 
     public function getUnitOfWork()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getUnitOfWork', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getUnitOfWork', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getUnitOfWork();
+        return $this->valueHolder9b545->getUnitOfWork();
     }
 
     public function getHydrator($hydrationMode)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getHydrator', array('hydrationMode' => $hydrationMode), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getHydrator', array('hydrationMode' => $hydrationMode), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getHydrator($hydrationMode);
+        return $this->valueHolder9b545->getHydrator($hydrationMode);
     }
 
     public function newHydrator($hydrationMode)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'newHydrator', array('hydrationMode' => $hydrationMode), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'newHydrator', array('hydrationMode' => $hydrationMode), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->newHydrator($hydrationMode);
+        return $this->valueHolder9b545->newHydrator($hydrationMode);
     }
 
     public function getProxyFactory()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getProxyFactory', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getProxyFactory', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getProxyFactory();
+        return $this->valueHolder9b545->getProxyFactory();
     }
 
     public function initializeObject($obj)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'initializeObject', array('obj' => $obj), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'initializeObject', array('obj' => $obj), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->initializeObject($obj);
+        return $this->valueHolder9b545->initializeObject($obj);
     }
 
     public function getFilters()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'getFilters', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'getFilters', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->getFilters();
+        return $this->valueHolder9b545->getFilters();
     }
 
     public function isFiltersStateClean()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'isFiltersStateClean', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'isFiltersStateClean', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->isFiltersStateClean();
+        return $this->valueHolder9b545->isFiltersStateClean();
     }
 
     public function hasFilters()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'hasFilters', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'hasFilters', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return $this->valueHolder21694->hasFilters();
+        return $this->valueHolder9b545->hasFilters();
     }
 
     /**
@@ -4363,7 +5798,7 @@ class DoctrineORMEntityManager_0000000003ce0acd000000004f387b668dcdc572960b2d02d
             unset($instance->config, $instance->conn, $instance->metadataFactory, $instance->unitOfWork, $instance->eventManager, $instance->proxyFactory, $instance->repositoryFactory, $instance->expressionBuilder, $instance->closed, $instance->filterCollection);
         }, $instance, 'Doctrine\\ORM\\EntityManager')->__invoke($instance);
 
-        $instance->initializer67e86 = $initializer;
+        $instance->initializer891b1 = $initializer;
 
         return $instance;
     }
@@ -4372,30 +5807,30 @@ class DoctrineORMEntityManager_0000000003ce0acd000000004f387b668dcdc572960b2d02d
     {
         static $reflection;
 
-        if (! $this->valueHolder21694) {
+        if (! $this->valueHolder9b545) {
             $reflection = $reflection ?: new \ReflectionClass('Doctrine\\ORM\\EntityManager');
-            $this->valueHolder21694 = $reflection->newInstanceWithoutConstructor();
+            $this->valueHolder9b545 = $reflection->newInstanceWithoutConstructor();
         \Closure::bind(function (\Doctrine\ORM\EntityManager $instance) {
             unset($instance->config, $instance->conn, $instance->metadataFactory, $instance->unitOfWork, $instance->eventManager, $instance->proxyFactory, $instance->repositoryFactory, $instance->expressionBuilder, $instance->closed, $instance->filterCollection);
         }, $this, 'Doctrine\\ORM\\EntityManager')->__invoke($this);
 
         }
 
-        $this->valueHolder21694->__construct($conn, $config, $eventManager);
+        $this->valueHolder9b545->__construct($conn, $config, $eventManager);
     }
 
     public function & __get($name)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, '__get', ['name' => $name], $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__get', ['name' => $name], $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        if (isset(self::$publicProperties0442a[$name])) {
-            return $this->valueHolder21694->$name;
+        if (isset(self::$publicPropertiesbc6b5[$name])) {
+            return $this->valueHolder9b545->$name;
         }
 
         $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
 
         if (! $realInstanceReflection->hasProperty($name)) {
-            $targetObject = $this->valueHolder21694;
+            $targetObject = $this->valueHolder9b545;
 
             $backtrace = debug_backtrace(false);
             trigger_error(
@@ -4412,7 +5847,7 @@ class DoctrineORMEntityManager_0000000003ce0acd000000004f387b668dcdc572960b2d02d
             return;
         }
 
-        $targetObject = $this->valueHolder21694;
+        $targetObject = $this->valueHolder9b545;
         $accessor = function & () use ($targetObject, $name) {
             return $targetObject->$name;
         };
@@ -4426,18 +5861,18 @@ class DoctrineORMEntityManager_0000000003ce0acd000000004f387b668dcdc572960b2d02d
 
     public function __set($name, $value)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, '__set', array('name' => $name, 'value' => $value), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__set', array('name' => $name, 'value' => $value), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
         $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
 
         if (! $realInstanceReflection->hasProperty($name)) {
-            $targetObject = $this->valueHolder21694;
+            $targetObject = $this->valueHolder9b545;
 
             return $targetObject->$name = $value;
             return;
         }
 
-        $targetObject = $this->valueHolder21694;
+        $targetObject = $this->valueHolder9b545;
         $accessor = function & () use ($targetObject, $name, $value) {
             return $targetObject->$name = $value;
         };
@@ -4451,18 +5886,18 @@ class DoctrineORMEntityManager_0000000003ce0acd000000004f387b668dcdc572960b2d02d
 
     public function __isset($name)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, '__isset', array('name' => $name), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__isset', array('name' => $name), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
         $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
 
         if (! $realInstanceReflection->hasProperty($name)) {
-            $targetObject = $this->valueHolder21694;
+            $targetObject = $this->valueHolder9b545;
 
             return isset($targetObject->$name);
             return;
         }
 
-        $targetObject = $this->valueHolder21694;
+        $targetObject = $this->valueHolder9b545;
         $accessor = function () use ($targetObject, $name) {
             return isset($targetObject->$name);
         };
@@ -4476,18 +5911,18 @@ class DoctrineORMEntityManager_0000000003ce0acd000000004f387b668dcdc572960b2d02d
 
     public function __unset($name)
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, '__unset', array('name' => $name), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__unset', array('name' => $name), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
         $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
 
         if (! $realInstanceReflection->hasProperty($name)) {
-            $targetObject = $this->valueHolder21694;
+            $targetObject = $this->valueHolder9b545;
 
             unset($targetObject->$name);
             return;
         }
 
-        $targetObject = $this->valueHolder21694;
+        $targetObject = $this->valueHolder9b545;
         $accessor = function () use ($targetObject, $name) {
             unset($targetObject->$name);
         };
@@ -4501,16 +5936,16 @@ class DoctrineORMEntityManager_0000000003ce0acd000000004f387b668dcdc572960b2d02d
 
     public function __clone()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, '__clone', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__clone', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        $this->valueHolder21694 = clone $this->valueHolder21694;
+        $this->valueHolder9b545 = clone $this->valueHolder9b545;
     }
 
     public function __sleep()
     {
-        $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, '__sleep', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__sleep', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
 
-        return array('valueHolder21694');
+        return array('valueHolder9b545');
     }
 
     public function __wakeup()
@@ -4522,27 +5957,262 @@ class DoctrineORMEntityManager_0000000003ce0acd000000004f387b668dcdc572960b2d02d
 
     public function setProxyInitializer(\Closure $initializer = null)
     {
-        $this->initializer67e86 = $initializer;
+        $this->initializer891b1 = $initializer;
     }
 
     public function getProxyInitializer()
     {
-        return $this->initializer67e86;
+        return $this->initializer891b1;
     }
 
     public function initializeProxy() : bool
     {
-        return $this->initializer67e86 && ($this->initializer67e86->__invoke($valueHolder21694, $this, 'initializeProxy', array(), $this->initializer67e86) || 1) && $this->valueHolder21694 = $valueHolder21694;
+        return $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'initializeProxy', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
     }
 
     public function isProxyInitialized() : bool
     {
-        return null !== $this->valueHolder21694;
+        return null !== $this->valueHolder9b545;
     }
 
     public function getWrappedValueHolderValue() : ?object
     {
-        return $this->valueHolder21694;
+        return $this->valueHolder9b545;
+    }
+
+
+}
+
+class FOSRestBundleSerializerJMSSerializerAdapter_0000000024be373b000000003f7e1eab8dcdc572960b2d02d38cd9c05f173664 extends \FOS\RestBundle\Serializer\JMSSerializerAdapter implements \ProxyManager\Proxy\VirtualProxyInterface
+{
+
+    /**
+     * @var \Closure|null initializer responsible for generating the wrapped object
+     */
+    private $valueHolder9b545 = null;
+
+    /**
+     * @var \Closure|null initializer responsible for generating the wrapped object
+     */
+    private $initializer891b1 = null;
+
+    /**
+     * @var bool[] map of public properties of the parent class
+     */
+    private static $publicPropertiesbc6b5 = [
+        
+    ];
+
+    public function serialize($data, $format, $context = null)
+    {
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'serialize', array('data' => $data, 'format' => $format, 'context' => $context), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
+
+        return $this->valueHolder9b545->serialize($data, $format, $context);
+    }
+
+    public function deserialize($data, $type, $format, $context = null)
+    {
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'deserialize', array('data' => $data, 'type' => $type, 'format' => $format, 'context' => $context), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
+
+        return $this->valueHolder9b545->deserialize($data, $type, $format, $context);
+    }
+
+    /**
+     * Constructor for lazy initialization
+     *
+     * @param \Closure|null $initializer
+     */
+    public static function staticProxyConstructor($initializer)
+    {
+        static $reflection;
+
+        $reflection = $reflection ?? $reflection = new \ReflectionClass(__CLASS__);
+        $instance = $reflection->newInstanceWithoutConstructor();
+
+        \Closure::bind(function (\FOS\RestBundle\Serializer\JMSSerializerAdapter $instance) {
+            unset($instance->serializer);
+        }, $instance, 'FOS\\RestBundle\\Serializer\\JMSSerializerAdapter')->__invoke($instance);
+
+        $instance->initializer891b1 = $initializer;
+
+        return $instance;
+    }
+
+    public function __construct(\JMS\Serializer\SerializerInterface $serializer)
+    {
+        static $reflection;
+
+        if (! $this->valueHolder9b545) {
+            $reflection = $reflection ?: new \ReflectionClass('FOS\\RestBundle\\Serializer\\JMSSerializerAdapter');
+            $this->valueHolder9b545 = $reflection->newInstanceWithoutConstructor();
+        \Closure::bind(function (\FOS\RestBundle\Serializer\JMSSerializerAdapter $instance) {
+            unset($instance->serializer);
+        }, $this, 'FOS\\RestBundle\\Serializer\\JMSSerializerAdapter')->__invoke($this);
+
+        }
+
+        $this->valueHolder9b545->__construct($serializer);
+    }
+
+    public function & __get($name)
+    {
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__get', ['name' => $name], $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
+
+        if (isset(self::$publicPropertiesbc6b5[$name])) {
+            return $this->valueHolder9b545->$name;
+        }
+
+        $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
+
+        if (! $realInstanceReflection->hasProperty($name)) {
+            $targetObject = $this->valueHolder9b545;
+
+            $backtrace = debug_backtrace(false);
+            trigger_error(
+                sprintf(
+                    'Undefined property: %s::$%s in %s on line %s',
+                    get_parent_class($this),
+                    $name,
+                    $backtrace[0]['file'],
+                    $backtrace[0]['line']
+                ),
+                \E_USER_NOTICE
+            );
+            return $targetObject->$name;
+            return;
+        }
+
+        $targetObject = $this->valueHolder9b545;
+        $accessor = function & () use ($targetObject, $name) {
+            return $targetObject->$name;
+        };
+        $backtrace = debug_backtrace(true);
+        $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \ProxyManager\Stub\EmptyClassStub();
+        $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
+        $returnValue = & $accessor();
+
+        return $returnValue;
+    }
+
+    public function __set($name, $value)
+    {
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__set', array('name' => $name, 'value' => $value), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
+
+        $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
+
+        if (! $realInstanceReflection->hasProperty($name)) {
+            $targetObject = $this->valueHolder9b545;
+
+            return $targetObject->$name = $value;
+            return;
+        }
+
+        $targetObject = $this->valueHolder9b545;
+        $accessor = function & () use ($targetObject, $name, $value) {
+            return $targetObject->$name = $value;
+        };
+        $backtrace = debug_backtrace(true);
+        $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \ProxyManager\Stub\EmptyClassStub();
+        $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
+        $returnValue = & $accessor();
+
+        return $returnValue;
+    }
+
+    public function __isset($name)
+    {
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__isset', array('name' => $name), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
+
+        $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
+
+        if (! $realInstanceReflection->hasProperty($name)) {
+            $targetObject = $this->valueHolder9b545;
+
+            return isset($targetObject->$name);
+            return;
+        }
+
+        $targetObject = $this->valueHolder9b545;
+        $accessor = function () use ($targetObject, $name) {
+            return isset($targetObject->$name);
+        };
+        $backtrace = debug_backtrace(true);
+        $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \ProxyManager\Stub\EmptyClassStub();
+        $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
+        $returnValue = $accessor();
+
+        return $returnValue;
+    }
+
+    public function __unset($name)
+    {
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__unset', array('name' => $name), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
+
+        $realInstanceReflection = new \ReflectionClass(get_parent_class($this));
+
+        if (! $realInstanceReflection->hasProperty($name)) {
+            $targetObject = $this->valueHolder9b545;
+
+            unset($targetObject->$name);
+            return;
+        }
+
+        $targetObject = $this->valueHolder9b545;
+        $accessor = function () use ($targetObject, $name) {
+            unset($targetObject->$name);
+        };
+        $backtrace = debug_backtrace(true);
+        $scopeObject = isset($backtrace[1]['object']) ? $backtrace[1]['object'] : new \ProxyManager\Stub\EmptyClassStub();
+        $accessor = $accessor->bindTo($scopeObject, get_class($scopeObject));
+        $returnValue = $accessor();
+
+        return $returnValue;
+    }
+
+    public function __clone()
+    {
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__clone', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
+
+        $this->valueHolder9b545 = clone $this->valueHolder9b545;
+    }
+
+    public function __sleep()
+    {
+        $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, '__sleep', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
+
+        return array('valueHolder9b545');
+    }
+
+    public function __wakeup()
+    {
+        \Closure::bind(function (\FOS\RestBundle\Serializer\JMSSerializerAdapter $instance) {
+            unset($instance->serializer);
+        }, $this, 'FOS\\RestBundle\\Serializer\\JMSSerializerAdapter')->__invoke($this);
+    }
+
+    public function setProxyInitializer(\Closure $initializer = null)
+    {
+        $this->initializer891b1 = $initializer;
+    }
+
+    public function getProxyInitializer()
+    {
+        return $this->initializer891b1;
+    }
+
+    public function initializeProxy() : bool
+    {
+        return $this->initializer891b1 && ($this->initializer891b1->__invoke($valueHolder9b545, $this, 'initializeProxy', array(), $this->initializer891b1) || 1) && $this->valueHolder9b545 = $valueHolder9b545;
+    }
+
+    public function isProxyInitialized() : bool
+    {
+        return null !== $this->valueHolder9b545;
+    }
+
+    public function getWrappedValueHolderValue() : ?object
+    {
+        return $this->valueHolder9b545;
     }
 
 

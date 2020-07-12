@@ -7,7 +7,8 @@
         "psr-4": {
             "AppBundle\\": "src/AppBundle",
             "AccountBundle\\": "src/AccountBundle",
-            "PaymentBundle\\": "src/PaymentBundle"
+            "PaymentBundle\\": "src/PaymentBundle",
+            "ApiBundle\\": "src/ApiBundle"
         }
     },
     "autoload-dev": {
@@ -18,6 +19,11 @@
         "doctrine/doctrine-bundle": "~1.4",
         "doctrine/doctrine-migrations-bundle": "^1.0",
         "doctrine/orm": "^2.4.8",
+        "friendsofsymfony/rest-bundle": "^1.7",
+        "friendsofsymfony/user-bundle": "^1.3",
+        "friendsofsymfony/oauth-server-bundle": "^1.5",
+        "jms/serializer": "^1.0.0",
+        "jms/serializer-bundle": "^1.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "^3.0.2",

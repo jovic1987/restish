@@ -4,9 +4,11 @@ namespace AccountBundle\Controller;
 
 use AccountBundle\Formatter\AccountsFormatter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Finder\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use FOS\RestBundle\Controller\FOSRestController;
 
-class DefaultController extends Controller
+class DefaultController extends FOSRestController
 {
     /**
      * Return the list of all accounts
