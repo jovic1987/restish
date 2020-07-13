@@ -4,7 +4,7 @@ namespace PaymentBundle\Manager;
 
 use AccountBundle\Entity\AccountEntity;
 use AccountBundle\Entity\AccountEntityRepository;
-use PaymentBundle\Dto\Payment;
+use PaymentBundle\Model\Payment;
 use PaymentBundle\Entity\PaymentEntity;
 use PaymentBundle\Entity\PaymentEntityRepository;
 

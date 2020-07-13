@@ -3,6 +3,8 @@
 /app/logs/*
 !app/cache/.gitkeep
 !app/logs/.gitkeep
+/app/logs/dev.log
+/app/logs/test..log
 
 # Parameters
 /app/config/parameters.yml
@@ -13,9 +15,10 @@
 !app/console
 !app/symfony_requirements
 /vendor/
+/web/bundles/
 
 # Assets and user uploads
-/web/bundles/
+#/web/bundles/
 
 # PHPUnit
 /app/phpunit.xml

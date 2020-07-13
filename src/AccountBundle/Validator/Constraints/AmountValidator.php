@@ -7,6 +7,10 @@ use Symfony\Component\Validator\ConstraintValidator;
 
 class AmountValidator extends ConstraintValidator
 {
+    /**
+     * @param mixed $value
+     * @param Constraint $constraint
+     */
     public function validate($value, Constraint $constraint)
     {
         if (!is_numeric($value)) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace PaymentBundle\Dto;
+namespace PaymentBundle\Model;
 
 /**
  * Payment

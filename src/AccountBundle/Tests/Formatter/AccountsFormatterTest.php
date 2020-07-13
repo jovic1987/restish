@@ -3,19 +3,19 @@
 namespace AccountBundle\Tests\Formatter;
 
 use AccountBundle\Entity\AccountEntity;
-use AccountBundle\Formatter\PaymentsFormatter;
+use AccountBundle\Formatter\AccountsFormatter;
 use PHPUnit\Framework\TestCase;
 
 class AccountsFormatterTest extends TestCase
 {
     /**
-     * @var PaymentsFormatter
+     * @var AccountsFormatter
      */
     private $formatter;
 
     public function setUp(): void
     {
-        $this->formatter = new PaymentsFormatter([new AccountEntity('bob', 'bob', '1.01', 'EUR')]);
+        $this->formatter = new AccountsFormatter([new AccountEntity('bob', 'bob', '1.01', 'EUR')]);
     }
 
     public function tearDown(): void

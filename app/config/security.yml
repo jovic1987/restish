@@ -28,7 +28,7 @@ security:
             http_basic: true
 
         api:
-            pattern:    ^/api
+            pattern:    ^/v1
             fos_oauth:  true
             stateless:  true
             anonymous:  false # can be omitted as its default value
@@ -43,4 +43,4 @@ security:
             anonymous:    true
 
     access_control:
-        - { path: ^/api, role: IS_AUTHENTICATED_FULLY }
+        - { path: ^/v1, role: IS_AUTHENTICATED_FULLY }

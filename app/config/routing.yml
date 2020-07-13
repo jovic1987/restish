@@ -1,14 +1,14 @@
 api:
     resource: "@ApiBundle/Resources/config/routing.yml"
-    prefix:   /api
+    prefix:   /v1
 
 payment:
     resource: "@PaymentBundle/Resources/config/routing.yml"
-    prefix:   /api
+    prefix:   /v1
 
 account:
     resource: "@AccountBundle/Resources/config/routing.yml"
-    prefix:   /api
+    prefix:   /v1
 
 app:
     resource: '@AppBundle/Controller/'

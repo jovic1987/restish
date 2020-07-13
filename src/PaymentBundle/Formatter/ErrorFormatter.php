@@ -35,7 +35,7 @@ class ErrorFormatter
      *
      * @return array
      */
-    public function format()
+    public function format(): array
 	{
     	$this->data['errors'] = $this->errors;
 

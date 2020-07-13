@@ -2,7 +2,7 @@
 
 namespace PaymentBundle\Controller;
 
-use PaymentBundle\Dto\Payment;
+use PaymentBundle\Model\Payment;
 use PaymentBundle\Formatter\ErrorFormatter;
 use PaymentBundle\Formatter\PaymentsFormatter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

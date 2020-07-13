@@ -39,7 +39,7 @@ class PaymentsFormatter
      *
      * @return array
      */
-    public function format()
+    public function format(): array
 	{
     	foreach ($this->payments as $payment) {
     		$this->data['items'][] = [
