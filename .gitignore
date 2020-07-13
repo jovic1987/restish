@@ -1,18 +1,24 @@
-/app/cache/
-app/cache/
+# Cache and logs (Symfony2)
 /app/cache/*
-app/cache/*
-/app/logs/
 /app/logs/*
-app/logs/
-app/logs/*
 !app/cache/.gitkeep
 !app/logs/.gitkeep
+
+# Parameters
 /app/config/parameters.yml
-/vendor/
-.idea/
-.DS_Store
-/web/bundles/
+
+# Managed by Composer
 /app/bootstrap.php.cache
-/build/
-/bin/
+/var/bootstrap.php.cache
+!app/console
+!app/symfony_requirements
+/vendor/
+
+# Assets and user uploads
+/web/bundles/
+
+# PHPUnit
+/app/phpunit.xml
+/phpunit.xml
+
+.idea
