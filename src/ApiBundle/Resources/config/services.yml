@@ -2,3 +2,10 @@ services:
 #    api.example:
 #        class: ApiBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
+
+    api.command.client:
+        class: 'ApiBundle\Command\ClientCommand'
+        arguments:
+            - '@fos_oauth_server.client_manager.default'
+        tags:
+            - { name: 'console.command' }
