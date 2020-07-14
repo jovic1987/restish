@@ -1,72 +1,142 @@
-Symfony Standard Edition
-========================
+RESTish
+======
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+Implementation a REST API secured with OAuth2
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+The API only returns JSON responses.
 
-What's inside?
---------------
+All API routes require authentication handled via OAuth2 with password grant type.
 
-The Symfony Standard Edition is configured with the following defaults:
+Bundles used:
+* [FOSRestBundle](https://github.com/FriendsOfSymfony/FOSRestBundle)
+* [JMSSerializerBundle](https://github.com/schmittjoh/JMSSerializerBundle)
+* [FOSUserBundle](https://github.com/FriendsOfSymfony/FOSUserBundle)
+* [FOSOAuthServerBundle](https://github.com/FriendsOfSymfony/FOSOAuthServerBundle)
 
-  * An AppBundle you can use to start coding;
 
-  * Twig as the only configured template engine;
+Installation
+------------
+* Clone:
+  ~~~bash
+  https://github.com/jovic1987/restish.git
+  ~~~
+  
+* Composer:
+  ~~~bash
+  composer install
+  ~~~
+    
+* Configure database parameters: 
+  ~~~bash
+  app/config/parameters.yml
+  ~~~
 
-  * Doctrine ORM/DBAL;
+* Create db and tables:
+  ~~~bash
+  php app/console doctrine:migrations:migrate
+  ~~~
 
-  * Swiftmailer;
+* Create a fos user:
+  ~~~bash
+  php app/console fos:user:create
+  ~~~
 
-  * Annotations enabled for everything.
+* Create a client:
+  ~~~bash
+  php app/console oauth-server:client:create --grant-type="password"
+  ~~~
+  
+* Run application:
+    ~~~bash
+    php app/console server:run
+    ~~~
 
-It comes pre-configured with the following bundles:
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+Usage
+-----------
+First we have to request an access token:
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+~~~bash
+curl --location --request POST 'http://127.0.0.1:8000/oauth/v2/token' \
+--header 'Cookie: PHPSESSID=f0b77vsrkaapr5ieq4g6abkv0s' \
+--form 'grant_type=password' \
+--form 'client_id={client_id}' \
+--form 'client_secret={secret}' \
+--form 'username={username}' \
+--form 'password={password}'
+}
+~~~
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+Now we can make calls to any API endpoint by sending the access token as a Bearer:
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+**GET Accounts**
+~~~bash
+curl --location --request GET 'http://127.0.0.1:8000/v1/accounts' \
+--header 'Authorization: Bearer {access_token}' \
+--header 'Cookie: PHPSESSID=f0b77vsrkaapr5ieq4g6abkv0s'
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+HTTP/1.1 200 OK
+{
+    "code": 200,
+    "status": "OK",
+    "items": [
+        {
+            "id": "bob",
+            "owner": "bob",
+            "balance": 89.98,
+            "currency": "EUR"
+        },
+        {
+            "id": "alice",
+            "owner": "alice",
+            "balance": 10.02,
+            "currency": "EUR"
+        }
+    ]
+}
+~~~
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+**GET Payments**
+~~~bash
+curl --location --request GET 'http://127.0.0.1:8000/v1/payments' \
+--header 'Authorization: Bearer {access_token}' \
+--header 'Cookie: PHPSESSID=f0b77vsrkaapr5ieq4g6abkv0s'
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+HTTP/1.1 200 OK
+{
+    "code": 200,
+    "status": "OK",
+    "items": [
+        {
+            "account": "alice",
+            "amount": 10,
+            "to_account": "bob",
+            "direction": "incoming"
+        },
+        {
+            "account": "bob",
+            "amount": 10,
+            "to_account": "alice",
+            "direction": "outgoing"
+        }
+    ]
+}
+~~~
 
-  * [**AsseticBundle**][12] - Adds support for Assetic, an asset processing
-    library
+**POST Payments**
+~~~bash
+curl --location --request POST 'http://127.0.0.1:8000/v1/payments?account=bob&to_account=alice&amount=0.02' \
+--header 'Authorization: Bearer {access_token}' \
+--header 'Cookie: PHPSESSID=f0b77vsrkaapr5ieq4g6abkv0s'
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
+HTTP/1.1 201 Created
+{
+    "code": 201,
+    "status": "Created"
+}
+~~~
 
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  https://symfony.com/doc/2.7/setup.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/2.7/doctrine.html
-[8]:  https://symfony.com/doc/2.7/templating.html
-[9]:  https://symfony.com/doc/2.7/security.html
-[10]: https://symfony.com/doc/2.7/email.html
-[11]: https://symfony.com/doc/2.7/logging.html
-[12]: https://symfony.com/doc/2.7/assetic/asset_management.html
-[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
+Requirements
+------------
+* php:   ">=7.1"
+* mysql: ">=8.0"
