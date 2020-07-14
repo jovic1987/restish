@@ -28,7 +28,7 @@ class Payment
      * @param float $amount
      * @param string $toAccount
      */
-    public function __construct($account, $amount, $toAccount)
+    public function __construct(string $account, float $amount, string $toAccount)
     {
         $this->account = $account;
         $this->amount = $amount;

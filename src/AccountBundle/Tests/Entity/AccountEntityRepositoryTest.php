@@ -91,4 +91,14 @@ class AccountEntityRepositoryTest extends TestCase
 
         $this->assertEmpty($result);
     }
+
+    public function testUpdate()
+    {
+        $this->em
+            ->expects($this->once())
+            ->method('flush')
+            ->with($this->account);
+
+        $this->repository->update($this->account);
+    }
 }

@@ -4,6 +4,8 @@ namespace PaymentBundle\Manager;
 
 use AccountBundle\Entity\AccountEntity;
 use AccountBundle\Entity\AccountEntityRepository;
+use AccountBundle\Exception\AccountNotFoundException;
+use PaymentBundle\Exception\InvalidBalanceException;
 use PaymentBundle\Model\Payment;
 use PaymentBundle\Entity\PaymentEntity;
 use PaymentBundle\Entity\PaymentEntityRepository;
@@ -39,7 +41,7 @@ class PaymentEntityManager
      *
      * @return array
      */
-    public function getAllPayments()
+    public function getAllPayments(): array
     {
         return $this->paymentRepository->findAllOrderByIdDesc();
     }
@@ -48,35 +50,51 @@ class PaymentEntityManager
      * Execute transaction. Write payments to db and update the balances of accounts.
      *
      * @param Payment $payment
+     *
+     * @return void
      */
-    public function createPayment(Payment $payment)
+    public function createPayment(Payment $payment): void
     {
-        $accountEntityFrom = $this->accountRepository->findOneBy(['id' => $payment->getAccount()]);
+        $fromAccount = $payment->getAccount();
+
+        $accountEntityFrom = $this->accountRepository->findOneBy(['id' => $fromAccount]);
 
         if (!$accountEntityFrom instanceof AccountEntity) {
-            throw new \RuntimeException(sprintf("Account %s does not exits.", $payment->getAccount()));
+            throw new AccountNotFoundException(sprintf("Account %s does not exits.", $fromAccount));
         }
 
-        if ($accountEntityFrom->getBalance() < $payment->getAmount()) {
-            throw new \RuntimeException('Not enough founds to preform this transaction');
+        $amount = $payment->getAmount();
+        $balanceFrom = $accountEntityFrom->getBalance();
+
+        if ($balanceFrom < $amount) {
+            throw new InvalidBalanceException(
+                sprintf(
+                    'Not enough founds in account %s to preform this transaction',
+                    $accountEntityFrom->getId()
+                )
+            );
         }
 
-        $accountEntityTo = $this->accountRepository->findOneBy(['id' => $payment->getToAccount()]);
+        $toAccount = $payment->getToAccount();
+
+        $accountEntityTo = $this->accountRepository->find($toAccount);
 
         if (!$accountEntityTo instanceof AccountEntity) {
-            throw new \RuntimeException(sprintf("Account %s does not exits.", $payment->getToAccount()));
+            throw new AccountNotFoundException(sprintf("Account %s does not exits.", $toAccount));
         }
 
-        $outgoingPaymentEntity = new PaymentEntity($payment->getAccount(), $payment->getAmount(), $payment->getToAccount(), 'outgoing');
+        $outgoingPaymentEntity = new PaymentEntity($fromAccount, $amount, $toAccount, 'outgoing');
         $this->paymentRepository->create($outgoingPaymentEntity);
 
-        $incomingPaymentEntity = new PaymentEntity($payment->getToAccount(), $payment->getAmount(), $payment->getAccount(), 'incoming');
+        $incomingPaymentEntity = new PaymentEntity($toAccount, $amount, $fromAccount, 'incoming');
         $this->paymentRepository->create($incomingPaymentEntity);
 
-        $accountEntityFrom->updateBalance($accountEntityFrom->getBalance() - $payment->getAmount());
+        $accountEntityFrom->updateBalance($balanceFrom - $amount);
         $this->accountRepository->update($accountEntityFrom);
 
-        $accountEntityTo->updateBalance($accountEntityTo->getBalance() + $payment->getAmount());
+        $balanceTo = $accountEntityTo->getBalance();
+
+        $accountEntityTo->updateBalance($balanceTo + $amount);
         $this->accountRepository->update($accountEntityTo);
     }
 }

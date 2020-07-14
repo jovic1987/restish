@@ -27,6 +27,6 @@ class AccountEntityRepository extends EntityRepository
      */
     public function update(AccountEntity $accountEntity)
     {
-        $this->getEntityManager()->flush();
+        $this->getEntityManager()->flush($accountEntity);
     }
 }
