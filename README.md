@@ -54,6 +54,11 @@ Installation
 
 Usage
 -----------
+* Run unit tests:
+    ~~~bash
+    php bin/simple-phpunit -c app/phpunit.xml.dist src/
+    ~~~
+  
 First we have to request an access token:
 
 ~~~bash
