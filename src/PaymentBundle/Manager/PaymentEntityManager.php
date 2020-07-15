@@ -83,18 +83,26 @@ class PaymentEntityManager
             throw new AccountNotFoundException(sprintf("Account %s does not exits.", $toAccount));
         }
 
-        $outgoingPaymentEntity = new PaymentEntity($fromAccount, $amount, $toAccount, 'outgoing');
-        $this->paymentRepository->create($outgoingPaymentEntity);
+        $this->create($fromAccount, $amount, $toAccount, 'outgoing');
 
-        $incomingPaymentEntity = new PaymentEntity($toAccount, $amount, $fromAccount, 'incoming');
-        $this->paymentRepository->create($incomingPaymentEntity);
+        $this->create($toAccount, $amount, $fromAccount, 'incoming');
 
-        $accountEntityFrom->updateBalance($balanceFrom - $amount);
-        $this->accountRepository->update($accountEntityFrom);
+        $this->update($accountEntityFrom, $balanceFrom - $amount);
 
         $balanceTo = $accountEntityTo->getBalance();
 
-        $accountEntityTo->updateBalance($balanceTo + $amount);
-        $this->accountRepository->update($accountEntityTo);
+        $this->update($accountEntityTo, $balanceTo + $amount);
+    }
+
+    private function create(string $fromAccount, float $amount, string $toAccount, string $direction)
+    {
+        $outgoingPaymentEntity = new PaymentEntity($fromAccount, $amount, $toAccount, $direction);
+        $this->paymentRepository->create($outgoingPaymentEntity);
+    }
+
+    private function update(AccountEntity $accountEntity, float $balance)
+    {
+        $accountEntity->updateBalance($balance);
+        $this->accountRepository->update($accountEntity);
     }
 }
