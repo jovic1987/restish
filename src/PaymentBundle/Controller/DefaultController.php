@@ -38,7 +38,7 @@ class DefaultController extends Controller
             $this->container->get('payment.payment_manager')->createPayment($payment);
             return new JsonResponse(['code' => 201, 'status' => 'Created'], 201);
         } catch (\Exception $exception) {
-            return new JsonResponse(['code' => 403, 'error' => $exception->getMessage()], 403);
+            return new JsonResponse(['code' => $exception->getCode(), 'error' => $exception->getMessage()], $exception->getCode());
         }
     }
 }
